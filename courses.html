@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>产品/服务 - TikTok跨境电商AI工具+实战培训</title>
+    <meta name="keywords" content="跨境AI合规雷达,TikTok运营培训,亚马逊运营课,直播运营课">
+    <meta name="description" content="拉克力跨境提供跨境AI合规雷达工具（降封店风险）+ TikTok/亚马逊实战培训课程，8年行业经验，1000+学员验证！">
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: '思源黑体', Arial, sans-serif;
+        }
+        :root {
+            --primary: #FF7F24;
+            --secondary: #1E40AF;
+            --gray: #F5F5F5;
+            --text-dark: #333;
+            --text-light: #666;
+        }
+        body {
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        /* 导航栏 */
+        .header {
+            position: sticky;
+            top: 0;
+            background: #fff;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            z-index: 999;
+        }
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .logo i {
+            font-size: 24px;
+        }
+        .nav-menu {
+            display: flex;
+            gap: 30px;
+        }
+        .nav-menu a {
+            font-size: 16px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        .nav-menu a:hover, .nav-menu a.active {
+            color: var(--primary);
+        }
+        .consult-btn {
+            background: var(--primary);
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: background 0.3s;
+        }
+        .consult-btn:hover {
+            background: #E67018;
+        }
+        .hamburger {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        /* 面包屑 */
+        .breadcrumb {
+            padding: 20px 0;
+            background: var(--gray);
+            font-size: 14px;
+        }
+        .breadcrumb a {
+            color: var(--secondary);
+        }
+        .breadcrumb span {
+            margin: 0 8px;
+            color: var(--text-light);
+        }
+        /* 业务分类导航 */
+        .service-tabs {
+            padding: 40px 0;
+        }
+        .tabs-nav {
+            display: flex;
+            gap: 0;
+            border-bottom: 2px solid var(--gray);
+            margin-bottom: 40px;
+        }
+        .tab-item {
+            padding: 15px 30px;
+            font-size: 18px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s;
+            border-bottom: 3px solid transparent;
+        }
+        .tab-item.active {
+            color: var(--primary);
+            border-bottom-color: var(--primary);
+        }
+        /* 业务详情 */
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        .service-card {
+            padding: 30px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            margin-bottom: 40px;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 30px;
+            align-items: center;
+        }
+        .service-img img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        .service-text h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+        .service-text p {
+            font-size: 16px;
+            color: var(--text-dark);
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+        .service-advantages {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        .service-advantages li {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-dark);
+        }
+        .service-advantages li i {
+            color: var(--primary);
+        }
+        .service-btn {
+            padding: 10px 25px;
+            background: var(--primary);
+            color: #fff;
+            border-radius: 4px;
+            display: inline-block;
+            transition: background 0.3s;
+        }
+        .service-btn:hover {
+            background: #E67018;
+        }
+        .course-subtabs {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+        .course-subtab {
+            padding: 8px 20px;
+            background: var(--gray);
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .course-subtab.active {
+            background: var(--primary);
+            color: #fff;
+        }
+        /* 服务流程 */
+        .service-process {
+            padding: 60px 0;
+            background: var(--gray);
+        }
+        .section-title {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 60px;
+            position: relative;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--primary);
+        }
+        .process-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 30px;
+            text-align: center;
+        }
+        .process-item {
+            padding: 20px;
+        }
+        .process-item .number {
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            border-radius: 50%;
+            background: var(--primary);
+            color: #fff;
+            font-size: 18px;
+            margin: 0 auto 15px;
+        }
+        .process-item i {
+            font-size: 30px;
+            color: var(--secondary);
+            margin-bottom: 15px;
+        }
+        .process-item p {
+            font-size: 16px;
+            color: var(--text-dark);
+        }
+        /* 常见问题 */
+        .faq {
+            padding: 60px 0;
+        }
+        .faq-item {
+            margin-bottom: 10px;
+            border: 1px solid var(--gray);
+            border-radius: 4px;
+        }
+        .faq-question {
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: var(--gray);
+            cursor: pointer;
+            font-weight: 500;
+        }
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s, padding 0.3s;
+        }
+        .faq-answer.show {
+            padding: 20px;
+            max-height: 500px;
+        }
+        /* 页脚 */
+        .footer {
+            background: #333;
+            color: #fff;
+            padding: 60px 0 20px;
+        }
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        .footer-col h4 {
+            font-size: 18px;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        .footer-col h4::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background: var(--primary);
+        }
+        .footer-col p {
+            color: #ccc;
+            font-size: 14px;
+            line-height: 1.8;
+        }
+        .footer-col .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .footer-col .contact-info li {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .footer-col .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .footer-col .social-icons a {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.3s;
+        }
+        .footer-col .social-icons a:hover {
+            background: var(--primary);
+        }
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #444;
+            font-size: 14px;
+            color: #ccc;
+        }
+        /* 响应式 */
+        @media (max-width: 768px) {
+            .nav-menu, .consult-btn {
+                display: none;
+            }
+            .hamburger {
+                display: block;
+            }
+            .service-card {
+                grid-template-columns: 1fr;
+            }
+            .section-title {
+                font-size: 26px;
+            }
+            .tab-item {
+                padding: 10px 20px;
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="index.html" class="logo">
+                    <i class="fab fa-tiktok"></i>
+                    拉克力跨境
+                </a>
+                <div class="nav-menu">
+                    <a href="index.html">首页</a>
+                    <a href="about.html">关于我们</a>
+                    <a href="courses.html" class="active">产品/服务</a>
+                    <a href="cases.html">成功案例</a>
+                    <a href="contact.html">联系我们</a>
+                </div>
+                <a href="contact.html" class="consult-btn">
+                    <i class="fas fa-comments"></i>
+                    立即咨询
+                </a>
+                <div class="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 面包屑 -->
+    <section class="breadcrumb">
+        <div class="container">
+            <a href="index.html">首页</a>
+            <span>></span>
+            <span>产品/服务</span>
+        </div>
+    </section>
+    
+    <!-- 业务分类导航 -->
+    <section class="service-tabs">
+        <div class="container">
+            <div class="tabs-nav">
+                <div class="tab-item active" data-tab="ai-tool">AI SaaS工具</div>
+                <div class="tab-item" data-tab="training">实战培训课程</div>
+            </div>
+    
+            <!-- AI SaaS工具内容 -->
+            <div class="tab-content active" id="ai-tool">
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="images/courses/hegui_leida.jpg" alt="跨境AI合规雷达">
+                    </div>
+                    <div class="service-text">
+                        <h3>跨境AI合规雷达</h3>
+                        <p>解决TikTok跨境卖家合规问题，规避封店风险，适配全球TikTok店铺运营，为你的出海生意保驾护航。</p>
+                        <ul class="service-advantages">
+                            <li><i class="fas fa-check"></i> 实时合规检测</li>
+                            <li><i class="fas fa-check"></i> 适配多地区店铺</li>
+                            <li><i class="fas fa-check"></i> 降低封店率</li>
+                            <li><i class="fas fa-check"></i> 操作简单易上手</li>
+                        </ul>
+                        <a href="contact.html" class="service-btn">立即咨询工具价格/试用</a>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- 实战培训课程内容 -->
+            <div class="tab-content" id="training">
+                <div class="course-subtabs">
+                    <div class="course-subtab active" data-course="tk">TK跨境电商课</div>
+                    <div class="course-subtab" data-course="live">直播运营课</div>
+                    <div class="course-subtab" data-course="amazon">亚马逊运营课</div>
+                </div>
+    
+                <div class="course-content active" id="tk">
+                    <div class="service-card">
+                        <div class="service-img">
+                            <img src="images/courses/Tiktok.jpg" alt="TK跨境电商课">
+                        </div>
+                        <div class="service-text">
+                            <h3>TK跨境电商课</h3>
+                            <p>覆盖TikTok店铺注册、选品、上架、流量获取、转化优化全流程，8年实战经验讲师授课，手把手教你做好TikTok跨境电商。</p>
+                            <ul class="service-advantages">
+                                <li><i class="fas fa-check"></i> 实战教学</li>
+                                <li><i class="fas fa-check"></i> 8年行业经验</li>
+                                <li><i class="fas fa-check"></i> 1000+学员验证</li>
+                                <li><i class="fas fa-check"></i> 课后答疑辅导</li>
+                            </ul>
+                            <a href="contact.html" class="service-btn">立即咨询课程详情</a>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="course-content" id="live">
+                    <div class="service-card">
+                        <div class="service-img">
+                            <img src="images/courses/zhibo.jpg" alt="直播运营课">
+                        </div>
+                        <div class="service-text">
+                            <h3>直播运营课</h3>
+                            <p>聚焦TikTok直播全流程运营，从直播间搭建、选品、脚本设计、流量投放、互动转化，打造高转化的TikTok直播体系。</p>
+                            <ul class="service-advantages">
+                                <li><i class="fas fa-check"></i> 实战教学</li>
+                                <li><i class="fas fa-check"></i> 8年行业经验</li>
+                                <li><i class="fas fa-check"></i> 1000+学员验证</li>
+                                <li><i class="fas fa-check"></i> 课后答疑辅导</li>
+                            </ul>
+                            <a href="contact.html" class="service-btn">立即咨询课程详情</a>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="course-content" id="amazon">
+                    <div class="service-card">
+                        <div class="service-img">
+                            <img src="images/courses/Amazon.jpg" alt="亚马逊运营课">
+                        </div>
+                        <div class="service-text">
+                            <h3>亚马逊运营课</h3>
+                            <p>涵盖亚马逊店铺注册、选品、Listing优化、FBA发货、广告投放、合规运营，助力你做好亚马逊跨境生意。</p>
+                            <ul class="service-advantages">
+                                <li><i class="fas fa-check"></i> 实战教学</li>
+                                <li><i class="fas fa-check"></i> 8年行业经验</li>
+                                <li><i class="fas fa-check"></i> 1000+学员验证</li>
+                                <li><i class="fas fa-check"></i> 课后答疑辅导</li>
+                            </ul>
+                            <a href="contact.html" class="service-btn">立即咨询课程详情</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- 服务流程 -->
+    <section class="service-process">
+        <div class="container">
+            <h2 class="section-title">服务流程</h2>
+            <div class="process-list">
+                <!-- AI工具流程 -->
+                <div class="process-item">
+                    <div class="number">1</div>
+                    <i class="fas fa-comments"></i>
+                    <p>咨询</p>
+                </div>
+                <div class="process-item">
+                    <div class="number">2</div>
+                    <i class="fas fa-user-check"></i>
+                    <p>需求匹配</p>
+                </div>
+                <div class="process-item">
+                    <div class="number">3</div>
+                    <i class="fas fa-key"></i>
+                    <p>工具开通</p>
+                </div>
+                <div class="process-item">
+                    <div class="number">4</div>
+                    <i class="fas fa-book"></i>
+                    <p>操作指导</p>
+                </div>
+                <div class="process-item">
+                    <div class="number">5</div>
+                    <i class="fas fa-headset"></i>
+                    <p>售后维护</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- 常见问题 -->
+    <section class="faq">
+        <div class="container">
+            <h2 class="section-title">常见问题</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>AI合规雷达适配哪些地区的TikTok店铺？</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        跨境AI合规雷达适配全球主流TikTok运营地区，包括东南亚（马来西亚、新加坡、印尼等）、欧美（美国、英国、德国等）、中东等地区的TikTok店铺，全面覆盖你的跨境生意场景。
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>培训课程是线上还是线下？</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        我们的培训课程以线上直播+录播形式为主，支持回放学习，同时提供线下小班课（限深圳地区），满足不同学员的学习需求。
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>课程有效期多久？</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        付费学员可享受课程永久回放权限，同时免费获取课程更新内容，以及1年的课后答疑辅导服务。
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>服务范围是哪些地区？</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        我们的AI工具服务覆盖全球TikTok店铺，培训课程面向全国跨境电商从业者，线下服务目前仅覆盖深圳地区。
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>关于我们</h4>
+                    <p>聚焦TikTok跨境电商，提供AI SaaS工具+实战培训全链路服务，助力全球商家高效出海。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>联系方式</h4>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>13715191472（微信同号）</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>深圳市龙岗区坂田街道发达路6号云里智能大厦</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>社交媒体</h4>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                        <a href="#"><i class="fab fa-weixin"></i></a>
+                        <a href="#"><i class="fab fa-weibo"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>©2025 深圳市拉克力国际贸易有限公司 版权所有 | <a href="#">隐私政策</a></p>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // 业务标签切换
+        const tabItems = document.querySelectorAll('.tab-item');
+        const tabContents = document.querySelectorAll('.tab-content');
+        tabItems.forEach(item => {
+            item.addEventListener('click', () => {
+                // 移除所有active
+                tabItems.forEach(i => i.classList.remove('active'));
+                tabContents.forEach(c => c.classList.remove('active'));
+                // 添加active
+                item.classList.add('active');
+                const tabId = item.getAttribute('data-tab');
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+    
+        // 课程子标签切换
+        const courseSubtabs = document.querySelectorAll('.course-subtab');
+        const courseContents = document.querySelectorAll('.course-content');
+        courseSubtabs.forEach(item => {
+            item.addEventListener('click', () => {
+                courseSubtabs.forEach(i => i.classList.remove('active'));
+                courseContents.forEach(c => c.classList.remove('active'));
+                item.classList.add('active');
+                const courseId = item.getAttribute('data-course');
+                document.getElementById(courseId).classList.add('active');
+            });
+        });
+    
+        // FAQ折叠面板
+        const faqQuestions = document.querySelectorAll('.faq-question');
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                answer.classList.toggle('show');
+                const icon = question.querySelector('i');
+                icon.classList.toggle('fa-chevron-down');
+                icon.classList.toggle('fa-chevron-up');
+            });
+        });
+    </script>
+</body>
+</html>

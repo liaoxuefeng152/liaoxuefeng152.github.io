@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关于我们 - 深圳市拉克力国际贸易有限公司</title>
+    <meta name="keywords" content="拉克力跨境,TikTok跨境电商,企业介绍,核心团队,发展历程">
+    <meta name="description" content="拉克力跨境成立于2020年，8年TikTok跨境电商实战经验，提供AI合规雷达+运营培训全链路服务，助力1000+学员出海成功！">
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: '思源黑体', Arial, sans-serif;
+        }
+        :root {
+            --primary: #FF7F24;
+            --secondary: #1E40AF;
+            --gray: #F5F5F5;
+            --text-dark: #333;
+            --text-light: #666;
+        }
+        body {
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        /* 导航栏 */
+        .header {
+            position: sticky;
+            top: 0;
+            background: #fff;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            z-index: 999;
+        }
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .logo i {
+            font-size: 24px;
+        }
+        .nav-menu {
+            display: flex;
+            gap: 30px;
+        }
+        .nav-menu a {
+            font-size: 16px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        .nav-menu a:hover, .nav-menu a.active {
+            color: var(--primary);
+        }
+        .consult-btn {
+            background: var(--primary);
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: background 0.3s;
+        }
+        .consult-btn:hover {
+            background: #E67018;
+        }
+        .hamburger {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        /* 面包屑 */
+        .breadcrumb {
+            padding: 20px 0;
+            background: var(--gray);
+            font-size: 14px;
+        }
+        .breadcrumb a {
+            color: var(--secondary);
+        }
+        .breadcrumb span {
+            margin: 0 8px;
+            color: var(--text-light);
+        }
+        /* 企业简介 */
+        .company-intro {
+            padding: 60px 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+        .intro-img img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        .intro-text h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+        .intro-text p {
+            font-size: 16px;
+            color: var(--text-dark);
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+        /* 发展历程 */
+        .timeline {
+            padding: 60px 0;
+            background: var(--gray);
+        }
+        .section-title {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 60px;
+            position: relative;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--primary);
+        }
+        .timeline-content {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .timeline-content::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            width: 2px;
+            background: var(--primary);
+            transform: translateX(-50%);
+        }
+        .timeline-item {
+            margin-bottom: 40px;
+            position: relative;
+        }
+        .timeline-item:nth-child(odd) {
+            padding-right: calc(50% + 30px);
+            text-align: right;
+        }
+        .timeline-item:nth-child(even) {
+            padding-left: calc(50% + 30px);
+        }
+        .timeline-dot {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: var(--primary);
+            transform: translateX(-50%);
+            z-index: 1;
+        }
+        .timeline-year {
+            font-size: 20px;
+            font-weight: bold;
+            color: var(--secondary);
+            margin-bottom: 10px;
+        }
+        .timeline-desc {
+            font-size: 16px;
+            color: var(--text-dark);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .timeline-desc i {
+            color: var(--primary);
+        }
+        /* 核心团队 */
+        .team {
+            padding: 60px 0;
+        }
+        .team-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        .team-card {
+            text-align: center;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .team-card img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+        .team-card h3 {
+            font-size: 20px;
+            margin-bottom: 5px;
+        }
+        .team-card .position {
+            color: var(--text-light);
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+        .team-card p {
+            font-size: 14px;
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+        /* 企业文化 */
+        .culture {
+            padding: 60px 0;
+            background: var(--gray);
+        }
+        .culture-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .culture-card {
+            padding: 40px 20px;
+            background: #fff;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .culture-card i {
+            font-size: 40px;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        .culture-card h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+        .culture-card p {
+            font-size: 16px;
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+        /* 页脚 */
+        .footer {
+            background: #333;
+            color: #fff;
+            padding: 60px 0 20px;
+        }
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        .footer-col h4 {
+            font-size: 18px;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        .footer-col h4::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background: var(--primary);
+        }
+        .footer-col p {
+            color: #ccc;
+            font-size: 14px;
+            line-height: 1.8;
+        }
+        .footer-col .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .footer-col .contact-info li {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .footer-col .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .footer-col .social-icons a {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.3s;
+        }
+        .footer-col .social-icons a:hover {
+            background: var(--primary);
+        }
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #444;
+            font-size: 14px;
+            color: #ccc;
+        }
+        /* 响应式 */
+        @media (max-width: 768px) {
+            .nav-menu, .consult-btn {
+                display: none;
+            }
+            .hamburger {
+                display: block;
+            }
+            .company-intro {
+                grid-template-columns: 1fr;
+            }
+            .intro-img img {
+                height: 300px;
+            }
+            .intro-text h2 {
+                font-size: 26px;
+            }
+            .section-title {
+                font-size: 26px;
+            }
+            .timeline-content::after {
+                left: 20px;
+            }
+            .timeline-item:nth-child(odd), .timeline-item:nth-child(even) {
+                padding-left: 60px;
+                padding-right: 0;
+                text-align: left;
+            }
+            .timeline-dot {
+                left: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="index.html" class="logo">
+                    <i class="fab fa-tiktok"></i>
+                    拉克力跨境
+                </a>
+                <div class="nav-menu">
+                    <a href="index.html">首页</a>
+                    <a href="about.html" class="active">关于我们</a>
+                    <a href="courses.html">产品/服务</a>
+                    <a href="cases.html">成功案例</a>
+                    <a href="contact.html">联系我们</a>
+                </div>
+                <a href="contact.html" class="consult-btn">
+                    <i class="fas fa-comments"></i>
+                    立即咨询
+                </a>
+                <div class="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 面包屑 -->
+    <section class="breadcrumb">
+        <div class="container">
+            <a href="index.html">首页</a>
+            <span>></span>
+            <span>关于我们</span>
+        </div>
+    </section>
+    
+    <!-- 企业简介 -->
+    <section class="company-intro">
+        <div class="container">
+            <div class="intro-img">
+                <img src="images/about/bangong.jpg" alt="企业办公环境">
+            </div>
+            <div class="intro-text">
+                <h2>关于我们</h2>
+                <p>深圳市拉克力国际贸易有限公司成立于2020年3月，聚焦TikTok跨境电商赛道，以实战电商业务为基础，同步提供“AI SaaS工具+实战培训”全链路服务。</p>
+                <p><strong>2023年营业收入突破100万</strong>，<strong>2022年新增跨境电商培训业务</strong>，<strong>2024年上线跨境AI合规雷达产品</strong>，助力1000+学员/商家实现TikTok全球开店、合规运营与业绩增长。</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- 发展历程 -->
+    <section class="timeline">
+        <div class="container">
+            <h2 class="section-title">发展历程</h2>
+            <div class="timeline-content">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-year">2020年</div>
+                    <div class="timeline-desc">
+                        <i class="fas fa-rocket"></i>
+                        <span>企业成立，聚焦TikTok跨境电商实战业务</span>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-year">2022年</div>
+                    <div class="timeline-desc">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                        <span>新增跨境电商培训业务（TK/亚马逊运营课）</span>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-year">2023年</div>
+                    <div class="timeline-desc">
+                        <i class="fas fa-chart-line"></i>
+                        <span>年营业收入突破100万</span>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-year">2024年</div>
+                    <div class="timeline-desc">
+                        <i class="fas fa-robot"></i>
+                        <span>新增跨境电商AI SaaS工具开发业务，上线跨境AI合规雷达</span>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-year">2025年</div>
+                    <div class="timeline-desc">
+                        <i class="fas fa-users"></i>
+                        <span>培训学员突破1000人</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- 核心团队 -->
+    <section class="team">
+        <div class="container">
+            <h2 class="section-title">核心团队</h2>
+            <div class="team-cards">
+                <div class="team-card">
+                    <img src="images/team/liaoxuefeng.jpg" alt="廖雪峰">
+                    <h3>廖雪峰</h3>
+                    <div class="position">创始人&主讲老师</div>
+                    <p>国内知名学校通信工程专业毕业，8年IT行业+5年跨境电商行业经验</p>
+                </div>
+                <div class="team-card">
+                    <img src="images/team/chenyiqi.jpg" alt="陈一奇">
+                    <h3>陈一奇</h3>
+                    <div class="position">联合创始人&运营总监</div>
+                    <p>8年IT行业经验+5年跨境电商运营经验</p>
+                </div>
+                <div class="team-card">
+                    <img src="images/team/weilingying.jpg" alt="魏凌鹰">
+                    <h3>魏凌鹰</h3>
+                    <div class="position">产品总监</div>
+                    <p>10年跨境电商行业经验，丰富选品经验</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- 企业文化 -->
+    <section class="culture">
+        <div class="container">
+            <h2 class="section-title">企业文化</h2>
+            <div class="culture-cards">
+                <div class="culture-card">
+                    <i class="fas fa-bullseye"></i>
+                    <h3>使命</h3>
+                    <p>以TikTok跨境电商实战为根基，用AI SaaS工具与专业培训赋能全球商家，打破跨境贸易壁垒，让出海创业更高效、更简单。</p>
+                </div>
+                <div class="culture-card">
+                    <i class="fas fa-globe"></i>
+                    <h3>愿景</h3>
+                    <p>成为TikTok生态下最具影响力的跨境电商全链路服务商，构建“实战运营+智能工具+专业培训”的出海服务生态。</p>
+                </div>
+                <div class="culture-card">
+                    <i class="fas fa-heart"></i>
+                    <h3>价值观</h3>
+                    <p>实战为本、技术驱动、客户至上、合规共赢</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>关于我们</h4>
+                    <p>聚焦TikTok跨境电商，提供AI SaaS工具+实战培训全链路服务，助力全球商家高效出海。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>联系方式</h4>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>13715191472（微信同号）</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>深圳市龙岗区坂田街道发达路6号云里智能大厦</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>社交媒体</h4>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                        <a href="#"><i class="fab fa-weixin"></i></a>
+                        <a href="#"><i class="fab fa-weibo"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>©2025 深圳市拉克力国际贸易有限公司 版权所有 | <a href="#">隐私政策</a></p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

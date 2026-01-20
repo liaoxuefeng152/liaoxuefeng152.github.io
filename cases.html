@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>成功案例 - TikTok跨境电商AI工具+实战培训</title>
+    <meta name="keywords" content="TikTok跨境电商案例,AI合规雷达案例,亚马逊运营培训案例,直播运营课案例">
+    <meta name="description" content="拉克力跨境服务1000+学员/商家，有棵树科技等知名企业合作案例，AI合规雷达降封店风险，培训课程提业绩！">
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: '思源黑体', Arial, sans-serif;
+        }
+        :root {
+            --primary: #FF7F24;
+            --secondary: #1E40AF;
+            --gray: #F5F5F5;
+            --text-dark: #333;
+            --text-light: #666;
+        }
+        body {
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        /* 导航栏 */
+        .header {
+            position: sticky;
+            top: 0;
+            background: #fff;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            z-index: 999;
+        }
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .logo i {
+            font-size: 24px;
+        }
+        .nav-menu {
+            display: flex;
+            gap: 30px;
+        }
+        .nav-menu a {
+            font-size: 16px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        .nav-menu a:hover, .nav-menu a.active {
+            color: var(--primary);
+        }
+        .consult-btn {
+            background: var(--primary);
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: background 0.3s;
+        }
+        .consult-btn:hover {
+            background: #E67018;
+        }
+        .hamburger {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        /* 面包屑 */
+        .breadcrumb {
+            padding: 20px 0;
+            background: var(--gray);
+            font-size: 14px;
+        }
+        .breadcrumb a {
+            color: var(--secondary);
+        }
+        .breadcrumb span {
+            margin: 0 8px;
+            color: var(--text-light);
+        }
+        /* 案例列表 */
+        .cases {
+            padding: 60px 0;
+        }
+        .section-title {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 60px;
+            position: relative;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--primary);
+        }
+        .case-filters {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+        .filter-btn {
+            padding: 8px 25px;
+            background: var(--gray);
+            border: none;
+            border-radius: 20px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .filter-btn.active {
+            background: var(--primary);
+            color: #fff;
+        }
+        .case-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        .case-card {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+        .case-card:hover {
+            transform: translateY(-5px);
+        }
+        .case-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .case-content {
+            padding: 25px;
+        }
+        .case-tag {
+            display: inline-block;
+            padding: 4px 10px;
+            background: rgba(255, 127, 36, 0.1);
+            color: var(--primary);
+            font-size: 12px;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+        .case-title {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: var(--text-dark);
+        }
+        .case-desc {
+            font-size: 14px;
+            color: var(--text-light);
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+        .case-metrics {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .metric-item {
+            display: flex;
+            flex-direction: column;
+        }
+        .metric-value {
+            font-size: 18px;
+            font-weight: bold;
+            color: var(--primary);
+        }
+        .metric-label {
+            font-size: 12px;
+            color: var(--text-light);
+        }
+        .case-detail-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 8px 20px;
+            border: 1px solid var(--primary);
+            color: var(--primary);
+            border-radius: 4px;
+            transition: all 0.3s;
+        }
+        .case-detail-btn:hover {
+            background: var(--primary);
+            color: #fff;
+        }
+        /* 案例详情模态框 */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.7);
+            z-index: 9999;
+            padding: 40px 20px;
+            overflow-y: auto;
+        }
+        .modal-content {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 8px;
+            padding: 30px;
+            position: relative;
+        }
+        .close-modal {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 24px;
+            cursor: pointer;
+            color: var(--text-light);
+            transition: color 0.3s;
+        }
+        .close-modal:hover {
+            color: var(--primary);
+        }
+        .modal-header {
+            margin-bottom: 20px;
+        }
+        .modal-header h3 {
+            font-size: 24px;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+        .modal-body img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .modal-body p {
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+        /* 页脚 */
+        .footer {
+            background: #333;
+            color: #fff;
+            padding: 60px 0 20px;
+        }
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        .footer-col h4 {
+            font-size: 18px;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        .footer-col h4::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background: var(--primary);
+        }
+        .footer-col p {
+            color: #ccc;
+            font-size: 14px;
+            line-height: 1.8;
+        }
+        .footer-col .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .footer-col .contact-info li {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .footer-col .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .footer-col .social-icons a {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.3s;
+        }
+        .footer-col .social-icons a:hover {
+            background: var(--primary);
+        }
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #444;
+            font-size: 14px;
+            color: #ccc;
+        }
+        /* 响应式 */
+        @media (max-width: 768px) {
+            .nav-menu, .consult-btn {
+                display: none;
+            }
+            .hamburger {
+                display: block;
+            }
+            .section-title {
+                font-size: 26px;
+            }
+            .case-list {
+                grid-template-columns: 1fr;
+            }
+            .modal-content {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="index.html" class="logo">
+                    <i class="fab fa-tiktok"></i>
+                    拉克力跨境
+                </a>
+                <div class="nav-menu">
+                    <a href="index.html">首页</a>
+                    <a href="about.html">关于我们</a>
+                    <a href="courses.html">产品/服务</a>
+                    <a href="cases.html" class="active">成功案例</a>
+                    <a href="contact.html">联系我们</a>
+                </div>
+                <a href="contact.html" class="consult-btn">
+                    <i class="fas fa-comments"></i>
+                    立即咨询
+                </a>
+                <div class="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 面包屑 -->
+    <section class="breadcrumb">
+        <div class="container">
+            <a href="index.html">首页</a>
+            <span>></span>
+            <span>成功案例</span>
+        </div>
+    </section>
+    
+    <!-- 案例列表 -->
+    <section class="cases">
+        <div class="container">
+            <h2 class="section-title">成功案例</h2>
+            
+            <!-- 案例筛选 -->
+            <div class="case-filters">
+                <button class="filter-btn active" data-filter="all">全部案例</button>
+                <button class="filter-btn" data-filter="ai-tool">AI工具类</button>
+                <button class="filter-btn" data-filter="training">培训课程类</button>
+            </div>
+    
+            <!-- 案例卡片列表 -->
+            <div class="case-list">
+                <!-- 案例1：有棵树科技 -->
+                <div class="case-card" data-category="ai-tool">
+                    <img src="images/cases/youkeshu.jpg" alt="有棵树科技" class="case-img">
+                    <div class="case-content">
+                        <span class="case-tag">AI合规雷达</span>
+                        <h3 class="case-title">有棵树科技 - AI合规雷达采购</h3>
+                        <p class="case-desc">有棵树科技采购我司AI合规雷达工具，覆盖东南亚、欧美地区TikTok店铺，有效降低合规封店风险80%。</p>
+                        <div class="case-metrics">
+                            <div class="metric-item">
+                                <span class="metric-value">80%</span>
+                                <span class="metric-label">封店风险降低</span>
+                            </div>
+                            <div class="metric-item">
+                                <span class="metric-value">10+</span>
+                                <span class="metric-label">覆盖店铺数</span>
+                            </div>
+                        </div>
+                        <a href="javascript:void(0)" class="case-detail-btn" data-case="1">查看详情</a>
+                    </div>
+                </div>
+    
+                <!-- 案例2：深圳XX跨境电商公司 -->
+                <div class="case-card" data-category="training">
+                    <img src="images/cases/miteou.jpg" alt="TK跨境电商培训" class="case-img">
+                    <div class="case-content">
+                        <span class="case-tag">TK跨境电商课</span>
+                        <h3 class="case-title">深圳米特欧科技- TK运营培训</h3>
+                        <p class="case-desc">该公司团队参加TK跨境电商实战课程后，3个月内TikTok店铺月销从0突破50万，ROI达1:8。</p>
+                        <div class="case-metrics">
+                            <div class="metric-item">
+                                <span class="metric-value">50万+</span>
+                                <span class="metric-label">月销售额</span>
+                            </div>
+                            <div class="metric-item">
+                                <span class="metric-value">1:8</span>
+                                <span class="metric-label">投入产出比</span>
+                            </div>
+                        </div>
+                        <a href="javascript:void(0)" class="case-detail-btn" data-case="2">查看详情</a>
+                    </div>
+                </div>
+    
+                <!-- 案例3：广州XX贸易公司 -->
+                <div class="case-card" data-category="training">
+                    <img src="images/cases/deyin.jpg" alt="亚马逊运营培训" class="case-img">
+                    <div class="case-content">
+                        <span class="case-tag">亚马逊运营课</span>
+                        <h3 class="case-title">深圳市德因科技 - 亚马逊运营培训</h3>
+                        <p class="case-desc">学员参加亚马逊运营课程后，优化Listing和广告策略，店铺订单量提升120%，广告成本降低30%。</p>
+                        <div class="case-metrics">
+                            <div class="metric-item">
+                                <span class="metric-value">120%</span>
+                                <span class="metric-label">订单量提升</span>
+                            </div>
+                            <div class="metric-item">
+                                <span class="metric-value">30%</span>
+                                <span class="metric-label">广告成本降低</span>
+                            </div>
+                        </div>
+                        <a href="javascript:void(0)" class="case-detail-btn" data-case="3">查看详情</a>
+                    </div>
+                </div>
+    
+                <!-- 案例4：东莞XX工厂 -->
+                <div class="case-card" data-category="training">
+                    <img src="images/cases/taimeiyuan.jpg" alt="直播运营培训" class="case-img">
+                    <div class="case-content">
+                        <span class="case-tag">直播运营课</span>
+                        <h3 class="case-title">东莞市泰美源发科技 - TikTok直播培训</h3>
+                        <p class="case-desc">工厂团队参加直播运营课程后，搭建TikTok直播体系，单场直播GMV突破10万，直播间转化率提升至8%。</p>
+                        <div class="case-metrics">
+                            <div class="metric-item">
+                                <span class="metric-value">10万+</span>
+                                <span class="metric-label">单场GMV</span>
+                            </div>
+                            <div class="metric-item">
+                                <span class="metric-value">8%</span>
+                                <span class="metric-label">直播间转化率</span>
+                            </div>
+                        </div>
+                        <a href="javascript:void(0)" class="case-detail-btn" data-case="4">查看详情</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- 案例详情模态框 -->
+    <div class="modal" id="caseModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-header">
+                <h3 id="modalTitle">案例标题</h3>
+                <span class="case-tag" id="modalTag">标签</span>
+            </div>
+            <div class="modal-body" id="modalBody">
+                <!-- 动态加载案例详情 -->
+            </div>
+        </div>
+    </div>
+    
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>关于我们</h4>
+                    <p>聚焦TikTok跨境电商，提供AI SaaS工具+实战培训全链路服务，助力全球商家高效出海。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>联系方式</h4>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>13715191472（微信同号）</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>深圳市龙岗区坂田街道发达路6号云里智能大厦</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>社交媒体</h4>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                        <a href="#"><i class="fab fa-weixin"></i></a>
+                        <a href="#"><i class="fab fa-weibo"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>©2025 深圳市拉克力国际贸易有限公司 版权所有 | <a href="#">隐私政策</a></p>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // 案例筛选功能
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const caseCards = document.querySelectorAll('.case-card');
+        
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // 切换active状态
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                
+                const filter = btn.getAttribute('data-filter');
+                
+                // 筛选案例
+                caseCards.forEach(card => {
+                    if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    
+        // 案例详情模态框
+        const modal = document.getElementById('caseModal');
+        const closeModal = document.querySelector('.close-modal');
+        const detailBtns = document.querySelectorAll('.case-detail-btn');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalTag = document.getElementById('modalTag');
+        const modalBody = document.getElementById('modalBody');
+    
+        // 案例详情数据
+        const caseDetails = {
+            1: {
+                title: '有棵树科技 - AI合规雷达采购',
+                tag: 'AI合规雷达',
+                content: `
+                    <img src="images/cases/youkeshu.jpg" alt="有棵树科技">
+                    <p>有棵树科技是国内知名的跨境电商企业，在TikTok全球开店布局中面临合规风控难题，多个店铺因合规问题面临封店风险。</p>
+                    <p>2024年，有棵树科技采购我司跨境AI合规雷达工具，覆盖其东南亚（马来西亚、印尼）、欧美（美国、英国）等10+TikTok店铺，工具实时监测店铺合规风险点，提前预警并给出优化建议。</p>
+                    <p>使用效果：3个月内，店铺违规预警率100%，封店风险降低80%，合规运营效率提升60%，保障了其TikTok业务的稳定运营。</p>
+                `
+            },
+            2: {
+                title: '深圳米特欧科技公司 - TK运营培训',
+                tag: 'TK跨境电商课',
+                content: `
+                    <img src="images/cases/miteou.jpg" alt="TK跨境电商培训">
+                    <p>深圳市米特欧科技公司是传统外贸企业转型跨境电商，缺乏TikTok运营经验，团队对TikTok平台规则、选品、流量获取等核心环节认知不足。</p>
+                    <p>2024年Q2，该公司10人团队参加我司TK跨境电商实战课程，课程覆盖店铺注册、选品策略、视频制作、流量投放、转化优化等全流程，讲师手把手指导实操。</p>
+                    <p>学习成果：3个月内，从0搭建TikTok店铺运营体系，月销售额突破50万元，广告投入产出比达1:8，成功实现传统外贸向TikTok跨境电商的转型。</p>
+                `
+            },
+            3: {
+                title: '深圳市德因科技公司 - 亚马逊运营培训',
+                tag: '亚马逊运营课',
+                content: `
+                    <img src="images/cases/deyin.jpg" alt="亚马逊运营培训">
+                    <p>深圳市德因科技公司亚马逊店铺运营多年，但订单量增长缓慢，广告成本高，Listing优化不到位，整体盈利水平低。</p>
+                    <p>2023年，该公司运营负责人参加我司亚马逊运营实战课程，系统学习Listing优化、FBA发货管理、广告投放策略、合规运营等核心内容。</p>
+                    <p>优化效果：课程结束后1个月，优化Listing后自然流量提升70%，调整广告策略后广告成本降低30%，整体订单量提升120%，店铺盈利水平翻倍。</p>
+                `
+            },
+            4: {
+                title: '东莞泰美源发科技公司 - TikTok直播培训',
+                tag: '直播运营课',
+                content: `
+                    <img src="images/cases/taimeiyuan.jpg" alt="直播运营培训">
+                    <p>东莞市泰美源发科技公司是3C产品生产厂家，拥有自有品牌，但TikTok直播运营能力薄弱，直播间流量少、转化低，无法有效承接流量。</p>
+                    <p>2024年，工厂直播团队5人参加我司TikTok直播运营课程，学习直播间搭建、选品策略、脚本设计、流量投放、互动转化等核心技能。</p>
+                    <p>直播效果：搭建标准化直播流程，单场直播GMV突破10万元，直播间转化率从2%提升至8%，月直播销售额稳定在80万元以上。</p>
+                `
+            }
+        };
+    
+        // 打开模态框
+        detailBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const caseId = btn.getAttribute('data-case');
+                const caseData = caseDetails[caseId];
+                
+                modalTitle.textContent = caseData.title;
+                modalTag.textContent = caseData.tag;
+                modalBody.innerHTML = caseData.content;
+                
+                modal.style.display = 'block';
+                document.body.style.overflow = 'hidden'; // 禁止页面滚动
+            });
+        });
+    
+        // 关闭模态框
+        closeModal.addEventListener('click', () => {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto'; // 恢复页面滚动
+        });
+    
+        // 点击模态框外部关闭
+        window.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        });
+    </script>
+</body>
+</html>

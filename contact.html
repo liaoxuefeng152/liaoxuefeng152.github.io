@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>联系我们 - TikTok跨境电商AI工具+实战培训</title>
+    <meta name="keywords" content="TikTok跨境电商咨询,AI合规雷达咨询,跨境电商培训咨询,联系方式">
+    <meta name="description" content="拉克力跨境联系方式：13715191472（微信同号），地址：深圳市XX区XX路XX号XX大厦，欢迎咨询AI工具/培训课程！">
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: '思源黑体', Arial, sans-serif;
+        }
+        :root {
+            --primary: #FF7F24;
+            --secondary: #1E40AF;
+            --gray: #F5F5F5;
+            --text-dark: #333;
+            --text-light: #666;
+        }
+        body {
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        /* 导航栏 */
+        .header {
+            position: sticky;
+            top: 0;
+            background: #fff;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            z-index: 999;
+        }
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .logo i {
+            font-size: 24px;
+        }
+        .nav-menu {
+            display: flex;
+            gap: 30px;
+        }
+        .nav-menu a {
+            font-size: 16px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        .nav-menu a:hover, .nav-menu a.active {
+            color: var(--primary);
+        }
+        .consult-btn {
+            background: var(--primary);
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: background 0.3s;
+        }
+        .consult-btn:hover {
+            background: #E67018;
+        }
+        .hamburger {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        /* 面包屑 */
+        .breadcrumb {
+            padding: 20px 0;
+            background: var(--gray);
+            font-size: 14px;
+        }
+        .breadcrumb a {
+            color: var(--secondary);
+        }
+        .breadcrumb span {
+            margin: 0 8px;
+            color: var(--text-light);
+        }
+        /* 联系我们主内容 */
+        .contact {
+            padding: 60px 0;
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 40px;
+        }
+        /* 联系信息 */
+        .contact-info {
+            background: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .contact-info h2 {
+            font-size: 28px;
+            color: var(--primary);
+            margin-bottom: 30px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        .contact-info h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: var(--primary);
+        }
+        .info-list {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+        .info-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+        .info-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 127, 36, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            font-size: 18px;
+            flex-shrink: 0;
+        }
+        .info-content h4 {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+        .info-content p {
+            color: var(--text-light);
+            font-size: 16px;
+        }
+        .info-content a {
+            color: var(--secondary);
+            transition: color 0.3s;
+        }
+        .info-content a:hover {
+            color: var(--primary);
+        }
+        .contact-social {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .contact-social a {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--gray);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-dark);
+            transition: all 0.3s;
+        }
+        .contact-social a:hover {
+            background: var(--primary);
+            color: #fff;
+            transform: translateY(-3px);
+        }
+        /* 联系表单 */
+        .contact-form {
+            background: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .contact-form h2 {
+            font-size: 28px;
+            color: var(--primary);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--text-dark);
+        }
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+        .form-select {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+            color: var(--text-dark);
+            transition: border-color 0.3s;
+        }
+        .form-select:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+        .submit-btn {
+            width: 100%;
+            padding: 14px;
+            background: var(--primary);
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            font-size: 18px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .submit-btn:hover {
+            background: #E67018;
+        }
+        /* 地图 */
+        .map {
+            margin-top: 40px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .map iframe {
+            width: 100%;
+            height: 300px;
+            border: none;
+        }
+        /* 成功提示 */
+        .success-message {
+            display: none;
+            padding: 15px;
+            background: #d4edda;
+            color: #155724;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        /* 页脚 */
+        .footer {
+            background: #333;
+            color: #fff;
+            padding: 60px 0 20px;
+        }
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        .footer-col h4 {
+            font-size: 18px;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        .footer-col h4::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background: var(--primary);
+        }
+        .footer-col p {
+            color: #ccc;
+            font-size: 14px;
+            line-height: 1.8;
+        }
+        .footer-col .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .footer-col .contact-info li {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .footer-col .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .footer-col .social-icons a {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.3s;
+        }
+        .footer-col .social-icons a:hover {
+            background: var(--primary);
+        }
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #444;
+            font-size: 14px;
+            color: #ccc;
+        }
+        /* 响应式 */
+        @media (max-width: 768px) {
+            .nav-menu, .consult-btn {
+                display: none;
+            }
+            .hamburger {
+                display: block;
+            }
+            .contact {
+                grid-template-columns: 1fr;
+            }
+            .contact-info, .contact-form {
+                padding: 25px;
+            }
+            .contact-info h2, .contact-form h2 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="index.html" class="logo">
+                    <i class="fab fa-tiktok"></i>
+                    拉克力跨境
+                </a>
+                <div class="nav-menu">
+                    <a href="index.html">首页</a>
+                    <a href="about.html">关于我们</a>
+                    <a href="courses.html">产品/服务</a>
+                    <a href="cases.html">成功案例</a>
+                    <a href="contact.html" class="active">联系我们</a>
+                </div>
+                <a href="contact.html" class="consult-btn">
+                    <i class="fas fa-comments"></i>
+                    立即咨询
+                </a>
+                <div class="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 面包屑 -->
+    <section class="breadcrumb">
+        <div class="container">
+            <a href="index.html">首页</a>
+            <span>></span>
+            <span>联系我们</span>
+        </div>
+    </section>
+    
+    <!-- 联系我们主内容 -->
+    <section class="contact">
+        <div class="container">
+            <!-- 联系信息 -->
+            <div class="contact-info">
+                <h2>联系方式</h2>
+                
+                <div class="info-list">
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>电话/微信</h4>
+                            <p><a href="tel:13715191472">13715191472</a>（微信同号）</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>公司地址</h4>
+                            <p>深圳市龙岗区坂田街道发达路6号云里智能大厦</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>工作时间</h4>
+                            <p>周一至周五 9:00-18:00（节假日除外）</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>邮箱</h4>
+                            <p><a href="mailto:contact@lakeli.com">contact@lakeli.com</a></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-social">
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                    <a href="#"><i class="fab fa-weixin"></i></a>
+                    <a href="#"><i class="fab fa-weibo"></i></a>
+                    <a href="#"><i class="fab fa-qq"></i></a>
+                </div>
+                
+                <!-- 地图 -->
+                <div class="map">
+                    <iframe 
+    			src="https://j.map.baidu.com/5a/wbVk" 
+   			width="100%" 
+   			height="300" 
+    			frameborder="0" 
+    			allowfullscreen="true" 
+    			loading="lazy">
+		   </iframe>
+
+                </div>
+            </div>
+
+    
+            <!-- 联系表单 -->
+            <div class="contact-form">
+                <div class="success-message" id="successMessage">
+                    提交成功！我们会尽快与你联系，感谢你的咨询。
+                </div>
+                
+                <h2>立即咨询</h2>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">姓名 <span style="color: red;">*</span></label>
+                        <input type="text" id="name" class="form-control" placeholder="请输入你的姓名" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">电话 <span style="color: red;">*</span></label>
+                        <input type="tel" id="phone" class="form-control" placeholder="请输入你的手机号码" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="consultType">咨询类型 <span style="color: red;">*</span></label>
+                        <select id="consultType" class="form-select" required>
+                            <option value="">请选择咨询类型</option>
+                            <option value="ai-tool">AI合规雷达工具</option>
+                            <option value="tk-course">TK跨境电商课</option>
+                            <option value="live-course">直播运营课</option>
+                            <option value="amazon-course">亚马逊运营课</option>
+                            <option value="other">其他咨询</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">咨询内容</label>
+                        <textarea id="message" class="form-control" placeholder="请详细描述你的咨询需求（选填）"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">提交咨询</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>关于我们</h4>
+                    <p>聚焦TikTok跨境电商，提供AI SaaS工具+实战培训全链路服务，助力全球商家高效出海。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>联系方式</h4>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>13715191472（微信同号）</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>深圳市龙岗区坂田街道发达路6号云里智能大厦</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>社交媒体</h4>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                        <a href="#"><i class="fab fa-weixin"></i></a>
+                        <a href="#"><i class="fab fa-weibo"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>©2025 深圳市拉克力国际贸易有限公司 版权所有 | <a href="#">隐私政策</a></p>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // 表单提交处理
+        const contactForm = document.getElementById('contactForm');
+        const successMessage = document.getElementById('successMessage');
+        
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault(); // 阻止默认提交
+            
+            // 获取表单数据（实际项目中可对接后端接口）
+            const formData = {
+                name: document.getElementById('name').value,
+                phone: document.getElementById('phone').value,
+                consultType: document.getElementById('consultType').value,
+                message: document.getElementById('message').value
+            };
+            
+            // 模拟提交成功
+            console.log('表单数据：', formData);
+            contactForm.reset(); // 重置表单
+            successMessage.style.display = 'block'; // 显示成功提示
+            
+            // 3秒后隐藏成功提示
+            setTimeout(() => {
+                successMessage.style.display = 'none';
+            }, 3000);
+        });
+    </script>
+</body>
+</html>
