@@ -658,5 +658,20 @@
             });
         });
     </script>
+    <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('.nav-menu');
+    const consultBtn = document.querySelector('.consult-btn');
+    
+    if (hamburger && navMenu && consultBtn) {
+      hamburger.addEventListener('click', function() {
+        const isNavVisible = getComputedStyle(navMenu).display === 'flex';
+        navMenu.style.display = isNavVisible ? 'none' : 'flex';
+        consultBtn.style.display = isNavVisible ? 'none' : 'block';
+      });
+    }
+  });
+</script>
 </body>
 </html>
