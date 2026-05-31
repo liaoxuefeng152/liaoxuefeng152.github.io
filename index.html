@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TikTok跨境电商全链路服务 - 深圳市拉克力国际贸易有限公司</title>
-    <meta name="keywords" content="TikTok跨境电商,AI合规雷达,跨境电商培训,亚马逊运营培训">
-    <meta name="description" content="8年TikTok跨境电商实战经验，提供AI合规雷达工具+实战培训课程，降风险提业绩，助力1000+学员出海成功！">
+    <meta name="keywords" content="TikTok跨境电商,AI合规雷达,跨境电商培训,亚马逊运营培训,龙掌柜智能运营系统">
+    <meta name="description" content="8年TikTok跨境电商实战经验，提供AI合规雷达工具+龙掌柜智能运营系统+实战培训课程，降风险提业绩，助力1000+学员出海成功！">
     <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
@@ -62,6 +62,7 @@
         .nav-menu {
             display: flex;
             gap: 30px;
+            align-items: center;
         }
         .nav-menu a {
             font-size: 16px;
@@ -70,6 +71,24 @@
         }
         .nav-menu a:hover {
             color: var(--primary);
+        }
+        .nav-menu .longzg-link {
+            color: var(--primary);
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+        .nav-menu .longzg-link:hover {
+            color: #E67018;
+        }
+        .nav-menu .longzg-link .badge {
+            background: var(--primary);
+            color: #fff;
+            font-size: 10px;
+            padding: 1px 6px;
+            border-radius: 10px;
+            font-weight: 500;
         }
         .consult-btn {
             background: var(--primary);
@@ -174,7 +193,7 @@
         }
         .business-cards {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 30px;
         }
         .business-card {
@@ -201,6 +220,42 @@
             color: var(--text-light);
             font-size: 16px;
         }
+        .business-card.longzg-card {
+            background: var(--gray);
+            border: 2px solid var(--primary);
+            position: relative;
+        }
+        .business-card.longzg-card i {
+            color: var(--primary);
+        }
+        .business-card.longzg-card h3 {
+            color: var(--text-dark);
+        }
+        .business-card.longzg-card .card-tag {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            background: var(--primary);
+            color: #fff;
+            font-size: 11px;
+            padding: 2px 10px;
+            border-radius: 12px;
+            font-weight: 500;
+        }
+        .business-card.longzg-card .card-btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 8px 24px;
+            background: var(--primary);
+            color: #fff;
+            border-radius: 4px;
+            font-size: 14px;
+            transition: background 0.3s;
+        }
+        .business-card.longzg-card .card-btn:hover {
+            background: #E67018;
+        }
+
         /* 优势亮点板块 */
         .advantages {
             padding: 80px 0;
@@ -445,6 +500,9 @@
                     <a href="index.html">首页</a>
                     <a href="about.html">关于我们</a>
                     <a href="courses.html">产品/服务</a>
+                    <a href="courses.html" class="longzg-link">
+                        <i class="fas fa-robot"></i> 龙掌柜系统 <span class="badge">NEW</span>
+                    </a>
                     <a href="cases.html">成功案例</a>
                     <a href="contact.html">联系我们</a>
                 </div>
@@ -458,7 +516,6 @@
             </nav>
         </div>
     </header>
-
     <!-- Banner区 -->
     <section class="banner">
         <div class="container">
@@ -466,8 +523,10 @@
                 <h1>TikTok跨境电商全链路服务，让出海更高效</h1>
                 <p>8年实战经验 · AI SaaS工具 · 1000+培训学员 · 降风险提业绩</p>
                 <div class="banner-btns">
-                    <button class="banner-btn btn-primary">了解AI工具</button>
-                    <button class="banner-btn btn-outline">咨询培训课程</button>
+                    <a href="https://lakeli.coze.site/landing" target="_blank" class="banner-btn btn-primary">
+                        <i class="fas fa-robot"></i> 体验龙掌柜
+                    </a>
+                    <a href="contact.html" class="banner-btn btn-outline">咨询培训课程</a>
                 </div>
             </div>
         </div>
@@ -478,8 +537,18 @@
         <div class="container">
             <h2 class="section-title">我们的核心业务</h2>
             <div class="business-cards">
+                <div class="business-card longzg-card">
+                    <span class="card-tag">新品</span>
+                    <i class="fas fa-robot"></i>
+                    <h3>龙掌柜智能运营系统</h3>
+                    <p>7大AI智能体+轻量ERP，从选品到售后全链路AI驱动</p>
+                    <div style="display:flex;gap:10px;justify-content:center;margin-top:15px">
+                        <a href="https://lakeli.coze.site/landing" target="_blank" class="card-btn">免费体验 <i class="fas fa-external-link-alt"></i></a>
+                        <a href="courses.html" class="card-btn" style="background:transparent;color:var(--primary);border:1px solid var(--primary)">了解更多 <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
                 <div class="business-card">
-                    <i class="fas fa-radar"></i>
+                    <i class="fas fa-shield-alt"></i>
                     <h3>跨境AI合规雷达</h3>
                     <p>解决TikTok店铺合规问题，降低封店风险</p>
                 </div>
@@ -491,6 +560,8 @@
             </div>
         </div>
     </section>
+
+
     
     <!-- 优势亮点板块 -->
     <section class="advantages">
@@ -501,12 +572,12 @@
                     <div class="desc">年跨境电商行业经验</div>
                 </div>
                 <div class="advantage-item">
-                    <div class="number">1000+</div>
-                    <div class="desc">培训学员</div>
+                    <div class="number">7</div>
+                    <div class="desc">大AI智能体全链路覆盖</div>
                 </div>
                 <div class="advantage-item">
-                    <div class="number">100万+</div>
-                    <div class="desc">2023年营收突破</div>
+                    <div class="number">1000+</div>
+                    <div class="desc">培训学员</div>
                 </div>
                 <div class="advantage-item">
                     <div class="number">98%</div>
@@ -543,7 +614,7 @@
             <h2 class="section-title" style="color: #fff;">客户评价</h2>
             <div class="review-slider">
                 <div class="review-item">
-                    <p>“AI合规雷达帮我们规避了封店风险，培训课程落地性极强，真正解决了TikTok运营中的核心痛点！”</p>
+                    <p>"AI合规雷达帮我们规避了封店风险，培训课程落地性极强，真正解决了TikTok运营中的核心痛点！"</p>
                     <div class="reviewer">
                         <img src="images/banner/zhangxiansheng.jpg" alt="客户头像">
                         <div class="reviewer-info">
