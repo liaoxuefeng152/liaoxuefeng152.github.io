@@ -1,616 +1,198 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8"><meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"><meta http-equiv="Pragma" content="no-cache"><meta http-equiv="Expires" content="0">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>联系我们 - TikTok跨境电商AI工具+实战培训</title>
-    <meta name="keywords" content="TikTok跨境电商咨询,AI合规雷达咨询,跨境电商培训咨询,联系方式">
-    <meta name="description" content="拉克力跨境联系方式：13715191472（微信同号），地址：深圳市XX区XX路XX号XX大厦，欢迎咨询AI工具/培训课程！">
-    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>联系我们 - 拉克力跨境</title>
+    <meta name="keywords" content="联系拉克力跨境,跨境电商咨询,TikTok培训咨询,AI工具咨询">
+    <meta name="description" content="联系我们获取TikTok跨境电商全链路服务咨询，包括AI工具、培训课程、运营服务等。">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@300;400;500;700;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: '思源黑体', Arial, sans-serif;
-        }
-        :root {
-            --primary: #FF7F24;
-            --secondary: #1E40AF;
-            --gray: #F5F5F5;
-            --text-dark: #333;
-            --text-light: #666;
-        }
-        body {
-            color: var(--text-dark);
-            line-height: 1.6;
-        }
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        /* 导航栏 */
-        .header {
-            position: sticky;
-            top: 0;
-            background: #fff;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            z-index: 999;
-        }
-        .nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            height: 80px;
-        }
-        .logo {
-            font-size: 22px;
-            font-weight: bold;
-            color: var(--primary);
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        .logo i {
-            font-size: 24px;
-        }
-        .nav-menu {
-            display: flex;
-            gap: 30px;
-        }
-        .nav-menu a {
-            font-size: 16px;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-        .nav-menu a:hover, .nav-menu a.active {
-            color: var(--primary);
-        }
-        .consult-btn {
-            background: var(--primary);
-            color: #fff;
-            padding: 10px 20px;
-            border-radius: 4px;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            transition: background 0.3s;
-        }
-        .consult-btn:hover {
-            background: #E67018;
-        }
-        .hamburger {
-            display: none;
-            font-size: 24px;
-            cursor: pointer;
-        }
-        /* 面包屑 */
-        .breadcrumb {
-            padding: 20px 0;
-            background: var(--gray);
-            font-size: 14px;
-        }
-        .breadcrumb a {
-            color: var(--secondary);
-        }
-        .breadcrumb span {
-            margin: 0 8px;
-            color: var(--text-light);
-        }
-        /* 联系我们主内容 */
-        .contact {
-            padding: 60px 0;
-            display: grid;
-            grid-template-columns: 1fr 1.5fr;
-            gap: 40px;
-        }
-        /* 联系信息 */
-        .contact-info {
-            background: #fff;
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-        }
-        .contact-info h2 {
-            font-size: 28px;
-            color: var(--primary);
-            margin-bottom: 30px;
-            position: relative;
-            padding-bottom: 15px;
-        }
-        .contact-info h2::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 60px;
-            height: 3px;
-            background: var(--primary);
-        }
-        .info-list {
-            display: flex;
-            flex-direction: column;
-            gap: 25px;
-            margin-bottom: 30px;
-        }
-        .info-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 15px;
-        }
-        .info-icon {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background: rgba(255, 127, 36, 0.1);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--primary);
-            font-size: 18px;
-            flex-shrink: 0;
-        }
-        .info-content h4 {
-            font-size: 18px;
-            margin-bottom: 5px;
-        }
-        .info-content p {
-            color: var(--text-light);
-            font-size: 16px;
-        }
-        .info-content a {
-            color: var(--secondary);
-            transition: color 0.3s;
-        }
-        .info-content a:hover {
-            color: var(--primary);
-        }
-        .contact-social {
-            display: flex;
-            gap: 15px;
-            margin-top: 20px;
-        }
-        .contact-social a {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background: var(--gray);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--text-dark);
-            transition: all 0.3s;
-        }
-        .contact-social a:hover {
-            background: var(--primary);
-            color: #fff;
-            transform: translateY(-3px);
-        }
-        /* 联系表单 */
-        .contact-form {
-            background: #fff;
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-        }
-        .contact-form h2 {
-            font-size: 28px;
-            color: var(--primary);
-            margin-bottom: 30px;
-            text-align: center;
-        }
-        .form-group {
-            margin-bottom: 20px;
-        }
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 500;
-            color: var(--text-dark);
-        }
-        .form-control {
-            width: 100%;
-            padding: 12px 15px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            font-size: 16px;
-            transition: border-color 0.3s;
-        }
-        .form-control:focus {
-            outline: none;
-            border-color: var(--primary);
-        }
-        textarea.form-control {
-            min-height: 150px;
-            resize: vertical;
-        }
-        .form-select {
-            width: 100%;
-            padding: 12px 15px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            font-size: 16px;
-            color: var(--text-dark);
-            transition: border-color 0.3s;
-        }
-        .form-select:focus {
-            outline: none;
-            border-color: var(--primary);
-        }
-        .submit-btn {
-            width: 100%;
-            padding: 14px;
-            background: var(--primary);
-            color: #fff;
-            border: none;
-            border-radius: 4px;
-            font-size: 18px;
-            font-weight: 500;
-            cursor: pointer;
-            transition: background 0.3s;
-        }
-        .submit-btn:hover {
-            background: #E67018;
-        }
-        /* 地图 */
-        .map {
-            margin-top: 40px;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-        }
-        .map iframe {
-            width: 100%;
-            height: 300px;
-            border: none;
-        }
-        /* 成功提示 */
-        .success-message {
-            display: none;
-            padding: 15px;
-            background: #d4edda;
-            color: #155724;
-            border-radius: 4px;
-            margin-bottom: 20px;
-            text-align: center;
-        }
-        /* 页脚 */
-        .footer {
-            background: #333;
-            color: #fff;
-            padding: 60px 0 20px;
-        }
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            margin-bottom: 40px;
-        }
-        .footer-col h4 {
-            font-size: 18px;
-            margin-bottom: 20px;
-            position: relative;
-            padding-bottom: 10px;
-        }
-        .footer-col h4::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 50px;
-            height: 2px;
-            background: var(--primary);
-        }
-        .footer-col p {
-            color: #ccc;
-            font-size: 14px;
-            line-height: 1.8;
-        }
-        .footer-col .contact-info {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-        .footer-col .contact-info li {
-            list-style: none;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        .footer-col .social-icons {
-            display: flex;
-            gap: 15px;
-            margin-top: 20px;
-        }
-        .footer-col .social-icons a {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background: rgba(255,255,255,0.1);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: background 0.3s;
-        }
-        .footer-col .social-icons a:hover {
-            background: var(--primary);
-        }
-        .footer-bottom {
-            text-align: center;
-            padding-top: 20px;
-            border-top: 1px solid #444;
-            font-size: 14px;
-            color: #ccc;
-        }
-        /* 响应式 */
-        @media (max-width: 768px) {
-            .nav-menu, .consult-btn {
-                display: none;
-            }
-            .hamburger {
-                display: block;
-            }
-            .contact {
-                grid-template-columns: 1fr;
-            }
-            .contact-info, .contact-form {
-                padding: 25px;
-            }
-            .contact-info h2, .contact-form h2 {
-                font-size: 24px;
-            }
-        }
+        *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+        :root{--bg-primary:#0A0E27;--bg-secondary:#0F1535;--bg-card:rgba(15,21,53,0.6);--bg-card-hover:rgba(20,28,65,0.8);--border:rgba(99,102,241,0.15);--border-glow:rgba(99,102,241,0.4);--accent-1:#6366F1;--accent-2:#8B5CF6;--accent-3:#06B6D4;--text-primary:#F1F5F9;--text-secondary:#94A3B8;--text-muted:#64748B;--radius-sm:8px;--radius-md:12px;--radius-lg:16px;--radius-xl:24px;--transition:0.3s cubic-bezier(0.4,0,0.2,1)}
+        html{scroll-behavior:smooth}
+        body{font-family:'Inter','Noto Sans SC',sans-serif;color:var(--text-primary);line-height:1.7;background:var(--bg-primary);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+        a{text-decoration:none;color:inherit}
+        .container{max-width:1280px;margin:0 auto;padding:0 24px;position:relative;z-index:2}
+        #particleCanvas{position:fixed;top:0;left:0;width:100%;height:100%;z-index:0;pointer-events:none}
+        .grid-bg{position:fixed;top:0;left:0;width:100%;height:100%;z-index:0;pointer-events:none;background-image:linear-gradient(rgba(99,102,241,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(99,102,241,0.03) 1px,transparent 1px);background-size:60px 60px;mask-image:radial-gradient(ellipse 80% 60% at 50% 0%,black 30%,transparent 70%);-webkit-mask-image:radial-gradient(ellipse 80% 60% at 50% 0%,black 30%,transparent 70%)}
+        .glow-orb{position:fixed;border-radius:50%;filter:blur(120px);opacity:0.1;pointer-events:none;z-index:0;animation:orbFloat 20s ease-in-out infinite}
+        .glow-orb.orb-1{width:500px;height:500px;background:var(--accent-1);top:-150px;right:-80px}
+        .glow-orb.orb-2{width:400px;height:400px;background:var(--accent-2);bottom:30%;left:-150px;animation-delay:-7s}
+        @keyframes orbFloat{0%,100%{transform:translate(0,0) scale(1)}25%{transform:translate(40px,-20px) scale(1.1)}50%{transform:translate(-15px,30px) scale(0.9)}75%{transform:translate(-30px,-15px) scale(1.05)}}
+        .header{position:fixed;top:0;left:0;right:0;z-index:1000;padding:16px 0;transition:var(--transition)}
+        .header.scrolled{background:rgba(10,14,39,0.85);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--border);padding:10px 0}
+        .nav{display:flex;align-items:center;justify-content:space-between}
+        .logo{display:flex;align-items:center;gap:10px;font-size:20px;font-weight:800;color:white;letter-spacing:-0.5px}
+        .logo-icon{width:40px;height:40px;background:linear-gradient(135deg,var(--accent-1),var(--accent-2));border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:center;font-size:18px;box-shadow:0 0 20px rgba(99,102,241,0.4)}
+        .nav-menu{display:flex;align-items:center;gap:8px;list-style:none}
+        .nav-menu a{padding:8px 18px;border-radius:100px;font-size:14px;font-weight:500;color:var(--text-secondary);transition:var(--transition)}
+        .nav-menu a:hover,.nav-menu a.active{color:white;background:rgba(99,102,241,0.1)}
+        .nav-badge{display:inline-flex;align-items:center;gap:6px;padding:6px 14px;border-radius:100px;font-size:12px;font-weight:600;background:rgba(99,102,241,0.15);border:1px solid var(--border-glow);color:var(--accent-1);animation:badgePulse 2s ease-in-out infinite}
+        @keyframes badgePulse{0%,100%{box-shadow:0 0 0 0 rgba(99,102,241,0.3)}50%{box-shadow:0 0 0 8px rgba(99,102,241,0)}}
+        .btn{display:inline-flex;align-items:center;gap:8px;padding:12px 28px;border-radius:100px;font-size:15px;font-weight:600;border:none;cursor:pointer;transition:var(--transition);position:relative;overflow:hidden}
+        .btn::after{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.15),transparent);transition:left 0.5s}
+        .btn:hover::after{left:100%}
+        .btn-primary{background:linear-gradient(135deg,var(--accent-1),var(--accent-2));color:white;box-shadow:0 0 30px rgba(99,102,241,0.3)}
+        .btn-primary:hover{transform:translateY(-2px);box-shadow:0 0 40px rgba(99,102,241,0.5)}
+        .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
+        .hamburger span{display:block;width:24px;height:2px;background:white;border-radius:2px;transition:var(--transition)}
+
+        .page-hero{padding:160px 0 100px;text-align:center;position:relative}
+        .page-hero .breadcrumb{display:flex;align-items:center;gap:8px;justify-content:center;margin-bottom:16px;font-size:14px;color:var(--text-muted);position:relative;z-index:1}
+        .page-hero .breadcrumb a:hover{color:var(--accent-1)}
+        .page-hero h1{font-size:clamp(36px,5vw,52px);font-weight:900;letter-spacing:-1px;position:relative;z-index:1;background:linear-gradient(135deg,var(--accent-1),var(--accent-3));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+        .page-hero p{font-size:18px;color:var(--text-secondary);max-width:560px;margin:16px auto 0;position:relative;z-index:1}
+
+        section{padding:80px 0;position:relative}
+        .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px}
+        .contact-info h2{font-size:36px;font-weight:900;letter-spacing:-1px;margin-bottom:16px}
+        .contact-info>p{font-size:17px;color:var(--text-secondary);margin-bottom:40px}
+        .contact-items{display:flex;flex-direction:column;gap:20px;margin-bottom:40px}
+        .contact-item{display:flex;align-items:flex-start;gap:16px;padding:20px;background:var(--bg-card);border-radius:var(--radius-md);border:1px solid var(--border);transition:var(--transition);backdrop-filter:blur(10px)}
+        .contact-item:hover{border-color:var(--border-glow);box-shadow:0 0 20px rgba(99,102,241,0.1)}
+        .ci-icon{width:48px;height:48px;border-radius:var(--radius-sm);background:rgba(99,102,241,0.15);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0}
+        .contact-item h4{font-size:16px;font-weight:700;margin-bottom:4px}
+        .contact-item p,.contact-item a{font-size:14px;color:var(--text-muted)}
+        .contact-qr{display:flex;gap:24px;margin-top:32px}
+        .qr-item{text-align:center;padding:20px;background:var(--bg-card);border-radius:var(--radius-md);border:1px solid var(--border);backdrop-filter:blur(10px)}
+        .qr-placeholder{width:100px;height:100px;margin:0 auto 12px;background:rgba(99,102,241,0.1);border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:center;font-size:40px;border:1px solid var(--border)}
+        .qr-item span{font-size:13px;color:var(--text-muted)}
+
+        .contact-form{background:var(--bg-card);border-radius:var(--radius-xl);padding:48px;border:1px solid var(--border);backdrop-filter:blur(10px)}
+        .contact-form h3{font-size:24px;font-weight:800;margin-bottom:8px}
+        .contact-form>p{font-size:14px;color:var(--text-muted);margin-bottom:32px}
+        .form-group{margin-bottom:20px}
+        .form-group label{display:block;font-size:14px;font-weight:600;margin-bottom:8px;color:var(--text-primary)}
+        .form-group input,.form-group select,.form-group textarea{width:100%;padding:12px 16px;border:1px solid var(--border);border-radius:var(--radius-sm);font-size:15px;font-family:inherit;transition:var(--transition);background:rgba(10,14,39,0.6);color:var(--text-primary)}
+        .form-group input:focus,.form-group select:focus,.form-group textarea:focus{outline:none;border-color:var(--accent-1);box-shadow:0 0 0 3px rgba(99,102,241,0.15)}
+        .form-group textarea{resize:vertical;min-height:120px}
+        .form-group select option{background:var(--bg-primary);color:var(--text-primary)}
+
+        .map-section{background:rgba(15,21,53,0.3);border-top:1px solid var(--border)}
+        .section-header{max-width:640px;margin:0 auto 48px;text-align:center}
+        .section-label{display:inline-flex;align-items:center;gap:8px;padding:6px 16px;border-radius:100px;border:1px solid var(--border-glow);font-size:12px;font-weight:600;color:var(--accent-1);text-transform:uppercase;letter-spacing:2px;margin-bottom:16px;background:rgba(99,102,241,0.05)}
+        .section-label::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--accent-3);box-shadow:0 0 8px var(--accent-3)}
+        .section-header h2{font-size:clamp(28px,4vw,42px);font-weight:800;letter-spacing:-0.5px}
+        .map-wrapper{border-radius:var(--radius-xl);overflow:hidden;max-width:900px;margin:0 auto;border:1px solid var(--border)}
+        .map-placeholder{width:100%;height:400px;background:rgba(15,21,53,0.5);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:12px;backdrop-filter:blur(10px)}
+        .map-placeholder .pin{font-size:48px;filter:drop-shadow(0 0 10px rgba(99,102,241,0.5))}
+        .map-placeholder .addr{font-size:16px;color:var(--text-secondary);font-weight:600}
+        .map-placeholder p{font-size:14px;color:var(--text-muted)}
+
+        .footer{padding:80px 0 32px;border-top:1px solid var(--border);background:rgba(15,21,53,0.3)}
+        .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:60px;margin-bottom:60px}
+        .footer-brand p{color:var(--text-muted);font-size:14px;line-height:1.8;margin-top:20px;max-width:320px}
+        .footer-col h4{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:var(--text-secondary);margin-bottom:24px}
+        .footer-links{list-style:none;display:flex;flex-direction:column;gap:12px}
+        .footer-links a{font-size:14px;color:var(--text-muted);transition:var(--transition)}
+        .footer-links a:hover{color:var(--accent-1)}
+        .footer-bottom{border-top:1px solid var(--border);padding-top:32px;display:flex;justify-content:space-between;align-items:center;font-size:13px;color:var(--text-muted)}
+        .footer-social{display:flex;gap:12px}
+        .footer-social a{width:36px;height:36px;border-radius:50%;background:rgba(99,102,241,0.08);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:16px;transition:var(--transition)}
+        .footer-social a:hover{background:var(--accent-1);border-color:var(--accent-1);box-shadow:0 0 16px rgba(99,102,241,0.4)}
+
+        @media(max-width:1024px){.contact-grid{grid-template-columns:1fr;gap:48px}.footer-grid{grid-template-columns:1fr 1fr;gap:40px}}
+        @media(max-width:768px){.nav-menu{display:none}.nav-menu.mobile-open{display:flex;flex-direction:column;position:absolute;top:76px;left:0;right:0;background:rgba(10,14,39,0.95);backdrop-filter:blur(20px);padding:16px;border:1px solid var(--border);border-radius:var(--radius-md);gap:4px}.hamburger{display:flex}.page-hero{padding:120px 0 60px}section{padding:60px 0}.contact-form{padding:32px 24px}.footer-grid{grid-template-columns:1fr;gap:32px}.footer-bottom{flex-direction:column;gap:16px;text-align:center}.contact-qr{flex-direction:column;align-items:center}}
     </style>
 </head>
 <body>
-    <!-- 导航栏 -->
-    <header class="header">
+    <canvas id="particleCanvas"></canvas>
+    <div class="grid-bg"></div>
+    <div class="glow-orb orb-1"></div>
+    <div class="glow-orb orb-2"></div>
+
+    <header class="header" id="header">
         <div class="container">
             <nav class="nav">
-                <a href="index.html" class="logo">
-                    <i class="fab fa-tiktok"></i>
-                    拉克力跨境
-                </a>
-                <div class="nav-menu">
-                    <a href="index.html">首页</a>
-                    <a href="about.html">关于我们</a>
-                    <a href="courses.html">产品/服务</a>
-                    <a href="cases.html">成功案例</a>
-                    <a href="contact.html" class="active">联系我们</a>
-                    <a href="https://lakeli.coze.site/landing" target="_blank" style="color:var(--primary);font-weight:600">
-                        <i class="fas fa-robot"></i> 龙掌柜 <span style="background:var(--primary);color:#fff;font-size:10px;padding:1px 6px;border-radius:10px;font-weight:500">HOT</span>
-                    </a>
-                    <a href="https://508db561-4a2d-41a8-89f5-4c200a009345.dev.coze.site" target="_blank" style="color:#2563EB;font-weight:600">
-                        <i class="fas fa-brain"></i> 域途GEO <span style="background:#2563EB;color:#fff;font-size:10px;padding:1px 6px;border-radius:10px;font-weight:500">NEW</span>
-                    </a>
-                </div>
-                <a href="contact.html" class="consult-btn">
-                    <i class="fas fa-comments"></i>
-                    立即咨询
-                </a>
-                <div class="hamburger">
-                    <i class="fas fa-bars"></i>
-                </div>
+                <a href="index.html" class="logo"><div class="logo-icon">🌐</div>拉克力跨境</a>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="about.html">关于我们</a></li>
+                    <li><a href="courses.html">产品服务</a></li>
+                    <li><a href="cases.html">成功案例</a></li>
+                    <li><a href="contact.html" class="active">联系我们</a></li>
+                    <li><a href="https://lakeli.coze.site/landing" target="_blank" class="nav-badge">🤖 龙掌柜AI</a></li>
+                </ul>
+                <a href="contact.html" class="btn btn-primary">立即咨询</a>
+                <button class="hamburger" id="hamburger" aria-label="菜单"><span></span><span></span><span></span></button>
             </nav>
         </div>
     </header>
 
-    <!-- 面包屑 -->
-    <section class="breadcrumb">
+    <section class="page-hero">
         <div class="container">
-            <a href="index.html">首页</a>
-            <span>></span>
-            <span>联系我们</span>
+            <div class="breadcrumb"><a href="index.html">首页</a> <span style="color:var(--text-muted)">/</span> <span style="color:var(--text-secondary)">联系我们</span></div>
+            <h1>联系我们</h1>
+            <p>有任何问题？我们随时为您解答</p>
         </div>
     </section>
-    
-    <!-- 联系我们主内容 -->
-    <section class="contact">
+
+    <section>
         <div class="container">
-            <!-- 联系信息 -->
-            <div class="contact-info">
-                <h2>联系方式</h2>
-                
-                <div class="info-list">
-                    <div class="info-item">
-                        <div class="info-icon">
-                            <i class="fas fa-phone"></i>
-                        </div>
-                        <div class="info-content">
-                            <h4>电话/微信</h4>
-                            <p><a href="tel:13715191472">13715191472</a>（微信同号）</p>
-                        </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h2>与我们<span class="gradient-text" style="background:linear-gradient(135deg,var(--accent-1),var(--accent-3));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">取得联系</span></h2>
+                    <p>无论是产品咨询、培训报名还是商务合作，我们都期待与您沟通。</p>
+                    <div class="contact-items">
+                        <div class="contact-item"><div class="ci-icon">📞</div><div><h4>联系电话</h4><p>13715191472（微信同号）</p></div></div>
+                        <div class="contact-item"><div class="ci-icon">📍</div><div><h4>公司地址</h4><p>深圳市龙岗区坂田街道发达路6号云里智能大厦</p></div></div>
+                        <div class="contact-item"><div class="ci-icon">📧</div><div><h4>电子邮箱</h4><a href="mailto:contact@lakeli.top" style="color:var(--accent-3)">contact@lakeli.top</a></div></div>
+                        <div class="contact-item"><div class="ci-icon">🕐</div><div><h4>工作时间</h4><p>周一至周五 9:00 - 18:00</p></div></div>
                     </div>
-                    
-                    <div class="info-item">
-                        <div class="info-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div class="info-content">
-                            <h4>公司地址</h4>
-                            <p>深圳市龙岗区坂田街道发达路6号云里智能大厦</p>
-                        </div>
-                    </div>
-                    
-                    <div class="info-item">
-                        <div class="info-icon">
-                            <i class="fas fa-clock"></i>
-                        </div>
-                        <div class="info-content">
-                            <h4>工作时间</h4>
-                            <p>周一至周五 9:00-18:00（节假日除外）</p>
-                        </div>
-                    </div>
-                    
-                    <div class="info-item">
-                        <div class="info-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="info-content">
-                            <h4>邮箱</h4>
-                            <p><a href="mailto:contact@lakeli.com">contact@lakeli.com</a></p>
-                        </div>
+                    <div class="contact-qr">
+                        <div class="qr-item"><div class="qr-placeholder">💬</div><span>微信咨询</span></div>
+                        <div class="qr-item"><div class="qr-placeholder">🤖</div><span>龙掌柜体验</span></div>
                     </div>
                 </div>
-                
-                <div class="contact-social">
-                    <a href="#"><i class="fab fa-tiktok"></i></a>
-                    <a href="#"><i class="fab fa-weixin"></i></a>
-                    <a href="#"><i class="fab fa-weibo"></i></a>
-                    <a href="#"><i class="fab fa-qq"></i></a>
+                <div class="contact-form" id="contactForm">
+                    <h3>发送消息</h3>
+                    <p>填写以下表单，我们将在24小时内与您联系</p>
+                    <form onsubmit="handleSubmit(event)">
+                        <div class="form-group"><label>您的姓名 *</label><input type="text" placeholder="请输入您的姓名" required></div>
+                        <div class="form-group"><label>联系电话 *</label><input type="tel" placeholder="请输入您的手机号码" required></div>
+                        <div class="form-group"><label>咨询类型</label><select><option value="">请选择咨询类型</option><option>TikTok运营培训</option><option>亚马逊运营培训</option><option>龙掌柜智能运营系统</option><option>域途GEO</option><option>AI合规雷达</option><option>商务合作</option><option>其他</option></select></div>
+                        <div class="form-group"><label>留言内容</label><textarea placeholder="请描述您的需求，我们会尽快回复您..."></textarea></div>
+                        <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center">✉️ 发送消息</button>
+                    </form>
                 </div>
-                
-                <!-- 地图 -->
-                <div class="map">
-                    <iframe 
-    			src="https://j.map.baidu.com/5a/wbVk" 
-   			width="100%" 
-   			height="300" 
-    			frameborder="0" 
-    			allowfullscreen="true" 
-    			loading="lazy">
-		   </iframe>
-
-                </div>
-            </div>
-
-    
-            <!-- 联系表单 -->
-            <div class="contact-form">
-                <div class="success-message" id="successMessage">
-                    提交成功！我们会尽快与你联系，感谢你的咨询。
-                </div>
-                
-                <h2>立即咨询</h2>
-                <form id="contactForm">
-                    <div class="form-group">
-                        <label for="name">姓名 <span style="color: red;">*</span></label>
-                        <input type="text" id="name" class="form-control" placeholder="请输入你的姓名" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="phone">电话 <span style="color: red;">*</span></label>
-                        <input type="tel" id="phone" class="form-control" placeholder="请输入你的手机号码" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="consultType">咨询类型 <span style="color: red;">*</span></label>
-                        <select id="consultType" class="form-select" required>
-                            <option value="">请选择咨询类型</option>
-                            <option value="ai-tool">AI合规雷达工具</option>
-                            <option value="tk-course">TK跨境电商课</option>
-                            <option value="live-course">直播运营课</option>
-                            <option value="amazon-course">亚马逊运营课</option>
-                            <option value="other">其他咨询</option>
-                        </select>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="message">咨询内容</label>
-                        <textarea id="message" class="form-control" placeholder="请详细描述你的咨询需求（选填）"></textarea>
-                    </div>
-                    
-                    <button type="submit" class="submit-btn">提交咨询</button>
-                </form>
             </div>
         </div>
     </section>
-    
-    <!-- 页脚 -->
+
+    <section class="map-section">
+        <div class="container">
+            <div class="section-header"><div class="section-label">公司地址</div><h2>欢迎莅临<span class="gradient-text" style="background:linear-gradient(135deg,var(--accent-1),var(--accent-3));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">参观</span></h2></div>
+            <div class="map-wrapper"><div class="map-placeholder"><div class="pin">📍</div><div class="addr">深圳市龙岗区坂田街道发达路6号云里智能大厦</div><p>（可在地图APP搜索"云里智能大厦"导航）</p></div></div>
+        </div>
+    </section>
+
     <footer class="footer">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-col">
-                    <h4>关于我们</h4>
-                    <p>聚焦TikTok跨境电商，提供AI SaaS工具+实战培训全链路服务，助力全球商家高效出海。</p>
-                </div>
-                <div class="footer-col">
-                    <h4>联系方式</h4>
-                    <ul class="contact-info">
-                        <li>
-                            <i class="fas fa-phone"></i>
-                            <span>13715191472（微信同号）</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>深圳市龙岗区坂田街道发达路6号云里智能大厦</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>AI产品</h4>
-                    <ul class="contact-info">
-                        <li>
-                            <i class="fas fa-brain" style="color:#2563EB"></i>
-                            <a href="https://508db561-4a2d-41a8-89f5-4c200a009345.dev.coze.site" target="_blank" style="color:inherit">域途GEO - AI搜索引擎优化</a>
-                        </li>
-                        <li>
-                            <i class="fas fa-robot" style="color:var(--primary)"></i>
-                            <a href="https://lakeli.coze.site/landing" target="_blank" style="color:inherit">龙掌柜 - 智能运营系统</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>社交媒体</h4>
-                    <div class="social-icons">
-                        <a href="#"><i class="fab fa-tiktok"></i></a>
-                        <a href="#"><i class="fab fa-weixin"></i></a>
-                        <a href="#"><i class="fab fa-weibo"></i></a>
-                    </div>
-                </div>
+            <div class="footer-grid">
+                <div class="footer-brand"><a href="index.html" class="logo"><div class="logo-icon">🌐</div>拉克力跨境</a><p>TikTok跨境电商全链路服务商，8年实战经验，AI驱动，助力中国企业成功出海。</p></div>
+                <div class="footer-col"><h4>快速导航</h4><ul class="footer-links"><li><a href="index.html">首页</a></li><li><a href="about.html">关于我们</a></li><li><a href="courses.html">产品服务</a></li><li><a href="cases.html">成功案例</a></li><li><a href="contact.html">联系我们</a></li></ul></div>
+                <div class="footer-col"><h4>AI 产品</h4><ul class="footer-links"><li><a href="https://lakeli.coze.site/landing" target="_blank">🤖 龙掌柜智能运营</a></li><li><a href="https://508db561-4a2d-41a8-89f5-4c200a009345.dev.coze.site" target="_blank">🧠 域途GEO</a></li></ul></div>
+                <div class="footer-col"><h4>联系方式</h4><ul class="footer-links"><li><a>📍 深圳龙岗坂田云里智能大厦</a></li><li><a>📞 13715191472（微信同号）</a></li><li><a>📧 contact@lakeli.top</a></li></ul></div>
             </div>
-            <div class="footer-bottom">
-                <p>©2025 深圳市拉克力国际贸易有限公司 版权所有 | <a href="#">隐私政策</a></p>
-            </div>
+            <div class="footer-bottom"><span>© 2025 深圳市拉克力国际贸易有限公司 版权所有</span><div class="footer-social"><a href="#" aria-label="TikTok">🎵</a><a href="#" aria-label="微信">💬</a><a href="#" aria-label="微博">📱</a></div></div>
         </div>
     </footer>
-    
+
     <script>
-        // 表单提交处理
-        const contactForm = document.getElementById('contactForm');
-        const successMessage = document.getElementById('successMessage');
-        
-        contactForm.addEventListener('submit', (e) => {
-            e.preventDefault(); // 阻止默认提交
-            
-            // 获取表单数据（实际项目中可对接后端接口）
-            const formData = {
-                name: document.getElementById('name').value,
-                phone: document.getElementById('phone').value,
-                consultType: document.getElementById('consultType').value,
-                message: document.getElementById('message').value
-            };
-            
-            // 模拟提交成功
-            console.log('表单数据：', formData);
-            contactForm.reset(); // 重置表单
-            successMessage.style.display = 'block'; // 显示成功提示
-            
-            // 3秒后隐藏成功提示
-            setTimeout(() => {
-                successMessage.style.display = 'none';
-            }, 3000);
-        });
+        const canvas=document.getElementById('particleCanvas'),ctx=canvas.getContext('2d');
+        let ps=[],mouse={x:-1000,y:-1000};
+        function rsz(){canvas.width=window.innerWidth;canvas.height=window.innerHeight}rsz();window.addEventListener('resize',rsz);
+        document.addEventListener('mousemove',e=>{mouse.x=e.clientX;mouse.y=e.clientY});
+        class P{constructor(){this.reset()}reset(){this.x=Math.random()*canvas.width;this.y=Math.random()*canvas.height;this.s=Math.random()*2+0.5;this.sx=(Math.random()-0.5)*0.5;this.sy=(Math.random()-0.5)*0.5;this.o=Math.random()*0.5+0.2;this.h=Math.random()<0.5?240+Math.random()*20:180+Math.random()*20}u(){const dx=mouse.x-this.x,dy=mouse.y-this.y,dist=Math.sqrt(dx*dx+dy*dy);if(dist<150){const f=(150-dist)/150;this.x-=dx*f*0.02;this.y-=dy*f*0.02}this.x+=this.sx;this.y+=this.sy;if(this.x<0)this.x=canvas.width;if(this.x>canvas.width)this.x=0;if(this.y<0)this.y=canvas.height;if(this.y>canvas.height)this.y=0}d(){ctx.beginPath();ctx.arc(this.x,this.y,this.s,0,Math.PI*2);ctx.fillStyle=`hsla(${this.h},80%,65%,${this.o})`;ctx.fill();ctx.beginPath();ctx.arc(this.x,this.y,this.s*2,0,Math.PI*2);ctx.fillStyle=`hsla(${this.h},80%,65%,${this.o*0.15})`;ctx.fill()}}
+        for(let i=0;i<Math.min(60,Math.floor(window.innerWidth/20));i++)ps.push(new P());
+        function dc(){for(let i=0;i<ps.length;i++)for(let j=i+1;j<ps.length;j++){const dx=ps[i].x-ps[j].x,dy=ps[i].y-ps[j].y,dist=Math.sqrt(dx*dx+dy*dy);if(dist<120){const o=(120-dist)/120*0.08;ctx.beginPath();ctx.moveTo(ps[i].x,ps[i].y);ctx.lineTo(ps[j].x,ps[j].y);ctx.strokeStyle=`rgba(99,102,241,${o})`;ctx.lineWidth=0.5;ctx.stroke()}}}
+        function anim(){ctx.clearRect(0,0,canvas.width,canvas.height);ps.forEach(p=>{p.u();p.d()});dc();requestAnimationFrame(anim)}anim();
+        function handleSubmit(e){e.preventDefault();const form=e.target.closest('.contact-form');form.innerHTML='<div style="text-align:center;padding:60px 20px"><div style="font-size:64px;margin-bottom:16px">✅</div><h3 style="font-size:24px;margin-bottom:8px">消息已发送！</h3><p style="color:var(--text-secondary)">感谢您的咨询，我们将在24小时内与您联系。</p></div>'}
+        const header=document.getElementById('header');window.addEventListener('scroll',()=>header.classList.toggle('scrolled',window.scrollY>50));
+        document.getElementById('hamburger').addEventListener('click',()=>document.getElementById('navMenu').classList.toggle('mobile-open'));
     </script>
-	<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const hamburger = document.querySelector('.hamburger');
-    const navMenu = document.querySelector('.nav-menu');
-    const consultBtn = document.querySelector('.consult-btn');
-    
-    if (hamburger && navMenu && consultBtn) {
-      hamburger.addEventListener('click', function() {
-        const isNavVisible = getComputedStyle(navMenu).display === 'flex';
-        navMenu.style.display = isNavVisible ? 'none' : 'flex';
-        consultBtn.style.display = isNavVisible ? 'none' : 'block';
-      });
-    }
-  });
-</script>
 </body>
 </html>

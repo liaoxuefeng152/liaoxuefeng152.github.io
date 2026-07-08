@@ -1,741 +1,1441 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<meta name="bytedance-verification-code" content="5it3kklmybDZUX2Z+wQY" />
+    <meta name="bytedance-verification-code" content="5it3kklmybDZUX2Z+wQY" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TikTok跨境电商全链路服务 - 深圳市拉克力国际贸易有限公司</title>
+    <title>拉克力跨境 - TikTok跨境电商全链路AI服务</title>
     <meta name="keywords" content="TikTok跨境电商,AI合规雷达,跨境电商培训,亚马逊运营培训,龙掌柜智能运营系统">
     <meta name="description" content="8年TikTok跨境电商实战经验，提供AI合规雷达工具+龙掌柜智能运营系统+实战培训课程，降风险提业绩，助力1000+学员出海成功！">
-    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@300;400;500;700;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: '思源黑体', Arial, sans-serif;
-        }
+        /* ========== Reset & Variables ========== */
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
         :root {
-            --primary: #FF7F24; /* 主色橙色 */
-            --secondary: #1E40AF; /* 辅助色深蓝色 */
-            --gray: #F5F5F5; /* 浅灰 */
-            --text-dark: #333;
-            --text-light: #666;
+            --bg-primary: #0A0E27;
+            --bg-secondary: #0F1535;
+            --bg-card: rgba(15, 21, 53, 0.6);
+            --bg-card-hover: rgba(20, 28, 65, 0.8);
+            --border: rgba(99, 102, 241, 0.15);
+            --border-glow: rgba(99, 102, 241, 0.4);
+            --accent-1: #6366F1;
+            --accent-2: #8B5CF6;
+            --accent-3: #06B6D4;
+            --accent-4: #F43F5E;
+            --accent-5: #F59E0B;
+            --glow-1: rgba(99, 102, 241, 0.5);
+            --glow-2: rgba(139, 92, 246, 0.5);
+            --glow-3: rgba(6, 182, 212, 0.5);
+            --text-primary: #F1F5F9;
+            --text-secondary: #94A3B8;
+            --text-muted: #64748B;
+            --white: #FFFFFF;
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 16px;
+            --radius-xl: 24px;
+            --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
+        html { scroll-behavior: smooth; }
         body {
-            color: var(--text-dark);
-            line-height: 1.6;
+            font-family: 'Inter', 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--text-primary);
+            line-height: 1.7;
+            background: var(--bg-primary);
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
         }
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        /* 导航栏 */
-        .header {
-            position: sticky;
-            top: 0;
-            background: #fff;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            z-index: 999;
-        }
-        .nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            height: 80px;
-        }
-        .logo {
-            font-size: 22px;
-            font-weight: bold;
-            color: var(--primary);
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        .logo i {
-            font-size: 24px;
-        }
-        .nav-menu {
-            display: flex;
-            gap: 30px;
-            align-items: center;
-        }
-        .nav-menu a {
-            font-size: 16px;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-        .nav-menu a:hover {
-            color: var(--primary);
-        }
-        .nav-menu .longzg-link {
-            color: var(--primary);
-            font-weight: 600;
-            display: flex;
-            align-items: center;
-            gap: 4px;
-        }
-        .nav-menu .longzg-link:hover {
-            color: #E67018;
-        }
-        .nav-menu .longzg-link .badge {
-            background: var(--primary);
-            color: #fff;
-            font-size: 10px;
-            padding: 1px 6px;
-            border-radius: 10px;
-            font-weight: 500;
-        }
-        .consult-btn {
-            background: var(--primary);
-            color: #fff;
-            padding: 10px 20px;
-            border-radius: 4px;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            transition: background 0.3s;
-        }
-        .consult-btn:hover {
-            background: #E67018;
-        }
-        .hamburger {
-            display: none;
-            font-size: 24px;
-            cursor: pointer;
-        }
-        /* Banner区 */
-        .banner {
-            height: calc(100vh - 80px);
-            min-height: 500px;
-            background: url("images/banner/daping_1920x1080.jpg") no-repeat center/cover;
-            display: flex;
-            align-items: center;
-            color: #fff;
-            position: relative;
-        }
-        .banner::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.5);
-        }
-        .banner-content {
-            position: relative;
-            z-index: 1;
-            max-width: 600px;
-        }
-        .banner h1 {
-            font-size: 40px;
-            line-height: 1.2;
-            margin-bottom: 20px;
-        }
-        .banner p {
-            font-size: 18px;
-            margin-bottom: 30px;
-            color: #eee;
-        }
-        .banner-btns {
-            display: flex;
-            gap: 20px;
-        }
-        .banner-btn {
-            padding: 12px 30px;
-            border-radius: 4px;
-            font-size: 16px;
-            font-weight: 500;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-        .btn-primary {
-            background: var(--primary);
-            border: none;
-            color: #fff;
-        }
-        .btn-primary:hover {
-            background: #E67018;
-        }
-        .btn-outline {
-            background: transparent;
-            border: 2px solid #fff;
-            color: #fff;
-        }
-        .btn-outline:hover {
-            background: rgba(255,255,255,0.2);
-        }
-        /* 核心业务板块 */
-        .core-business {
-            padding: 80px 0;
-            background: #fff;
-        }
-        .section-title {
-            text-align: center;
-            font-size: 32px;
-            margin-bottom: 60px;
-            position: relative;
-        }
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 4px;
-            background: var(--primary);
-        }
-        .business-cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-        }
-        .business-card {
-            padding: 40px 20px;
-            background: var(--gray);
-            border-radius: 8px;
-            text-align: center;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-        .business-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-        }
-        .business-card i {
-            font-size: 40px;
-            color: var(--primary);
-            margin-bottom: 20px;
-        }
-        .business-card h3 {
-            font-size: 22px;
-            margin-bottom: 15px;
-        }
-        .business-card p {
-            color: var(--text-light);
-            font-size: 16px;
-        }
-        .business-card.longzg-card {
-            background: var(--gray);
-            border: 2px solid var(--primary);
-            position: relative;
-        }
-        .business-card.longzg-card i {
-            color: var(--primary);
-        }
-        .business-card.longzg-card h3 {
-            color: var(--text-dark);
-        }
-        .business-card.longzg-card .card-tag {
-            position: absolute;
-            top: 12px;
-            right: 12px;
-            background: var(--primary);
-            color: #fff;
-            font-size: 11px;
-            padding: 2px 10px;
-            border-radius: 12px;
-            font-weight: 500;
-        }
-        .business-card.longzg-card .card-btn {
-            display: inline-block;
-            margin-top: 15px;
-            padding: 8px 24px;
-            background: var(--primary);
-            color: #fff;
-            border-radius: 4px;
-            font-size: 14px;
-            transition: background 0.3s;
-        }
-        .business-card.longzg-card .card-btn:hover {
-            background: #E67018;
+        a { text-decoration: none; color: inherit; }
+        img { max-width: 100%; display: block; }
+        .container { max-width: 1280px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 2; }
+
+        /* ========== Canvas Particle Background ========== */
+        #particleCanvas {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            z-index: 0;
+            pointer-events: none;
         }
 
-        /* 优势亮点板块 */
-        .advantages {
-            padding: 80px 0;
-            background: var(--gray);
+        /* ========== Grid Background ========== */
+        .grid-bg {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            z-index: 0;
+            pointer-events: none;
+            background-image:
+                linear-gradient(rgba(99, 102, 241, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(99, 102, 241, 0.03) 1px, transparent 1px);
+            background-size: 60px 60px;
+            mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, black 30%, transparent 70%);
+            -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, black 30%, transparent 70%);
         }
-        .advantage-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 40px;
-            text-align: center;
-        }
-        .advantage-item {
-            padding: 20px;
-        }
-        .advantage-item .number {
-            font-size: 40px;
-            font-weight: bold;
-            color: var(--primary);
-            margin-bottom: 10px;
-        }
-        .advantage-item .desc {
-            font-size: 16px;
-            color: var(--text-dark);
-        }
-        /* 精选案例板块 */
-        .cases {
-            padding: 80px 0;
-            background: #fff;
-        }
-        .cases-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 40px;
-        }
-        .cases-header h2 {
-            font-size: 32px;
-        }
-        .cases-header a {
-            color: var(--primary);
-            font-size: 16px;
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-        .case-slider {
-            overflow-x: auto;
-            padding-bottom: 20px;
-        }
-        .case-cards {
-            display: flex;
-            gap: 30px;
-            width: max-content;
-        }
-        .case-card {
-            width: 350px;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-        }
-        .case-card img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
-        .case-card .content {
-            padding: 20px;
-        }
-        .case-card h4 {
-            font-size: 18px;
-            margin-bottom: 10px;
-        }
-        .case-card p {
-            color: var(--text-light);
-        }
-        /* 客户评价板块 */
-        .reviews {
-            padding: 80px 0;
-            background: var(--secondary);
-            color: #fff;
-        }
-        .review-slider {
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: center;
-        }
-        .review-item {
-            padding: 20px;
-        }
-        .review-item p {
-            font-size: 18px;
-            font-style: italic;
-            margin-bottom: 30px;
-        }
-        .reviewer {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 15px;
-        }
-        .reviewer img {
-            width: 60px;
-            height: 60px;
+
+        /* ========== Glow Orbs ========== */
+        .glow-orb {
+            position: fixed;
             border-radius: 50%;
-            object-fit: cover;
+            filter: blur(120px);
+            opacity: 0.15;
+            pointer-events: none;
+            z-index: 0;
+            animation: orbFloat 20s ease-in-out infinite;
         }
-        .reviewer-info h5 {
-            font-size: 16px;
-            font-weight: 500;
+        .glow-orb.orb-1 {
+            width: 600px; height: 600px;
+            background: var(--accent-1);
+            top: -200px; right: -100px;
+            animation-delay: 0s;
         }
-        .reviewer-info p {
-            font-size: 14px;
-            color: #ddd;
-            margin: 0;
+        .glow-orb.orb-2 {
+            width: 500px; height: 500px;
+            background: var(--accent-2);
+            bottom: 20%; left: -200px;
+            animation-delay: -7s;
         }
-        /* 联系入口 */
-        .contact-cta {
-            padding: 60px 0;
-            background: linear-gradient(to right, #FF9E6D, var(--primary));
-            text-align: center;
-            color: #fff;
+        .glow-orb.orb-3 {
+            width: 400px; height: 400px;
+            background: var(--accent-3);
+            top: 50%; right: 20%;
+            animation-delay: -14s;
         }
-        .contact-cta h3 {
-            font-size: 28px;
-            margin-bottom: 20px;
+        @keyframes orbFloat {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            25% { transform: translate(50px, -30px) scale(1.1); }
+            50% { transform: translate(-20px, 40px) scale(0.9); }
+            75% { transform: translate(-40px, -20px) scale(1.05); }
         }
-        .contact-cta .btn {
-            padding: 12px 30px;
-            background: #fff;
-            color: var(--primary);
-            border-radius: 4px;
-            font-size: 16px;
-            font-weight: 500;
-            display: inline-block;
-            transition: background 0.3s, color 0.3s;
+
+        /* ========== Navigation ========== */
+        .header {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 1000;
+            padding: 16px 0;
+            transition: var(--transition);
         }
-        .contact-cta .btn:hover {
-            background: #f5f5f5;
-            color: #E67018;
+        .header.scrolled {
+            background: rgba(10, 14, 39, 0.85);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
+            padding: 10px 0;
         }
-        /* 页脚 */
-        .footer {
-            background: #333;
-            color: #fff;
-            padding: 60px 0 20px;
-        }
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            margin-bottom: 40px;
-        }
-        .footer-col h4 {
-            font-size: 18px;
-            margin-bottom: 20px;
-            position: relative;
-            padding-bottom: 10px;
-        }
-        .footer-col h4::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 50px;
-            height: 2px;
-            background: var(--primary);
-        }
-        .footer-col p {
-            color: #ccc;
-            font-size: 14px;
-            line-height: 1.8;
-        }
-        .footer-col .contact-info {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-        .footer-col .contact-info li {
-            list-style: none;
+        .nav { display: flex; align-items: center; justify-content: space-between; }
+        .logo {
             display: flex;
             align-items: center;
             gap: 10px;
+            font-size: 20px;
+            font-weight: 800;
+            color: white;
+            letter-spacing: -0.5px;
         }
-        .footer-col .social-icons {
-            display: flex;
-            gap: 15px;
-            margin-top: 20px;
-        }
-        .footer-col .social-icons a {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background: rgba(255,255,255,0.1);
+        .logo-icon {
+            width: 40px; height: 40px;
+            background: linear-gradient(135deg, var(--accent-1), var(--accent-2));
+            border-radius: var(--radius-sm);
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: background 0.3s;
+            font-size: 18px;
+            box-shadow: 0 0 20px rgba(99, 102, 241, 0.4);
         }
-        .footer-col .social-icons a:hover {
-            background: var(--primary);
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            list-style: none;
+        }
+        .nav-menu a {
+            padding: 8px 18px;
+            border-radius: 100px;
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--text-secondary);
+            transition: var(--transition);
+            position: relative;
+        }
+        .nav-menu a:hover, .nav-menu a.active {
+            color: white;
+            background: rgba(99, 102, 241, 0.1);
+        }
+        .nav-cta {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .nav-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 14px;
+            border-radius: 100px;
+            font-size: 12px;
+            font-weight: 600;
+            background: rgba(99, 102, 241, 0.15);
+            border: 1px solid var(--border-glow);
+            color: var(--accent-1);
+            animation: badgePulse 2s ease-in-out infinite;
+        }
+        @keyframes badgePulse {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(99, 102, 241, 0.3); }
+            50% { box-shadow: 0 0 0 8px rgba(99, 102, 241, 0); }
+        }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 28px;
+            border-radius: 100px;
+            font-size: 15px;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+        .btn::after {
+            content: '';
+            position: absolute;
+            top: 0; left: -100%;
+            width: 100%; height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent);
+            transition: left 0.5s;
+        }
+        .btn:hover::after { left: 100%; }
+        .btn-primary {
+            background: linear-gradient(135deg, var(--accent-1), var(--accent-2));
+            color: white;
+            box-shadow: 0 0 30px rgba(99, 102, 241, 0.3);
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 40px rgba(99, 102, 241, 0.5);
+        }
+        .btn-outline {
+            background: transparent;
+            color: white;
+            border: 1px solid var(--border-glow);
+        }
+        .btn-outline:hover {
+            background: rgba(99, 102, 241, 0.1);
+            border-color: var(--accent-1);
+            box-shadow: 0 0 20px rgba(99, 102, 241, 0.2);
+        }
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 4px;
+        }
+        .hamburger span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: white;
+            border-radius: 2px;
+            transition: var(--transition);
+        }
+
+        /* ========== Hero ========== */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 120px 0 80px;
+            position: relative;
+        }
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 16px;
+            border-radius: 100px;
+            border: 1px solid var(--border-glow);
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--accent-1);
+            margin-bottom: 28px;
+            background: rgba(99, 102, 241, 0.05);
+        }
+        .hero-badge .dot {
+            width: 8px; height: 8px;
+            border-radius: 50%;
+            background: var(--accent-3);
+            animation: dotPulse 1.5s ease-in-out infinite;
+        }
+        @keyframes dotPulse {
+            0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(6, 182, 212, 0.6); }
+            50% { opacity: 0.5; box-shadow: 0 0 0 8px rgba(6, 182, 212, 0); }
+        }
+        .hero h1 {
+            font-size: 56px;
+            font-weight: 900;
+            line-height: 1.15;
+            margin-bottom: 24px;
+            letter-spacing: -1px;
+        }
+        .hero h1 .gradient-text {
+            background: linear-gradient(135deg, var(--accent-1) 0%, var(--accent-2) 50%, var(--accent-3) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .hero p {
+            font-size: 18px;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 36px;
+            max-width: 500px;
+        }
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+        .hero-stats {
+            display: flex;
+            gap: 48px;
+            margin-top: 48px;
+            padding-top: 32px;
+            border-top: 1px solid var(--border);
+        }
+        .hero-stat .num {
+            font-size: 36px;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--accent-1), var(--accent-3));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .hero-stat .label {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-top: 4px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Hero Visual - Terminal Card */
+        .hero-visual {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+        .hero-card {
+            background: rgba(15, 21, 53, 0.8);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-xl);
+            padding: 24px;
+            backdrop-filter: blur(20px);
+            box-shadow: 0 0 60px rgba(99, 102, 241, 0.15), 0 20px 40px rgba(0,0,0,0.4);
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--accent-1), var(--accent-2), transparent);
+            opacity: 0.6;
+        }
+        .terminal-header {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+        .terminal-dot {
+            width: 12px; height: 12px;
+            border-radius: 50%;
+        }
+        .terminal-dot.red { background: #FF5F56; }
+        .terminal-dot.yellow { background: #FFBD2E; }
+        .terminal-dot.green { background: #27C93F; }
+        .terminal-body {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 13px;
+            line-height: 1.8;
+            color: var(--text-secondary);
+        }
+        .terminal-line {
+            display: flex;
+            gap: 8px;
+        }
+        .terminal-prompt { color: var(--accent-3); }
+        .terminal-cursor {
+            display: inline-block;
+            width: 8px; height: 16px;
+            background: var(--accent-3);
+            animation: cursorBlink 1s step-end infinite;
+            vertical-align: text-bottom;
+        }
+        @keyframes cursorBlink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+        .terminal-highlight { color: var(--accent-1); }
+        .terminal-success { color: #10B981; }
+        .hero-image-wrapper {
+            position: absolute;
+            top: -20px; right: -20px;
+            width: 120px; height: 120px;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            border: 2px solid var(--border-glow);
+            box-shadow: 0 0 30px rgba(99, 102, 241, 0.3);
+            opacity: 0.7;
+        }
+        .hero-image-wrapper img {
+            width: 100%; height: 100%;
+            object-fit: cover;
+        }
+
+        /* Floating orbs around hero visual */
+        .floating-card {
+            position: absolute;
+            padding: 12px 20px;
+            border-radius: var(--radius-md);
+            background: rgba(15, 21, 53, 0.9);
+            border: 1px solid var(--border);
+            backdrop-filter: blur(10px);
+            font-size: 13px;
+            font-weight: 600;
+            white-space: nowrap;
+            animation: floatCard 6s ease-in-out infinite;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+        .floating-card.card-1 {
+            top: 10%; left: -60px;
+            animation-delay: 0s;
+            color: var(--accent-3);
+        }
+        .floating-card.card-2 {
+            bottom: 20%; right: -80px;
+            animation-delay: -3s;
+            color: var(--accent-2);
+        }
+        .floating-card.card-3 {
+            bottom: -20px; left: 0;
+            animation-delay: -5s;
+            color: var(--accent-5);
+        }
+        @keyframes floatCard {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+
+        /* ========== Section Common ========== */
+        section { padding: 100px 0; position: relative; }
+        .section-header {
+            text-align: center;
+            margin-bottom: 64px;
+        }
+        .section-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 16px;
+            border-radius: 100px;
+            border: 1px solid var(--border-glow);
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--accent-1);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 16px;
+            background: rgba(99, 102, 241, 0.05);
+        }
+        .section-label::before {
+            content: '';
+            width: 6px; height: 6px;
+            border-radius: 50%;
+            background: var(--accent-3);
+            box-shadow: 0 0 8px var(--accent-3);
+        }
+        .section-header h2 {
+            font-size: 42px;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            margin-bottom: 16px;
+        }
+        .section-header h2 .gradient-text {
+            background: linear-gradient(135deg, var(--accent-1), var(--accent-3));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .section-header p {
+            font-size: 17px;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* ========== Stats Bar ========== */
+        .stats-section {
+            background: linear-gradient(180deg, rgba(15, 21, 53, 0.4) 0%, transparent 100%);
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+            padding: 60px 0;
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+        }
+        .stat-item {
+            text-align: center;
+            position: relative;
+        }
+        .stat-item::after {
+            content: '';
+            position: absolute;
+            right: 0; top: 20%; bottom: 20%;
+            width: 1px;
+            background: linear-gradient(180deg, transparent, var(--border), transparent);
+        }
+        .stat-item:last-child::after { display: none; }
+        .stat-icon {
+            font-size: 28px;
+            margin-bottom: 12px;
+            filter: drop-shadow(0 0 8px rgba(99, 102, 241, 0.4));
+        }
+        .stat-number {
+            font-size: 44px;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--accent-1), var(--accent-3));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .stat-label {
+            font-size: 14px;
+            color: var(--text-muted);
+            margin-top: 4px;
+        }
+
+        /* ========== Services ========== */
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+        .service-card {
+            padding: 40px 32px;
+            background: var(--bg-card);
+            border-radius: var(--radius-xl);
+            border: 1px solid var(--border);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+        }
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--accent-1), transparent);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .service-card:hover::before { opacity: 1; }
+        .service-card:hover {
+            transform: translateY(-6px);
+            border-color: var(--border-glow);
+            box-shadow: 0 0 40px rgba(99, 102, 241, 0.15), 0 10px 30px rgba(0,0,0,0.3);
+            background: var(--bg-card-hover);
+        }
+        .service-card.featured {
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.15), rgba(139, 92, 246, 0.1));
+            border-color: var(--border-glow);
+        }
+        .service-card.featured::after {
+            content: 'HOT';
+            position: absolute;
+            top: 16px; right: 16px;
+            background: linear-gradient(135deg, var(--accent-4), var(--accent-5));
+            color: white;
+            font-size: 10px;
+            font-weight: 800;
+            padding: 4px 12px;
+            border-radius: 100px;
+            letter-spacing: 1px;
+        }
+        .service-icon-wrap {
+            width: 56px; height: 56px;
+            border-radius: var(--radius-md);
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.15), rgba(139, 92, 246, 0.1));
+            border: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            margin-bottom: 24px;
+            position: relative;
+            z-index: 1;
+        }
+        .service-card h3 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            position: relative;
+            z-index: 1;
+        }
+        .service-card p {
+            font-size: 15px;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            position: relative;
+            z-index: 1;
+        }
+        .service-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 20px;
+            position: relative;
+            z-index: 1;
+        }
+        .service-tag {
+            padding: 4px 12px;
+            border-radius: 100px;
+            font-size: 11px;
+            font-weight: 600;
+            background: rgba(99, 102, 241, 0.1);
+            color: var(--accent-1);
+            border: 1px solid rgba(99, 102, 241, 0.2);
+        }
+
+        /* ========== Cases ========== */
+        .case-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+        .case-card {
+            background: var(--bg-card);
+            border-radius: var(--radius-xl);
+            border: 1px solid var(--border);
+            overflow: hidden;
+            transition: var(--transition);
+            backdrop-filter: blur(10px);
+        }
+        .case-card:hover {
+            transform: translateY(-6px);
+            border-color: var(--border-glow);
+            box-shadow: 0 0 40px rgba(99, 102, 241, 0.15);
+        }
+        .case-img {
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+        }
+        .case-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        .case-card:hover .case-img img { transform: scale(1.05); }
+        .case-img-overlay {
+            position: absolute;
+            top: 12px; left: 12px;
+            padding: 4px 12px;
+            border-radius: 100px;
+            background: rgba(10, 14, 39, 0.8);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--border);
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--accent-1);
+        }
+        .case-body { padding: 24px; }
+        .case-body h3 { font-size: 18px; font-weight: 700; margin-bottom: 8px; }
+        .case-body p { font-size: 14px; color: var(--text-secondary); margin-bottom: 16px; }
+        .case-metrics {
+            display: flex;
+            gap: 16px;
+            padding-top: 16px;
+            border-top: 1px solid var(--border);
+        }
+        .case-metric .val {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--accent-3);
+        }
+        .case-metric .lbl {
+            font-size: 11px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* ========== Testimonials ========== */
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+        .testimonial-card {
+            background: var(--bg-card);
+            border-radius: var(--radius-xl);
+            border: 1px solid var(--border);
+            padding: 32px;
+            transition: var(--transition);
+            position: relative;
+            backdrop-filter: blur(10px);
+        }
+        .testimonial-card:hover {
+            border-color: var(--border-glow);
+            box-shadow: 0 0 30px rgba(99, 102, 241, 0.1);
+        }
+        .testimonial-card .quote-mark {
+            font-size: 64px;
+            font-family: serif;
+            line-height: 1;
+            color: var(--accent-1);
+            opacity: 0.3;
+            position: absolute;
+            top: 16px; left: 24px;
+        }
+        .testimonial-card .quote-text {
+            font-size: 15px;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 24px;
+            position: relative;
+            z-index: 1;
+        }
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .testimonial-author img {
+            width: 44px; height: 44px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--border-glow);
+        }
+        .testimonial-author h5 { font-size: 14px; font-weight: 600; }
+        .testimonial-author span {
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+
+        /* ========== CTA ========== */
+        .cta-section { padding: 80px 0; }
+        .cta-inner {
+            text-align: center;
+            padding: 80px 48px;
+            border-radius: var(--radius-xl);
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(139, 92, 246, 0.08));
+            border: 1px solid var(--border-glow);
+            position: relative;
+            overflow: hidden;
+        }
+        .cta-inner::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--accent-1), var(--accent-2), var(--accent-3), transparent);
+        }
+        .cta-inner h2 {
+            font-size: 36px;
+            font-weight: 800;
+            margin-bottom: 16px;
+        }
+        .cta-inner p {
+            font-size: 17px;
+            color: var(--text-secondary);
+            margin-bottom: 36px;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .cta-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .btn-white {
+            background: white;
+            color: var(--bg-primary);
+            padding: 14px 32px;
+            border-radius: 100px;
+            font-size: 15px;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: var(--transition);
+        }
+        .btn-white:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(255,255,255,0.2);
+        }
+
+        /* ========== Footer ========== */
+        .footer {
+            padding: 80px 0 32px;
+            border-top: 1px solid var(--border);
+            background: rgba(15, 21, 53, 0.3);
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 60px;
+            margin-bottom: 60px;
+        }
+        .footer-brand p {
+            color: var(--text-muted);
+            font-size: 14px;
+            line-height: 1.8;
+            margin-top: 20px;
+            max-width: 320px;
+        }
+        .footer-col h4 {
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--text-secondary);
+            margin-bottom: 24px;
+        }
+        .footer-links {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .footer-links a {
+            font-size: 14px;
+            color: var(--text-muted);
+            transition: var(--transition);
+        }
+        .footer-links a:hover { color: var(--accent-1); }
+        .footer-links .footer-link-icon {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
         }
         .footer-bottom {
-            text-align: center;
-            padding-top: 20px;
-            border-top: 1px solid #444;
-            font-size: 14px;
-            color: #ccc;
+            border-top: 1px solid var(--border);
+            padding-top: 32px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 13px;
+            color: var(--text-muted);
         }
-        /* 响应式 */
+        .footer-social {
+            display: flex;
+            gap: 12px;
+        }
+        .footer-social a {
+            width: 36px; height: 36px;
+            border-radius: 50%;
+            background: rgba(99, 102, 241, 0.08);
+            border: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            transition: var(--transition);
+        }
+        .footer-social a:hover {
+            background: var(--accent-1);
+            border-color: var(--accent-1);
+            box-shadow: 0 0 16px rgba(99, 102, 241, 0.4);
+        }
+
+        /* ========== Responsive ========== */
+        @media (max-width: 1024px) {
+            .hero-grid { grid-template-columns: 1fr; gap: 60px; }
+            .hero-visual { order: -1; }
+            .hero h1 { font-size: 42px; }
+            .service-grid { grid-template-columns: repeat(2, 1fr); }
+            .case-grid { grid-template-columns: repeat(2, 1fr); }
+            .testimonial-grid { grid-template-columns: repeat(2, 1fr); }
+            .footer-grid { grid-template-columns: 1fr 1fr; gap: 40px; }
+            .stats-grid { grid-template-columns: repeat(2, 1fr); }
+            .stat-item::after { display: none; }
+        }
         @media (max-width: 768px) {
-            .nav-menu, .consult-btn {
-                display: none;
+            .nav-menu, .nav-cta { display: none; }
+            .nav-menu.mobile-open {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 76px; left: 0; right: 0;
+                background: rgba(10, 14, 39, 0.95);
+                backdrop-filter: blur(20px);
+                padding: 16px;
+                border: 1px solid var(--border);
+                border-radius: var(--radius-md);
+                gap: 4px;
             }
-            .hamburger {
-                display: block;
-            }
-            .banner h1 {
-                font-size: 30px;
-            }
-            .banner p {
-                font-size: 16px;
-            }
-            .section-title {
-                font-size: 26px;
-            }
-            .cases-header h2 {
-                font-size: 26px;
-            }
+            .hamburger { display: flex; }
+            section { padding: 60px 0; }
+            .hero { min-height: auto; padding: 100px 0 60px; }
+            .hero h1 { font-size: 30px; }
+            .hero-stats { gap: 24px; }
+            .hero-stat .num { font-size: 24px; }
+            .service-grid { grid-template-columns: 1fr; }
+            .case-grid { grid-template-columns: 1fr; }
+            .testimonial-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+            .footer-bottom { flex-direction: column; gap: 16px; text-align: center; }
+            .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+            .stat-number { font-size: 32px; }
+            .cta-inner { padding: 48px 24px; }
+            .cta-inner h2 { font-size: 28px; }
+            .section-header h2 { font-size: 30px; }
+            .floating-card { display: none; }
+        }
+        @media (max-width: 480px) {
+            .hero-buttons { flex-direction: column; }
+            .hero-buttons .btn { justify-content: center; }
+            .stats-grid { grid-template-columns: 1fr 1fr; }
         }
     </style>
 </head>
 <body>
-    <!-- 导航栏 -->
-    <header class="header">
+
+    <!-- Particle Background -->
+    <canvas id="particleCanvas"></canvas>
+    <div class="grid-bg"></div>
+    <div class="glow-orb orb-1"></div>
+    <div class="glow-orb orb-2"></div>
+    <div class="glow-orb orb-3"></div>
+
+    <!-- ========== NAVIGATION ========== -->
+    <header class="header" id="header">
         <div class="container">
             <nav class="nav">
                 <a href="index.html" class="logo">
-                    <i class="fab fa-tiktok"></i>
+                    <div class="logo-icon">🌐</div>
                     拉克力跨境
                 </a>
-                <div class="nav-menu">
-                    <a href="index.html">首页</a>
-                    <a href="about.html">关于我们</a>
-                    <a href="courses.html">产品/服务</a>
-                    <a href="cases.html">成功案例</a>
-                    <a href="contact.html">联系我们</a>
-                    <a href="https://lakeli.coze.site/landing" target="_blank" class="longzg-link">
-                        <i class="fas fa-robot"></i> 龙掌柜 <span class="badge">HOT</span>
-                    </a>
-                    <a href="https://508db561-4a2d-41a8-89f5-4c200a009345.dev.coze.site" target="_blank" class="longzg-link" style="color:#2563EB">
-                        <i class="fas fa-brain"></i> 域途GEO <span class="badge" style="background:#2563EB">NEW</span>
-                    </a>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" class="active">首页</a></li>
+                    <li><a href="about.html">关于我们</a></li>
+                    <li><a href="courses.html">产品服务</a></li>
+                    <li><a href="cases.html">成功案例</a></li>
+                    <li><a href="contact.html">联系我们</a></li>
+                </ul>
+                <div class="nav-cta">
+                    <a href="https://lakeli.coze.site/landing" target="_blank" class="nav-badge">🤖 龙掌柜AI</a>
+                    <a href="contact.html" class="btn btn-primary">立即咨询</a>
                 </div>
-                <a href="contact.html" class="consult-btn">
-                    <i class="fas fa-comments"></i>
-                    立即咨询
-                </a>
-                <div class="hamburger">
-                    <i class="fas fa-bars"></i>
-                </div>
+                <button class="hamburger" id="hamburger" aria-label="菜单">
+                    <span></span><span></span><span></span>
+                </button>
             </nav>
         </div>
     </header>
-    <!-- Banner区 -->
-    <section class="banner">
-        <div class="container">
-            <div class="banner-content">
-                <h1>TikTok跨境电商全链路服务，让出海更高效</h1>
-                <p>8年实战经验 · AI SaaS工具 · 1000+培训学员 · 降风险提业绩</p>
-                <div class="banner-btns">
-                    <a href="https://lakeli.coze.site/landing" target="_blank" class="banner-btn btn-primary">
-                        <i class="fas fa-robot"></i> 体验龙掌柜
-                    </a>
-                    <a href="https://508db561-4a2d-41a8-89f5-4c200a009345.dev.coze.site" target="_blank" class="banner-btn" style="background:#2563EB;border:none;color:#fff">
-                        <i class="fas fa-brain"></i> 体验域途GEO
-                    </a>
-                    <a href="contact.html" class="banner-btn btn-outline">咨询培训课程</a>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- 核心业务板块 -->
-    <section class="core-business">
-        <div class="container">
-            <h2 class="section-title">我们的核心业务</h2>
-            <div class="business-cards">
-                <div class="business-card longzg-card">
-                    <span class="card-tag">新品</span>
-                    <i class="fas fa-robot"></i>
-                    <h3>龙掌柜智能运营系统</h3>
-                    <p>7大AI智能体+轻量ERP，从选品到售后全链路AI驱动</p>
-                    <div style="display:flex;gap:10px;justify-content:center;margin-top:15px">
-                        <a href="https://lakeli.coze.site/landing" target="_blank" class="card-btn">免费体验 <i class="fas fa-external-link-alt"></i></a>
-                        <a href="courses.html" class="card-btn" style="background:transparent;color:var(--primary);border:1px solid var(--primary)">了解更多 <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                <div class="business-card">
-                    <i class="fas fa-shield-alt"></i>
-                    <h3>跨境AI合规雷达</h3>
-                    <p>解决TikTok店铺合规问题，降低封店风险</p>
-                </div>
-                <div class="business-card">
-                    <i class="fas fa-chalkboard-teacher"></i>
-                    <h3>TikTok/亚马逊运营培训</h3>
-                    <p>TK跨境电商课/直播运营课/亚马逊运营课，实战教学</p>
-                </div>
-                <div class="business-card" style="border:2px solid #2563EB;position:relative">
-                    <span class="card-tag" style="background:#2563EB">新品</span>
-                    <i class="fas fa-brain" style="color:#2563EB"></i>
-                    <h3>域途GEO - AI搜索引擎优化</h3>
-                    <p>让品牌内容在豆包、文心一言、ChatGPT等AI平台被优先推荐，抢占AI搜索流量红利</p>
-                    <div style="display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-top:12px">
-                        <span style="font-size:12px;background:#EFF6FF;color:#2563EB;padding:2px 8px;border-radius:10px">GEO诊断</span>
-                        <span style="font-size:12px;background:#EFF6FF;color:#2563EB;padding:2px 8px;border-radius:10px">AI文案</span>
-                        <span style="font-size:12px;background:#EFF6FF;color:#2563EB;padding:2px 8px;border-radius:10px">收录监测</span>
-                        <span style="font-size:12px;background:#EFF6FF;color:#2563EB;padding:2px 8px;border-radius:10px">自动建站</span>
-                    </div>
-                    <div style="display:flex;gap:10px;justify-content:center;margin-top:15px">
-                        <a href="https://508db561-4a2d-41a8-89f5-4c200a009345.dev.coze.site" target="_blank" class="card-btn" style="background:#2563EB">免费体验 <i class="fas fa-external-link-alt"></i></a>
-                        <a href="https://508db561-4a2d-41a8-89f5-4c200a009345.dev.coze.site" target="_blank" class="card-btn" style="background:transparent;color:#2563EB;border:1px solid #2563EB">了解更多 <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-
-    
-    <!-- 优势亮点板块 -->
-    <section class="advantages">
+    <!-- ========== HERO ========== -->
+    <section class="hero">
         <div class="container">
-            <div class="advantage-list">
-                <div class="advantage-item">
-                    <div class="number">8</div>
-                    <div class="desc">年跨境电商行业经验</div>
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <span class="dot"></span> AI驱动 · 跨境电商全链路解决方案
+                    </div>
+                    <h1>
+                        用<span class="gradient-text">AI智能</span><br>
+                        重新定义跨境电商
+                    </h1>
+                    <p>
+                        8年TikTok实战经验 × 自研AI引擎，从选品、合规到运营全链路智能化，
+                        让中国品牌出海更简单、更安全、更高效。
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="contact.html" class="btn btn-primary">🚀 开启AI出海之旅</a>
+                        <a href="https://lakeli.coze.site/landing" target="_blank" class="btn btn-outline">🤖 体验龙掌柜AI</a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="hero-stat">
+                            <div class="num">1000+</div>
+                            <div class="label">服务学员</div>
+                        </div>
+                        <div class="hero-stat">
+                            <div class="num">8年</div>
+                            <div class="label">实战经验</div>
+                        </div>
+                        <div class="hero-stat">
+                            <div class="num">98%</div>
+                            <div class="label">好评率</div>
+                        </div>
+                    </div>
                 </div>
-                <div class="advantage-item">
-                    <div class="number">7</div>
-                    <div class="desc">大AI智能体全链路覆盖</div>
-                </div>
-                <div class="advantage-item">
-                    <div class="number">1000+</div>
-                    <div class="desc">培训学员</div>
-                </div>
-                <div class="advantage-item">
-                    <div class="number">98%</div>
-                    <div class="desc">合规工具客户降风险有效</div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- 精选案例板块 -->
-    <section class="cases">
-        <div class="container">
-            <div class="cases-header">
-                <h2>成功案例</h2>
-                <a href="cases.html">查看全部 <i class="fas fa-arrow-right"></i></a>
-            </div>
-            <div class="case-slider">
-                <div class="case-cards">
-                    <div class="case-card">
-                        <img src="images/banner/youkeshu.jpg" alt="有棵树科技案例">
-                        <div class="content">
-                            <h4>有棵树科技</h4>
-                            <p>AI合规雷达采购，降低合规封店风险</p>
+                <div class="hero-visual">
+                    <!-- Floating cards -->
+                    <div class="floating-card card-1">⚡ AI智能选品</div>
+                    <div class="floating-card card-2">🔮 合规风险预判</div>
+                    <div class="floating-card card-3">📊 实时数据分析</div>
+                    <!-- Terminal Card -->
+                    <div class="hero-card" style="width: 100%; max-width: 440px;">
+                        <div class="terminal-header">
+                            <div class="terminal-dot red"></div>
+                            <div class="terminal-dot yellow"></div>
+                            <div class="terminal-dot green"></div>
+                        </div>
+                        <div class="terminal-body">
+                            <div class="terminal-line">
+                                <span class="terminal-prompt">lakeli ~ $</span>
+                                <span>init --mode=ai-cross-border</span>
+                            </div>
+                            <div style="margin: 8px 0;">
+                                <span class="terminal-success">✓</span> AI合规雷达 <span class="terminal-highlight">v3.2</span> 已启动<br>
+                                <span class="terminal-success">✓</span> 龙掌柜智能运营引擎 已连接<br>
+                                <span class="terminal-success">✓</span> 实时市场数据流 同步中<br>
+                                <span class="terminal-success">✓</span> 多平台店铺API 已接入
+                            </div>
+                            <div class="terminal-line">
+                                <span class="terminal-prompt">lakeli ~ $</span>
+                                <span>deploy --target=global-market</span>
+                            </div>
+                            <div style="margin-top: 8px; color: var(--accent-3);">
+                                <span class="terminal-cursor"></span> Ready for cross-border AI ops...
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    
-    <!-- 客户评价板块 -->
-    <section class="reviews">
+
+    <!-- ========== STATS BAR ========== -->
+    <section class="stats-section">
         <div class="container">
-            <h2 class="section-title" style="color: #fff;">客户评价</h2>
-            <div class="review-slider">
-                <div class="review-item">
-                    <p>"AI合规雷达帮我们规避了封店风险，培训课程落地性极强，真正解决了TikTok运营中的核心痛点！"</p>
-                    <div class="reviewer">
-                        <img src="images/banner/zhangxiansheng.jpg" alt="客户头像">
-                        <div class="reviewer-info">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-icon">👥</div>
+                    <div class="stat-number">1000+</div>
+                    <div class="stat-label">服务学员</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon">🎯</div>
+                    <div class="stat-number">95%</div>
+                    <div class="stat-label">学员出单率</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon">🛡️</div>
+                    <div class="stat-number">99.9%</div>
+                    <div class="stat-label">合规通过率</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon">🚀</div>
+                    <div class="stat-number">300%+</div>
+                    <div class="stat-label">平均业绩增长</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SERVICES ========== -->
+    <section id="services">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Core Services</div>
+                <h2>AI驱动的<span class="gradient-text">全链路服务</span></h2>
+                <p>从选品到运营，从合规到增长，一站式AI解决方案覆盖跨境电商全场景</p>
+            </div>
+            <div class="service-grid">
+                <div class="service-card">
+                    <div class="service-icon-wrap">🛡️</div>
+                    <h3>AI合规雷达</h3>
+                    <p>实时扫描产品合规风险，自动检测侵权、违禁词、资质要求，降低90%违规风险。</p>
+                    <div class="service-tags">
+                        <span class="service-tag">侵权检测</span>
+                        <span class="service-tag">合规扫描</span>
+                        <span class="service-tag">风险预警</span>
+                    </div>
+                </div>
+                <div class="service-card featured">
+                    <div class="service-icon-wrap">🤖</div>
+                    <h3>龙掌柜智能运营</h3>
+                    <p>AI驱动的全自动运营系统，智能选品、自动上架、数据分析一体化，节省80%人力。</p>
+                    <div class="service-tags">
+                        <span class="service-tag">AI选品</span>
+                        <span class="service-tag">自动上架</span>
+                        <span class="service-tag">数据分析</span>
+                        <span class="service-tag">智能定价</span>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon-wrap">🧠</div>
+                    <h3>域途GEO</h3>
+                    <p>基于AI大模型的全球市场洞察引擎，实时追踪趋势，精准定位高潜力市场机会。</p>
+                    <div class="service-tags">
+                        <span class="service-tag">市场洞察</span>
+                        <span class="service-tag">趋势预测</span>
+                        <span class="service-tag">竞品分析</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CASES ========== -->
+    <section id="cases">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Success Cases</div>
+                <h2>真实<span class="gradient-text">成功案例</span></h2>
+                <p>来自不同行业的客户，通过AI赋能实现跨境电商业绩飞跃</p>
+            </div>
+            <div class="case-grid">
+                <div class="case-card">
+                    <div class="case-img">
+                        <img src="images/cases/case1.jpg" alt="案例1" onerror="this.style.background='linear-gradient(135deg, #1e1b4b, #312e81)'; this.style.minHeight='200px'">
+                        <div class="case-img-overlay">TikTok Shop</div>
+                    </div>
+                    <div class="case-body">
+                        <h3>美妆品牌TikTok出海</h3>
+                        <p>从0到月销百万美金，AI选品准确率高达85%</p>
+                        <div class="case-metrics">
+                            <div class="case-metric">
+                                <div class="val">$1.2M</div>
+                                <div class="lbl">月GMV</div>
+                            </div>
+                            <div class="case-metric">
+                                <div class="val">50万+</div>
+                                <div class="lbl">粉丝增长</div>
+                            </div>
+                            <div class="case-metric">
+                                <div class="val">320%</div>
+                                <div class="lbl">ROI</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="case-card">
+                    <div class="case-img">
+                        <img src="images/cases/case2.jpg" alt="案例2" onerror="this.style.background='linear-gradient(135deg, #1e1b4b, #312e81)'; this.style.minHeight='200px'">
+                        <div class="case-img-overlay">Amazon</div>
+                    </div>
+                    <div class="case-body">
+                        <h3>3C数码亚马逊运营</h3>
+                        <p>AI合规雷达护航，0侵权0下架安全运营</p>
+                        <div class="case-metrics">
+                            <div class="case-metric">
+                                <div class="val">$800K</div>
+                                <div class="lbl">月GMV</div>
+                            </div>
+                            <div class="case-metric">
+                                <div class="val">0次</div>
+                                <div class="lbl">违规记录</div>
+                            </div>
+                            <div class="case-metric">
+                                <div class="val">5人</div>
+                                <div class="lbl">人力节省</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="case-card">
+                    <div class="case-img">
+                        <img src="images/cases/case3.jpg" alt="案例3" onerror="this.style.background='linear-gradient(135deg, #1e1b4b, #312e81)'; this.style.minHeight='200px'">
+                        <div class="case-img-overlay">Shopee</div>
+                    </div>
+                    <div class="case-body">
+                        <h3>家居用品东南亚拓展</h3>
+                        <p>域途GEO精准定位，3个月覆盖5国市场</p>
+                        <div class="case-metrics">
+                            <div class="case-metric">
+                                <div class="val">5国</div>
+                                <div class="lbl">市场覆盖</div>
+                            </div>
+                            <div class="case-metric">
+                                <div class="val">$500K</div>
+                                <div class="lbl">总GMV</div>
+                            </div>
+                            <div class="case-metric">
+                                <div class="val">200+</div>
+                                <div class="lbl">SKU</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== TESTIMONIALS ========== -->
+    <section id="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Testimonials</div>
+                <h2>客户<span class="gradient-text">真实反馈</span></h2>
+                <p>来自1000+学员和客户的真实声音</p>
+            </div>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="quote-mark">"</div>
+                    <div class="quote-text">龙掌柜系统帮我们节省了至少3个人力成本，AI选品功能特别精准，推荐的产品几乎款款爆单。</div>
+                    <div class="testimonial-author">
+                        <img src="images/team/weilingying.jpg" alt="魏玲英" onerror="this.style.background='linear-gradient(135deg, #6366F1, #8B5CF6)'">
+                        <div>
+                            <h5>魏女士</h5>
+                            <span>义乌跨境电商创业者</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="quote-mark">"</div>
+                    <div class="quote-text">AI合规雷达帮我们规避了至少5次潜在的侵权风险，省下的罚款都够买好几套系统了。</div>
+                    <div class="testimonial-author">
+                        <img src="images/team/liaoxuefeng.jpg" alt="学员" onerror="this.style.background='linear-gradient(135deg, #06B6D4, #6366F1)'">
+                        <div>
                             <h5>张先生</h5>
-                            <p>跨境电商企业运营总监</p>
+                            <span>亚马逊大卖商家</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="quote-mark">"</div>
+                    <div class="quote-text">域途GEO的市场洞察让我们精准锁定了东南亚市场，三个月就打开了5个国家的销路。</div>
+                    <div class="testimonial-author">
+                        <img src="images/team/weilingying.jpg" alt="学员" onerror="this.style.background='linear-gradient(135deg, #8B5CF6, #F43F5E)'">
+                        <div>
+                            <h5>李总</h5>
+                            <span>家居品牌创始人</span>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    
-    <!-- 联系入口 -->
-    <section class="contact-cta">
+
+    <!-- ========== CTA ========== -->
+    <section class="cta-section">
         <div class="container">
-            <h3>TikTok出海有难题？随时联系我们</h3>
-            <a href="contact.html" class="btn">立即沟通</a>
+            <div class="cta-inner">
+                <h2>准备好用AI重新定义你的跨境电商了吗？</h2>
+                <p>立即联系我们，获取专属的AI跨境电商解决方案</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn-white">📞 立即咨询</a>
+                    <a href="https://lakeli.coze.site/landing" target="_blank" class="btn btn-primary">🤖 免费体验龙掌柜AI</a>
+                </div>
+            </div>
         </div>
     </section>
-    
-    <!-- 页脚 -->
+
+    <!-- ========== FOOTER ========== -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-content">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <div class="logo-icon">🌐</div>
+                        拉克力跨境
+                    </a>
+                    <p>TikTok跨境电商全链路AI服务商，8年实战经验，AI驱动，助力中国企业成功出海。</p>
+                </div>
                 <div class="footer-col">
-                    <h4>关于我们</h4>
-                    <p>聚焦TikTok跨境电商，提供AI SaaS工具+实战培训全链路服务，助力全球商家高效出海。</p>
+                    <h4>快速导航</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">首页</a></li>
+                        <li><a href="about.html">关于我们</a></li>
+                        <li><a href="courses.html">产品服务</a></li>
+                        <li><a href="cases.html">成功案例</a></li>
+                        <li><a href="contact.html">联系我们</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>AI 产品</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://lakeli.coze.site/landing" target="_blank" class="footer-link-icon">🤖 龙掌柜智能运营</a></li>
+                        <li><a href="https://508db561-4a2d-41a8-89f5-4c200a009345.dev.coze.site" target="_blank" class="footer-link-icon">🧠 域途GEO</a></li>
+                    </ul>
                 </div>
                 <div class="footer-col">
                     <h4>联系方式</h4>
-                    <ul class="contact-info">
-                        <li>
-                            <i class="fas fa-phone"></i>
-                            <span>13715191472（微信同号）</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>深圳市龙岗区坂田街道发达路6号云里智能大厦</span>
-                        </li>
+                    <ul class="footer-links">
+                        <li><a>📍 深圳龙岗坂田云里智能大厦</a></li>
+                        <li><a>📧 contact@lakeli.top</a></li>
                     </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>AI产品</h4>
-                    <ul class="contact-info">
-                        <li>
-                            <i class="fas fa-brain" style="color:#2563EB"></i>
-                            <a href="https://508db561-4a2d-41a8-89f5-4c200a009345.dev.coze.site" target="_blank" style="color:inherit">域途GEO - AI搜索引擎优化</a>
-                        </li>
-                        <li>
-                            <i class="fas fa-robot" style="color:var(--primary)"></i>
-                            <a href="https://lakeli.coze.site/landing" target="_blank" style="color:inherit">龙掌柜 - 智能运营系统</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>社交媒体</h4>
-                    <div class="social-icons">
-                        <a href="#"><i class="fab fa-tiktok"></i></a>
-                        <a href="#"><i class="fab fa-weixin"></i></a>
-                        <a href="#"><i class="fab fa-weibo"></i></a>
-                    </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>©2025 深圳市拉克力国际贸易有限公司 版权所有 | <a href="#">隐私政策</a></p>
+                <span>© 2025 深圳市拉克力国际贸易有限公司 版权所有</span>
+                <div class="footer-social">
+                    <a href="#" aria-label="TikTok">🎵</a>
+                    <a href="#" aria-label="微信">💬</a>
+                    <a href="#" aria-label="微博">📱</a>
+                </div>
             </div>
         </div>
     </footer>
-    
+
     <script>
-        // 简单轮播效果（客户评价）
-        const reviewItems = document.querySelectorAll('.review-item');
-        let currentReview = 0;
-        function showReview(index) {
-            reviewItems.forEach((item, i) => {
-                item.style.display = i === index ? 'block' : 'none';
-            });
+        // ========== Particle Canvas ==========
+        const canvas = document.getElementById('particleCanvas');
+        const ctx = canvas.getContext('2d');
+        let particles = [];
+        let mouse = { x: -1000, y: -1000 };
+
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
         }
-        showReview(currentReview);
-        setInterval(() => {
-            currentReview = (currentReview + 1) % reviewItems.length;
-            showReview(currentReview);
-        }, 5000);
+        resizeCanvas();
+        window.addEventListener('resize', resizeCanvas);
+
+        document.addEventListener('mousemove', (e) => {
+            mouse.x = e.clientX;
+            mouse.y = e.clientY;
+        });
+
+        class Particle {
+            constructor() {
+                this.reset();
+            }
+            reset() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height;
+                this.size = Math.random() * 2 + 0.5;
+                this.speedX = (Math.random() - 0.5) * 0.5;
+                this.speedY = (Math.random() - 0.5) * 0.5;
+                this.opacity = Math.random() * 0.5 + 0.2;
+                this.hue = Math.random() < 0.5 ? 240 + Math.random() * 20 : 180 + Math.random() * 20;
+            }
+            update() {
+                // Mouse interaction
+                const dx = mouse.x - this.x;
+                const dy = mouse.y - this.y;
+                const dist = Math.sqrt(dx * dx + dy * dy);
+                if (dist < 150) {
+                    const force = (150 - dist) / 150;
+                    this.x -= dx * force * 0.02;
+                    this.y -= dy * force * 0.02;
+                }
+
+                this.x += this.speedX;
+                this.y += this.speedY;
+
+                if (this.x < 0) this.x = canvas.width;
+                if (this.x > canvas.width) this.x = 0;
+                if (this.y < 0) this.y = canvas.height;
+                if (this.y > canvas.height) this.y = 0;
+            }
+            draw() {
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fillStyle = `hsla(${this.hue}, 80%, 65%, ${this.opacity})`;
+                ctx.fill();
+
+                // Glow
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size * 2, 0, Math.PI * 2);
+                ctx.fillStyle = `hsla(${this.hue}, 80%, 65%, ${this.opacity * 0.15})`;
+                ctx.fill();
+            }
+        }
+
+        // Create particles
+        const particleCount = Math.min(80, Math.floor(window.innerWidth / 15));
+        for (let i = 0; i < particleCount; i++) {
+            particles.push(new Particle());
+        }
+
+        // Draw connections between close particles
+        function drawConnections() {
+            for (let i = 0; i < particles.length; i++) {
+                for (let j = i + 1; j < particles.length; j++) {
+                    const dx = particles[i].x - particles[j].x;
+                    const dy = particles[i].y - particles[j].y;
+                    const dist = Math.sqrt(dx * dx + dy * dy);
+                    if (dist < 120) {
+                        const opacity = (120 - dist) / 120 * 0.1;
+                        ctx.beginPath();
+                        ctx.moveTo(particles[i].x, particles[i].y);
+                        ctx.lineTo(particles[j].x, particles[j].y);
+                        ctx.strokeStyle = `rgba(99, 102, 241, ${opacity})`;
+                        ctx.lineWidth = 0.5;
+                        ctx.stroke();
+                    }
+                }
+            }
+        }
+
+        function animate() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            particles.forEach(p => {
+                p.update();
+                p.draw();
+            });
+
+            drawConnections();
+            requestAnimationFrame(animate);
+        }
+        animate();
+
+        // ========== Navigation ==========
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            header.classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('navMenu');
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('mobile-open');
+        });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    navMenu.classList.remove('mobile-open');
+                }
+            });
+        });
+
+        // ========== Scroll Animations ==========
+        const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.service-card, .case-card, .testimonial-card, .stat-item').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
     </script>
-    <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const hamburger = document.querySelector('.hamburger');
-    const navMenu = document.querySelector('.nav-menu');
-    const consultBtn = document.querySelector('.consult-btn');
-    
-    if (hamburger && navMenu && consultBtn) {
-      hamburger.addEventListener('click', function() {
-        const isNavVisible = getComputedStyle(navMenu).display === 'flex';
-        navMenu.style.display = isNavVisible ? 'none' : 'flex';
-        consultBtn.style.display = isNavVisible ? 'none' : 'block';
-      });
-    }
-  });
-</script>
 </body>
 </html>

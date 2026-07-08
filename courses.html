@@ -1,1087 +1,301 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8"><meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"><meta http-equiv="Pragma" content="no-cache"><meta http-equiv="Expires" content="0">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>产品/服务 - TikTok跨境电商AI工具+实战培训</title>
+    <title>产品服务 - 拉克力跨境</title>
     <meta name="keywords" content="跨境AI合规雷达,龙掌柜智能运营系统,TikTok运营培训,亚马逊运营课,直播运营课">
     <meta name="description" content="拉克力跨境提供龙掌柜智能运营系统（7大AI智能体+轻量ERP）+ 跨境AI合规雷达 + TikTok/亚马逊实战培训课程！">
-    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@300;400;500;700;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: '思源黑体', Arial, sans-serif;
-        }
-        :root {
-            --primary: #FF7F24;
-            --secondary: #1E40AF;
-            --gray: #F5F5F5;
-            --text-dark: #333;
-            --text-light: #666;
-        }
-        body {
-            color: var(--text-dark);
-            line-height: 1.6;
-        }
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        /* 导航栏 */
-        .header {
-            position: sticky;
-            top: 0;
-            background: #fff;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            z-index: 999;
-        }
-        .nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            height: 80px;
-        }
-        .logo {
-            font-size: 22px;
-            font-weight: bold;
-            color: var(--primary);
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        .logo i {
-            font-size: 24px;
-        }
-        .nav-menu {
-            display: flex;
-            gap: 30px;
-        }
-        .nav-menu a {
-            font-size: 16px;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-        .nav-menu a:hover, .nav-menu a.active {
-            color: var(--primary);
-        }
-        .consult-btn {
-            background: var(--primary);
-            color: #fff;
-            padding: 10px 20px;
-            border-radius: 4px;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            transition: background 0.3s;
-        }
-        .consult-btn:hover {
-            background: #E67018;
-        }
-        .hamburger {
-            display: none;
-            font-size: 24px;
-            cursor: pointer;
-        }
-        /* 面包屑 */
-        .breadcrumb {
-            padding: 20px 0;
-            background: var(--gray);
-            font-size: 14px;
-        }
-        .breadcrumb a {
-            color: var(--secondary);
-        }
-        .breadcrumb span {
-            margin: 0 8px;
-            color: var(--text-light);
-        }
-        /* 业务分类导航 */
-        .service-tabs {
-            padding: 40px 0;
-        }
-        .tabs-nav {
-            display: flex;
-            gap: 0;
-            border-bottom: 2px solid var(--gray);
-            margin-bottom: 40px;
-        }
-        .tab-item {
-            padding: 15px 30px;
-            font-size: 18px;
-            font-weight: 500;
-            cursor: pointer;
-            transition: all 0.3s;
-            border-bottom: 3px solid transparent;
-        }
-        .tab-item.active {
-            color: var(--primary);
-            border-bottom-color: var(--primary);
-        }
-        /* 业务详情 */
-        .tab-content {
-            display: none;
-        }
-        .tab-content.active {
-            display: block;
-        }
-        .service-card {
-            padding: 30px;
-            background: #fff;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-            margin-bottom: 40px;
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            gap: 30px;
-            align-items: center;
-        }
-        .service-img img {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-            border-radius: 8px;
-        }
-        .service-text h3 {
-            font-size: 24px;
-            margin-bottom: 15px;
-            color: var(--primary);
-        }
-        .service-text p {
-            font-size: 16px;
-            color: var(--text-dark);
-            margin-bottom: 20px;
-            line-height: 1.8;
-        }
-        .service-advantages {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-            margin-bottom: 20px;
-        }
-        .service-advantages li {
-            list-style: none;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            color: var(--text-dark);
-        }
-        .service-advantages li i {
-            color: var(--primary);
-        }
-        .service-btn {
-            padding: 10px 25px;
-            background: var(--primary);
-            color: #fff;
-            border-radius: 4px;
-            display: inline-block;
-            transition: background 0.3s;
-        }
-        .service-btn:hover {
-            background: #E67018;
-        }
+        *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+        :root{--bg-primary:#0A0E27;--bg-secondary:#0F1535;--bg-card:rgba(15,21,53,0.6);--bg-card-hover:rgba(20,28,65,0.8);--border:rgba(99,102,241,0.15);--border-glow:rgba(99,102,241,0.4);--accent-1:#6366F1;--accent-2:#8B5CF6;--accent-3:#06B6D4;--accent-4:#F43F5E;--accent-5:#F59E0B;--text-primary:#F1F5F9;--text-secondary:#94A3B8;--text-muted:#64748B;--radius-sm:8px;--radius-md:12px;--radius-lg:16px;--radius-xl:24px;--transition:0.3s cubic-bezier(0.4,0,0.2,1)}
+        html{scroll-behavior:smooth}
+        body{font-family:'Inter','Noto Sans SC',sans-serif;color:var(--text-primary);line-height:1.7;background:var(--bg-primary);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+        a{text-decoration:none;color:inherit}
+        img{max-width:100%;display:block}
+        .container{max-width:1280px;margin:0 auto;padding:0 24px;position:relative;z-index:2}
 
-        /* 龙掌柜特色样式 */
-        .longzg-card {
-            border: 2px solid var(--primary);
-            position: relative;
-        }
-        .longzg-card::before {
-            content: 'HOT';
-            position: absolute;
-            top: -1px;
-            right: -1px;
-            background: var(--primary);
-            color: #fff;
-            font-size: 12px;
-            padding: 4px 12px;
-            border-radius: 0 8px 0 8px;
-            font-weight: bold;
-        }
-        .longzg-features {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 15px;
-            margin-bottom: 20px;
-        }
-        .longzg-feature-item {
-            background: var(--gray);
-            border-radius: 6px;
-            padding: 12px;
-            text-align: center;
-        }
-        .longzg-feature-item i {
-            color: var(--primary);
-            font-size: 20px;
-            margin-bottom: 6px;
-        }
-        .longzg-feature-item span {
-            display: block;
-            font-size: 13px;
-            color: var(--text-dark);
-        }
-        .longzg-btn-group {
-            display: flex;
-            gap: 15px;
-        }
-        .longzg-btn-primary {
-            padding: 10px 25px;
-            background: var(--primary);
-            color: #fff;
-            border-radius: 4px;
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            transition: background 0.3s;
-        }
-        .longzg-btn-primary:hover {
-            background: #E67018;
-        }
-        .longzg-btn-outline {
-            padding: 10px 25px;
-            background: #fff;
-            color: var(--primary);
-            border: 1px solid var(--primary);
-            border-radius: 4px;
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            transition: all 0.3s;
-        }
-        .longzg-btn-outline:hover {
-            background: var(--primary);
-            color: #fff;
-        }
+        #particleCanvas{position:fixed;top:0;left:0;width:100%;height:100%;z-index:0;pointer-events:none}
+        .grid-bg{position:fixed;top:0;left:0;width:100%;height:100%;z-index:0;pointer-events:none;background-image:linear-gradient(rgba(99,102,241,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(99,102,241,0.03) 1px,transparent 1px);background-size:60px 60px;mask-image:radial-gradient(ellipse 80% 60% at 50% 0%,black 30%,transparent 70%);-webkit-mask-image:radial-gradient(ellipse 80% 60% at 50% 0%,black 30%,transparent 70%)}
+        .glow-orb{position:fixed;border-radius:50%;filter:blur(120px);opacity:0.1;pointer-events:none;z-index:0;animation:orbFloat 20s ease-in-out infinite}
+        .glow-orb.orb-1{width:500px;height:500px;background:var(--accent-1);top:-150px;right:-80px;animation-delay:0s}
+        .glow-orb.orb-2{width:400px;height:400px;background:var(--accent-3);bottom:30%;left:-150px;animation-delay:-7s}
+        @keyframes orbFloat{0%,100%{transform:translate(0,0) scale(1)}25%{transform:translate(40px,-20px) scale(1.1)}50%{transform:translate(-15px,30px) scale(0.9)}75%{transform:translate(-30px,-15px) scale(1.05)}}
 
-        /* 龙掌柜详情展开区 */
-        .longzg-detail {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.5s ease;
-        }
-        .longzg-detail.open {
-            max-height: 1500px;
-        }
-        .longzg-detail-inner {
-            padding: 30px;
-            background: var(--gray);
-            border-radius: 8px;
-            margin-top: 20px;
-        }
-        .longzg-modules {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 20px;
-            margin-top: 20px;
-        }
-        .longzg-module {
-            background: #fff;
-            border-radius: 8px;
-            padding: 20px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-        .longzg-module:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 6px 16px rgba(0,0,0,0.1);
-        }
-        .longzg-module-icon {
-            width: 44px;
-            height: 44px;
-            border-radius: 10px;
-            background: rgba(255,127,36,0.1);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 12px;
-        }
-        .longzg-module-icon i {
-            font-size: 20px;
-            color: var(--primary);
-        }
-        .longzg-module h4 {
-            font-size: 16px;
-            margin-bottom: 6px;
-            color: var(--text-dark);
-        }
-        .longzg-module p {
-            font-size: 13px;
-            color: var(--text-light);
-            line-height: 1.6;
-        }
-        .longzg-flow {
-            margin-top: 30px;
-            padding: 20px;
-            background: #fff;
-            border-radius: 8px;
-        }
-        .longzg-flow h4 {
-            font-size: 18px;
-            margin-bottom: 15px;
-            color: var(--text-dark);
-        }
-        .longzg-flow-steps {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 8px;
-        }
-        .longzg-flow-step {
-            padding: 8px 16px;
-            background: var(--gray);
-            border-radius: 20px;
-            font-size: 14px;
-            color: var(--text-dark);
-        }
-        .longzg-flow-arrow {
-            color: var(--primary);
-            font-size: 14px;
-        }
+        .header{position:fixed;top:0;left:0;right:0;z-index:1000;padding:16px 0;transition:var(--transition)}
+        .header.scrolled{background:rgba(10,14,39,0.85);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--border);padding:10px 0}
+        .nav{display:flex;align-items:center;justify-content:space-between}
+        .logo{display:flex;align-items:center;gap:10px;font-size:20px;font-weight:800;color:white;letter-spacing:-0.5px}
+        .logo-icon{width:40px;height:40px;background:linear-gradient(135deg,var(--accent-1),var(--accent-2));border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:center;font-size:18px;box-shadow:0 0 20px rgba(99,102,241,0.4)}
+        .nav-menu{display:flex;align-items:center;gap:8px;list-style:none}
+        .nav-menu a{padding:8px 18px;border-radius:100px;font-size:14px;font-weight:500;color:var(--text-secondary);transition:var(--transition)}
+        .nav-menu a:hover,.nav-menu a.active{color:white;background:rgba(99,102,241,0.1)}
+        .nav-badge{display:inline-flex;align-items:center;gap:6px;padding:6px 14px;border-radius:100px;font-size:12px;font-weight:600;background:rgba(99,102,241,0.15);border:1px solid var(--border-glow);color:var(--accent-1);animation:badgePulse 2s ease-in-out infinite}
+        @keyframes badgePulse{0%,100%{box-shadow:0 0 0 0 rgba(99,102,241,0.3)}50%{box-shadow:0 0 0 8px rgba(99,102,241,0)}}
+        .btn{display:inline-flex;align-items:center;gap:8px;padding:12px 28px;border-radius:100px;font-size:15px;font-weight:600;border:none;cursor:pointer;transition:var(--transition);position:relative;overflow:hidden}
+        .btn::after{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.15),transparent);transition:left 0.5s}
+        .btn:hover::after{left:100%}
+        .btn-primary{background:linear-gradient(135deg,var(--accent-1),var(--accent-2));color:white;box-shadow:0 0 30px rgba(99,102,241,0.3)}
+        .btn-primary:hover{transform:translateY(-2px);box-shadow:0 0 40px rgba(99,102,241,0.5)}
+        .btn-outline{border:1px solid var(--border-glow);background:transparent;color:white}
+        .btn-outline:hover{border-color:var(--accent-1);box-shadow:0 0 20px rgba(99,102,241,0.2);transform:translateY(-2px)}
+        .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
+        .hamburger span{display:block;width:24px;height:2px;background:white;border-radius:2px;transition:var(--transition)}
 
-        .course-subtabs {
-            display: flex;
-            gap: 20px;
-            margin-bottom: 30px;
-            flex-wrap: wrap;
-        }
-        .course-subtab {
-            padding: 8px 20px;
-            background: var(--gray);
-            border-radius: 20px;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-        .course-subtab.active {
-            background: var(--primary);
-            color: #fff;
-        }
-        /* 服务流程 */
-        .service-process {
-            padding: 60px 0;
-            background: var(--gray);
-        }
-        .section-title {
-            text-align: center;
-            font-size: 32px;
-            margin-bottom: 60px;
-            position: relative;
-        }
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 4px;
-            background: var(--primary);
-        }
-        .process-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 30px;
-            text-align: center;
-        }
-        .process-item {
-            padding: 20px;
-        }
-        .process-item .number {
-            width: 40px;
-            height: 40px;
-            line-height: 40px;
-            border-radius: 50%;
-            background: var(--primary);
-            color: #fff;
-            font-size: 18px;
-            margin: 0 auto 15px;
-        }
-        .process-item i {
-            font-size: 30px;
-            color: var(--secondary);
-            margin-bottom: 15px;
-        }
-        .process-item p {
-            font-size: 16px;
-            color: var(--text-dark);
-        }
-        /* 常见问题 */
-        .faq {
-            padding: 60px 0;
-        }
-        .faq-item {
-            margin-bottom: 10px;
-            border: 1px solid var(--gray);
-            border-radius: 4px;
-        }
-        .faq-question {
-            padding: 15px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: var(--gray);
-            cursor: pointer;
-            font-weight: 500;
-        }
-        .faq-answer {
-            padding: 0 20px;
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s, padding 0.3s;
-        }
-        .faq-answer.show {
-            padding: 20px;
-            max-height: 500px;
-        }
-        /* 页脚 */
-        .footer {
-            background: #333;
-            color: #fff;
-            padding: 60px 0 20px;
-        }
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            margin-bottom: 40px;
-        }
-        .footer-col h4 {
-            font-size: 18px;
-            margin-bottom: 20px;
-            position: relative;
-            padding-bottom: 10px;
-        }
-        .footer-col h4::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 50px;
-            height: 2px;
-            background: var(--primary);
-        }
-        .footer-col p {
-            color: #ccc;
-            font-size: 14px;
-            line-height: 1.8;
-        }
-        .footer-col .contact-info {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-        .footer-col .contact-info li {
-            list-style: none;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        .footer-col .social-icons {
-            display: flex;
-            gap: 15px;
-            margin-top: 20px;
-        }
-        .footer-col .social-icons a {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background: rgba(255,255,255,0.1);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: background 0.3s;
-        }
-        .footer-col .social-icons a:hover {
-            background: var(--primary);
-        }
-        .footer-bottom {
-            text-align: center;
-            padding-top: 20px;
-            border-top: 1px solid #444;
-            font-size: 14px;
-            color: #ccc;
-        }
-        /* 响应式 */
-        @media (max-width: 768px) {
-            .nav-menu, .consult-btn {
-                display: none;
-            }
-            .hamburger {
-                display: block;
-            }
-            .service-card {
-                grid-template-columns: 1fr;
-            }
-            .section-title {
-                font-size: 26px;
-            }
-            .tab-item {
-                padding: 10px 20px;
-                font-size: 16px;
-            }
-            .longzg-features {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            .longzg-btn-group {
-                flex-direction: column;
-            }
-            .longzg-flow-steps {
-                gap: 6px;
-            }
-            .longzg-flow-step {
-                font-size: 12px;
-                padding: 6px 12px;
-            }
-        }
+        .page-hero{padding:160px 0 100px;text-align:center;position:relative}
+        .page-hero .breadcrumb{display:flex;align-items:center;gap:8px;justify-content:center;margin-bottom:16px;font-size:14px;color:var(--text-muted);position:relative;z-index:1}
+        .page-hero .breadcrumb a:hover{color:var(--accent-1)}
+        .page-hero h1{font-size:clamp(36px,5vw,52px);font-weight:900;letter-spacing:-1px;position:relative;z-index:1;background:linear-gradient(135deg,var(--accent-1),var(--accent-3));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+
+        .tabs-nav{display:flex;justify-content:center;gap:8px;margin-bottom:60px;background:rgba(15,21,53,0.5);padding:6px;border-radius:100px;max-width:440px;margin-left:auto;margin-right:auto;border:1px solid var(--border);position:relative;z-index:2}
+        .tab-btn{padding:12px 32px;border-radius:100px;font-size:15px;font-weight:600;border:none;background:transparent;color:var(--text-muted);cursor:pointer;transition:var(--transition)}
+        .tab-btn.active{background:linear-gradient(135deg,var(--accent-1),var(--accent-2));color:white;box-shadow:0 0 20px rgba(99,102,241,0.3)}
+        .tab-content{display:none}
+        .tab-content.active{display:block}
+
+        section{padding:80px 0;position:relative}
+        .section-header{max-width:640px;margin:0 auto 64px;text-align:center}
+        .section-label{display:inline-flex;align-items:center;gap:8px;padding:6px 16px;border-radius:100px;border:1px solid var(--border-glow);font-size:12px;font-weight:600;color:var(--accent-1);text-transform:uppercase;letter-spacing:2px;margin-bottom:16px;background:rgba(99,102,241,0.05)}
+        .section-label::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--accent-3);box-shadow:0 0 8px var(--accent-3)}
+        .section-header h2{font-size:clamp(28px,4vw,42px);font-weight:800;letter-spacing:-0.5px;margin-bottom:16px}
+        .section-header h2 .gradient-text{background:linear-gradient(135deg,var(--accent-1),var(--accent-3));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+
+        .product-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+        .product-image img{border-radius:var(--radius-xl);width:100%;border:1px solid var(--border);box-shadow:0 0 40px rgba(99,102,241,0.1)}
+        .product-badge{display:inline-block;padding:4px 14px;border-radius:100px;font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:16px}
+        .product-badge.hot{background:rgba(244,63,94,0.15);color:var(--accent-4);border:1px solid rgba(244,63,94,0.3)}
+        .product-badge.new{background:rgba(6,182,212,0.15);color:var(--accent-3);border:1px solid rgba(6,182,212,0.3)}
+        .product-text h2{font-size:32px;font-weight:900;letter-spacing:-1px;margin-bottom:20px}
+        .product-text .subtitle{font-size:17px;color:var(--text-secondary);margin-bottom:28px;line-height:1.7}
+        .feature-list{list-style:none;display:flex;flex-direction:column;gap:16px;margin-bottom:32px}
+        .feature-list li{display:flex;align-items:flex-start;gap:12px;font-size:15px;color:var(--text-secondary)}
+        .feature-list .f-icon{width:28px;height:28px;border-radius:50%;background:rgba(99,102,241,0.15);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:12px;color:var(--accent-3)}
+        .product-alt-bg{background:rgba(15,21,53,0.3);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+
+        .flow-section{padding:80px 0;background:linear-gradient(135deg,rgba(99,102,241,0.08),rgba(139,92,246,0.05));border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+        .flow-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;text-align:center}
+        .flow-step{padding:28px 16px;background:var(--bg-card);border-radius:var(--radius-md);border:1px solid var(--border);backdrop-filter:blur(10px);transition:var(--transition);position:relative}
+        .flow-step:hover{border-color:var(--border-glow);transform:translateY(-4px);box-shadow:0 0 30px rgba(99,102,241,0.15)}
+        .flow-step .step-num{font-size:32px;font-weight:900;background:linear-gradient(135deg,var(--accent-1),var(--accent-3));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:8px}
+        .flow-step .step-title{font-size:15px;font-weight:600;margin-bottom:4px}
+        .flow-step .step-desc{font-size:12px;color:var(--text-muted)}
+        .flow-arrow-m{display:flex;align-items:center;justify-content:center;color:var(--accent-1);font-size:24px}
+
+        .course-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+        .course-card{background:var(--bg-card);border-radius:var(--radius-xl);overflow:hidden;transition:var(--transition);border:1px solid var(--border);backdrop-filter:blur(10px)}
+        .course-card:hover{transform:translateY(-6px);border-color:var(--border-glow);box-shadow:0 0 40px rgba(99,102,241,0.15)}
+        .course-card img{width:100%;height:200px;object-fit:cover;transition:transform 0.5s}
+        .course-card:hover img{transform:scale(1.05)}
+        .course-body{padding:24px}
+        .course-body h3{font-size:20px;font-weight:700;margin-bottom:8px}
+        .course-body p{font-size:14px;color:var(--text-secondary);margin-bottom:16px;line-height:1.6}
+        .course-tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
+        .course-tag{padding:4px 12px;border-radius:100px;font-size:12px;color:var(--accent-1);font-weight:500;background:rgba(99,102,241,0.1);border:1px solid var(--border)}
+        .course-footer{display:flex;justify-content:space-between;align-items:center;padding-top:16px;border-top:1px solid var(--border)}
+        .course-price{font-size:16px;font-weight:700;color:var(--accent-3)}
+        .course-link{font-size:14px;font-weight:600;color:var(--accent-1);transition:var(--transition)}
+        .course-link:hover{color:var(--accent-2)}
+
+        .footer{padding:80px 0 32px;border-top:1px solid var(--border);background:rgba(15,21,53,0.3)}
+        .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:60px;margin-bottom:60px}
+        .footer-brand p{color:var(--text-muted);font-size:14px;line-height:1.8;margin-top:20px;max-width:320px}
+        .footer-col h4{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:var(--text-secondary);margin-bottom:24px}
+        .footer-links{list-style:none;display:flex;flex-direction:column;gap:12px}
+        .footer-links a{font-size:14px;color:var(--text-muted);transition:var(--transition)}
+        .footer-links a:hover{color:var(--accent-1)}
+        .footer-bottom{border-top:1px solid var(--border);padding-top:32px;display:flex;justify-content:space-between;align-items:center;font-size:13px;color:var(--text-muted)}
+        .footer-social{display:flex;gap:12px}
+        .footer-social a{width:36px;height:36px;border-radius:50%;background:rgba(99,102,241,0.08);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:16px;transition:var(--transition)}
+        .footer-social a:hover{background:var(--accent-1);border-color:var(--accent-1);box-shadow:0 0 16px rgba(99,102,241,0.4)}
+
+        @media(max-width:1024px){.product-grid{grid-template-columns:1fr;gap:40px}.flow-grid{grid-template-columns:repeat(3,1fr)}.course-grid{grid-template-columns:repeat(2,1fr)}.footer-grid{grid-template-columns:1fr 1fr;gap:40px}}
+        @media(max-width:768px){.nav-menu{display:none}.nav-menu.mobile-open{display:flex;flex-direction:column;position:absolute;top:76px;left:0;right:0;background:rgba(10,14,39,0.95);backdrop-filter:blur(20px);padding:16px;border:1px solid var(--border);border-radius:var(--radius-md);gap:4px}.hamburger{display:flex}.page-hero{padding:120px 0 60px}section{padding:60px 0}.flow-grid{grid-template-columns:repeat(2,1fr)}.course-grid{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr;gap:32px}.footer-bottom{flex-direction:column;gap:16px;text-align:center}.tabs-nav{max-width:100%}.tab-btn{padding:10px 20px;font-size:14px}}
     </style>
 </head>
 <body>
-    <!-- 导航栏 -->
-    <header class="header">
+    <canvas id="particleCanvas"></canvas>
+    <div class="grid-bg"></div>
+    <div class="glow-orb orb-1"></div>
+    <div class="glow-orb orb-2"></div>
+
+    <header class="header" id="header">
         <div class="container">
             <nav class="nav">
-                <a href="index.html" class="logo">
-                    <i class="fab fa-tiktok"></i>
-                    拉克力跨境
-                </a>
-                <div class="nav-menu">
-                    <a href="index.html">首页</a>
-                    <a href="about.html">关于我们</a>
-                    <a href="courses.html" class="active">产品/服务</a>
-                    <a href="cases.html">成功案例</a>
-                    <a href="contact.html">联系我们</a>
-                    <a href="https://lakeli.coze.site/landing" target="_blank" style="color:var(--primary);font-weight:600">
-                        <i class="fas fa-robot"></i> 龙掌柜 <span style="background:var(--primary);color:#fff;font-size:10px;padding:1px 6px;border-radius:10px;font-weight:500">HOT</span>
-                    </a>
-                    <a href="https://508db561-4a2d-41a8-89f5-4c200a009345.dev.coze.site" target="_blank" style="color:#2563EB;font-weight:600">
-                        <i class="fas fa-brain"></i> 域途GEO <span style="background:#2563EB;color:#fff;font-size:10px;padding:1px 6px;border-radius:10px;font-weight:500">NEW</span>
-                    </a>
-                </div>
-                <a href="contact.html" class="consult-btn">
-                    <i class="fas fa-comments"></i>
-                    立即咨询
-                </a>
-                <div class="hamburger">
-                    <i class="fas fa-bars"></i>
-                </div>
+                <a href="index.html" class="logo"><div class="logo-icon">🌐</div>拉克力跨境</a>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="about.html">关于我们</a></li>
+                    <li><a href="courses.html" class="active">产品服务</a></li>
+                    <li><a href="cases.html">成功案例</a></li>
+                    <li><a href="contact.html">联系我们</a></li>
+                    <li><a href="https://lakeli.coze.site/landing" target="_blank" class="nav-badge">🤖 龙掌柜AI</a></li>
+                </ul>
+                <a href="contact.html" class="btn btn-primary">立即咨询</a>
+                <button class="hamburger" id="hamburger" aria-label="菜单"><span></span><span></span><span></span></button>
             </nav>
         </div>
     </header>
-    <!-- 面包屑 -->
-    <section class="breadcrumb">
+
+    <section class="page-hero">
         <div class="container">
-            <a href="index.html">首页</a>
-            <span>></span>
-            <span>产品/服务</span>
+            <div class="breadcrumb"><a href="index.html">首页</a> <span style="color:var(--text-muted)">/</span> <span style="color:var(--text-secondary)">产品服务</span></div>
+            <h1>产品与服务</h1>
         </div>
     </section>
-    
-    <!-- 业务分类导航 -->
-    <section class="service-tabs">
-        <div class="container">
-            <div class="tabs-nav">
-                <div class="tab-item active" data-tab="ai-tool">AI SaaS工具</div>
-                <div class="tab-item" data-tab="training">实战培训课程</div>
-            </div>
-    
-            <!-- AI SaaS工具内容 -->
-            <div class="tab-content active" id="ai-tool">
 
-                <!-- 龙掌柜智能运营系统 -->
-                <div class="service-card longzg-card">
-                    <div class="service-img">
-                        <img src="images/courses/longzg_dashboard.png" alt="龙掌柜智能运营系统 - 运营工作台">
-                    </div>
-                    <div class="service-text">
-                        <h3>龙掌柜智能运营系统</h3>
-                        <p>跨境电商AI智能体运营平台，7大AI智能体覆盖选品到售后全链路，自研轻量ERP打通商品全生命周期，让AI成为跨境卖家的智能运营助理。</p>
-                        <div class="longzg-features">
-                            <div class="longzg-feature-item">
-                                <i class="fas fa-search"></i>
-                                <span>AI选品</span>
-                            </div>
-                            <div class="longzg-feature-item">
-                                <i class="fas fa-image"></i>
-                                <span>图片设计</span>
-                            </div>
-                            <div class="longzg-feature-item">
-                                <i class="fas fa-file-alt"></i>
-                                <span>Listing优化</span>
-                            </div>
-                            <div class="longzg-feature-item">
-                                <i class="fas fa-bullhorn"></i>
-                                <span>广告投放</span>
-                            </div>
-                            <div class="longzg-feature-item">
-                                <i class="fas fa-headset"></i>
-                                <span>AI客服</span>
-                            </div>
-                            <div class="longzg-feature-item">
-                                <i class="fas fa-video"></i>
-                                <span>视频生成</span>
-                            </div>
-                            <div class="longzg-feature-item">
-                                <i class="fas fa-chart-line"></i>
-                                <span>数据复盘</span>
-                            </div>
-                            <div class="longzg-feature-item">
-                                <i class="fas fa-robot"></i>
-                                <span>AI综合助手</span>
-                            </div>
-                        </div>
-                        <div class="longzg-btn-group">
-                            <a href="https://lakeli.coze.site/landing" target="_blank" class="longzg-btn-primary">
-                                <i class="fas fa-external-link-alt"></i> 免费体验
-                            </a>
-                            <a href="javascript:void(0)" class="longzg-btn-outline" onclick="toggleLongzgDetail()">
-                                <i class="fas fa-chevron-down"></i> 查看详情
-                            </a>
-                        </div>
-                    </div>
-                </div>
+    <div class="tabs-nav" style="margin-top:-20px;">
+        <button class="tab-btn active" onclick="switchTab('ai')">🤖 AI SaaS 工具</button>
+        <button class="tab-btn" onclick="switchTab('training')">📚 实战培训</button>
+    </div>
 
-                <!-- 龙掌柜详情展开区 -->
-                <div class="longzg-detail" id="longzgDetail">
-                    <div class="longzg-detail-inner">
-                        <h3 style="font-size:20px;margin-bottom:10px;color:var(--text-dark)">7大AI智能体 + 轻量ERP</h3>
-                        <p style="color:var(--text-light);margin-bottom:20px">AI辅助人工决策，自动的自动，必须人工的人工</p>
-                        <div class="longzg-modules">
-                            <div class="longzg-module">
-                                <div class="longzg-module-icon"><i class="fas fa-search"></i></div>
-                                <h4>选品智能体</h4>
-                                <p>市场趋势分析、竞品研究、蓝海类目挖掘、合规校验、供应商匹配</p>
-                            </div>
-                            <div class="longzg-module">
-                                <div class="longzg-module-icon"><i class="fas fa-image"></i></div>
-                                <h4>图片设计智能体</h4>
-                                <p>主图优化、图片翻译、白底图、背景替换，多语言适配</p>
-                            </div>
-                            <div class="longzg-module">
-                                <div class="longzg-module-icon"><i class="fas fa-video"></i></div>
-                                <h4>视频生成智能体</h4>
-                                <p>商品展示视频自动生成，提升商品详情页转化率</p>
-                            </div>
-                            <div class="longzg-module">
-                                <div class="longzg-module-icon"><i class="fas fa-file-alt"></i></div>
-                                <h4>Listing优化智能体</h4>
-                                <p>标题优化、五点描述、关键词挖掘，支持6种语言</p>
-                            </div>
-                            <div class="longzg-module">
-                                <div class="longzg-module-icon"><i class="fas fa-bullhorn"></i></div>
-                                <h4>广告投放智能体</h4>
-                                <p>广告计划创建、预算优化、ROI监控，智能出价</p>
-                            </div>
-                            <div class="longzg-module">
-                                <div class="longzg-module-icon"><i class="fas fa-headset"></i></div>
-                                <h4>客服智能体</h4>
-                                <p>AI客服回复、纠纷处理、多语言支持，7×24小时在线</p>
-                            </div>
-                            <div class="longzg-module">
-                                <div class="longzg-module-icon"><i class="fas fa-chart-line"></i></div>
-                                <h4>数据复盘智能体</h4>
-                                <p>运营数据分析、问题诊断、行动项自动生成</p>
-                            </div>
-                            <div class="longzg-module">
-                                <div class="longzg-module-icon"><i class="fas fa-boxes"></i></div>
-                                <h4>自研轻量ERP</h4>
-                                <p>商品采集、库存采购、订单物流、财务核算，全链路打通</p>
-                            </div>
-                        </div>
-                        <div class="longzg-flow">
-                            <h4>全链路数据闭环</h4>
-                            <div class="longzg-flow-steps">
-                                <span class="longzg-flow-step">选品采集</span>
-                                <i class="fas fa-arrow-right longzg-flow-arrow"></i>
-                                <span class="longzg-flow-step">商品入库</span>
-                                <i class="fas fa-arrow-right longzg-flow-arrow"></i>
-                                <span class="longzg-flow-step">图片处理</span>
-                                <i class="fas fa-arrow-right longzg-flow-arrow"></i>
-                                <span class="longzg-flow-step">Listing优化</span>
-                                <i class="fas fa-arrow-right longzg-flow-arrow"></i>
-                                <span class="longzg-flow-step">智能定价</span>
-                                <i class="fas fa-arrow-right longzg-flow-arrow"></i>
-                                <span class="longzg-flow-step">上架发布</span>
-                                <i class="fas fa-arrow-right longzg-flow-arrow"></i>
-                                <span class="longzg-flow-step">广告推广</span>
-                                <i class="fas fa-arrow-right longzg-flow-arrow"></i>
-                                <span class="longzg-flow-step">订单管理</span>
-                                <i class="fas fa-arrow-right longzg-flow-arrow"></i>
-                                <span class="longzg-flow-step">客服售后</span>
-                                <i class="fas fa-arrow-right longzg-flow-arrow"></i>
-                                <span class="longzg-flow-step">数据复盘</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 跨境AI合规雷达 -->
-                <div class="service-card">
-                    <div class="service-img">
-                        <img src="images/courses/hegui_leida.jpg" alt="跨境AI合规雷达">
-                    </div>
-                    <div class="service-text">
-                        <h3>跨境AI合规雷达</h3>
-                        <p>解决TikTok跨境卖家合规问题，规避封店风险，适配全球TikTok店铺运营，为你的出海生意保驾护航。</p>
-                        <ul class="service-advantages">
-                            <li><i class="fas fa-check"></i> 实时合规检测</li>
-                            <li><i class="fas fa-check"></i> 适配多地区店铺</li>
-                            <li><i class="fas fa-check"></i> 降低封店率</li>
-                            <li><i class="fas fa-check"></i> 操作简单易上手</li>
+    <!-- AI Tools Tab -->
+    <div class="tab-content active" id="tab-ai">
+        <section>
+            <div class="container">
+                <div class="product-grid">
+                    <div class="product-text">
+                        <span class="product-badge hot">🔥 旗舰产品</span>
+                        <h2>龙掌柜智能运营系统</h2>
+                        <p class="subtitle">7大AI智能体 + 轻量ERP，从选品到售后全链路AI驱动，帮助跨境卖家降本增效，实现业绩翻倍增长。</p>
+                        <ul class="feature-list">
+                            <li><span class="f-icon">✓</span> AI选品：智能分析市场趋势，精准推荐高潜力产品</li>
+                            <li><span class="f-icon">✓</span> AI内容：自动生成TikTok视频脚本与商品文案</li>
+                            <li><span class="f-icon">✓</span> AI客服：7x24小时多语言智能客服，响应率99%</li>
+                            <li><span class="f-icon">✓</span> 轻量ERP：订单管理、库存追踪、物流对接一站式搞定</li>
+                            <li><span class="f-icon">✓</span> 数据分析：实时Dashboard，运营数据一目了然</li>
                         </ul>
-                        <a href="contact.html" class="service-btn">立即咨询工具价格/试用</a>
+                        <a href="https://lakeli.coze.site/landing" target="_blank" class="btn btn-primary">立即体验 →</a>
                     </div>
+                    <div class="product-image"><img src="images/courses/longzg_dashboard.png" alt="龙掌柜智能运营系统"></div>
                 </div>
+            </div>
+        </section>
 
-                <!-- 域途GEOAI搜索引擎优化 -->
-                <div class="service-card" style="border:2px solid #2563EB;position:relative">
-                    <div style="position:absolute;top:-1px;right:-1px;background:#2563EB;color:#fff;font-size:12px;padding:4px 12px;border-radius:0 8px 0 8px;font-weight:bold">NEW</div>
-                    <div class="service-img">
-                        <img src="images/courses/hegui_leida.jpg" alt="域途GEOAI搜索引擎优化" style="object-fit:cover">
+        <section class="flow-section">
+            <div class="container">
+                <div class="section-header"><div class="section-label">工作流程</div><h2>龙掌柜<span class="gradient-text">全链路工作流</span></h2></div>
+                <div class="flow-grid">
+                    <div class="flow-step"><div class="step-num">01</div><div class="step-title">🔍 AI选品</div><div class="step-desc">智能市场分析</div></div>
+                    <div class="flow-arrow-m">→</div>
+                    <div class="flow-step"><div class="step-num">02</div><div class="step-title">📝 内容生成</div><div class="step-desc">AI脚本文案</div></div>
+                    <div class="flow-arrow-m">→</div>
+                    <div class="flow-step"><div class="step-num">03</div><div class="step-title">📊 运营管理</div><div class="step-desc">轻量ERP</div></div>
+                    <div class="flow-arrow-m">→</div>
+                    <div class="flow-step"><div class="step-num">04</div><div class="step-title">💬 AI客服</div><div class="step-desc">7x24h多语言</div></div>
+                    <div class="flow-arrow-m">→</div>
+                    <div class="flow-step"><div class="step-num">05</div><div class="step-title">📈 数据复盘</div><div class="step-desc">智能分析报告</div></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="product-alt-bg">
+            <div class="container">
+                <div class="product-grid" style="grid-template-columns:1fr 1fr">
+                    <div class="product-image" style="order:2"><img src="images/courses/longzg_landing.png" alt="域途GEO"></div>
+                    <div class="product-text" style="order:1">
+                        <span class="product-badge new">🆕 新品上线</span>
+                        <h2>域途GEO - AI搜索引擎优化</h2>
+                        <p class="subtitle">让你的品牌在全球搜索引擎中获得更高排名和曝光，AI驱动的SEO优化工具。</p>
+                        <ul class="feature-list">
+                            <li><span class="f-icon">✓</span> AI关键词分析：智能挖掘高转化关键词</li>
+                            <li><span class="f-icon">✓</span> 多语言SEO：支持英语、日语、韩语等多语种优化</li>
+                            <li><span class="f-icon">✓</span> 竞品分析：实时追踪竞争对手SEO策略</li>
+                            <li><span class="f-icon">✓</span> 排名监控：关键词排名变化实时预警</li>
+                        </ul>
+                        <a href="https://508db561-4a2d-41a8-89f5-4c200a009345.dev.coze.site" target="_blank" class="btn btn-primary">立即体验 →</a>
                     </div>
-                    <div class="service-text">
-                        <h3 style="color:#2563EB">域途GEO - AI搜索引擎优化</h3>
-                        <p>让品牌内容在豆包、文心一言、通义千问、ChatGPT等AI平台被优先推荐。GEO诊断+AI文案+收录监测+自动建站，抢占AI搜索流量红利。</p>
-                        <div class="longzg-features" style="grid-template-columns:repeat(4,1fr)">
-                            <div class="longzg-feature-item" style="background:#EFF6FF">
-                                <i class="fas fa-stethoscope" style="color:#2563EB"></i>
-                                <span style="color:#2563EB">GEO诊断</span>
-                            </div>
-                            <div class="longzg-feature-item" style="background:#EFF6FF">
-                                <i class="fas fa-pen-fancy" style="color:#2563EB"></i>
-                                <span style="color:#2563EB">AI文案</span>
-                            </div>
-                            <div class="longzg-feature-item" style="background:#EFF6FF">
-                                <i class="fas fa-satellite-dish" style="color:#2563EB"></i>
-                                <span style="color:#2563EB">收录监测</span>
-                            </div>
-                            <div class="longzg-feature-item" style="background:#EFF6FF">
-                                <i class="fas fa-globe" style="color:#2563EB"></i>
-                                <span style="color:#2563EB">自动建站</span>
-                            </div>
-                            <div class="longzg-feature-item" style="background:#EFF6FF">
-                                <i class="fas fa-key" style="color:#2563EB"></i>
-                                <span style="color:#2563EB">关键词挖掘</span>
-                            </div>
-                            <div class="longzg-feature-item" style="background:#EFF6FF">
-                                <i class="fas fa-link" style="color:#2563EB"></i>
-                                <span style="color:#2563EB">外链挖掘</span>
-                            </div>
-                            <div class="longzg-feature-item" style="background:#EFF6FF">
-                                <i class="fas fa-share-alt" style="color:#2563EB"></i>
-                                <span style="color:#2563EB">内容分发</span>
-                            </div>
-                            <div class="longzg-feature-item" style="background:#EFF6FF">
-                                <i class="fas fa-robot" style="color:#2563EB"></i>
-                                <span style="color:#2563EB">AI助手</span>
-                            </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <div class="product-grid">
+                    <div class="product-text">
+                        <span class="product-badge hot">🛡️ 核心工具</span>
+                        <h2>AI合规雷达</h2>
+                        <p class="subtitle">智能检测侵权风险、政策合规，让你的跨境生意安全无忧。</p>
+                        <ul class="feature-list">
+                            <li><span class="f-icon">✓</span> 商标侵权检测：AI自动识别潜在侵权风险</li>
+                            <li><span class="f-icon">✓</span> 政策合规审查：实时追踪各平台政策变动</li>
+                            <li><span class="f-icon">✓</span> 风险预警：异常情况即时推送通知</li>
+                            <li><span class="f-icon">✓</span> 合规报告：一键生成专业合规报告</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-outline">了解详情 →</a>
+                    </div>
+                    <div class="product-image"><img src="images/courses/hegui_leida.jpg" alt="AI合规雷达"></div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Training Tab -->
+    <div class="tab-content" id="tab-training">
+        <section style="padding-top:0;">
+            <div class="container">
+                <div class="section-header"><div class="section-label">培训课程</div><h2>系统化<span class="gradient-text">实战培训课程</span></h2><p style="color:var(--text-secondary)">8年实战导师亲授，从入门到精通</p></div>
+                <div class="course-grid">
+                    <div class="course-card">
+                        <img src="images/courses/Tiktok.jpg" alt="TikTok运营" onerror="this.style.background='linear-gradient(135deg,#1e1b4b,#312e81);this.style.minHeight=200px'">
+                        <div class="course-body">
+                            <h3>TikTok运营实战课</h3>
+                            <p>从0到1打造TikTok爆款账号，系统掌握短视频运营、直播带货全流程。</p>
+                            <div class="course-tags"><span class="course-tag">短视频运营</span><span class="course-tag">直播带货</span><span class="course-tag">账号矩阵</span></div>
+                            <div class="course-footer"><span class="course-price">立即咨询</span><a href="contact.html" class="course-link">了解详情 →</a></div>
                         </div>
-                        <div class="longzg-btn-group">
-                            <a href="https://508db561-4a2d-41a8-89f5-4c200a009345.dev.coze.site" target="_blank" style="padding:10px 25px;background:#2563EB;color:#fff;border-radius:4px;display:inline-flex;align-items:center;gap:6px;transition:background 0.3s">
-                                <i class="fas fa-external-link-alt"></i> 免费体验
-                            </a>
-                            <a href="https://508db561-4a2d-41a8-89f5-4c200a009345.dev.coze.site" target="_blank" style="padding:10px 25px;background:#fff;color:#2563EB;border:1px solid #2563EB;border-radius:4px;display:inline-flex;align-items:center;gap:6px;transition:all 0.3s">
-                                了解更多 <i class="fas fa-arrow-right"></i>
-                            </a>
+                    </div>
+                    <div class="course-card">
+                        <img src="images/courses/Amazon.jpg" alt="亚马逊运营" onerror="this.style.background='linear-gradient(135deg,#1e1b4b,#312e81);this.style.minHeight=200px'">
+                        <div class="course-body">
+                            <h3>亚马逊运营精讲课</h3>
+                            <p>精细化运营方法论，Listing优化、广告投放、库存管理一站搞定。</p>
+                            <div class="course-tags"><span class="course-tag">Listing优化</span><span class="course-tag">PPC广告</span><span class="course-tag">FBA管理</span></div>
+                            <div class="course-footer"><span class="course-price">立即咨询</span><a href="contact.html" class="course-link">了解详情 →</a></div>
+                        </div>
+                    </div>
+                    <div class="course-card">
+                        <img src="images/courses/zhibo.jpg" alt="直播运营" onerror="this.style.background='linear-gradient(135deg,#1e1b4b,#312e81);this.style.minHeight=200px'">
+                        <div class="course-body">
+                            <h3>TikTok直播运营课</h3>
+                            <p>从选品到话术，从场景搭建到流量投放，全流程实战教学。</p>
+                            <div class="course-tags"><span class="course-tag">直播选品</span><span class="course-tag">话术设计</span><span class="course-tag">流量投放</span></div>
+                            <div class="course-footer"><span class="course-price">立即咨询</span><a href="contact.html" class="course-link">了解详情 →</a></div>
                         </div>
                     </div>
                 </div>
             </div>
-    
-            <!-- 实战培训课程内容 -->
-            <div class="tab-content" id="training">
-                <div class="course-subtabs">
-                    <div class="course-subtab active" data-course="tk">TK跨境电商课</div>
-                    <div class="course-subtab" data-course="live">直播运营课</div>
-                    <div class="course-subtab" data-course="amazon">亚马逊运营课</div>
-                </div>
-    
-                <div class="course-content active" id="tk">
-                    <div class="service-card">
-                        <div class="service-img">
-                            <img src="images/courses/Tiktok.jpg" alt="TK跨境电商课">
-                        </div>
-                        <div class="service-text">
-                            <h3>TK跨境电商课</h3>
-                            <p>覆盖TikTok店铺注册、选品、上架、流量获取、转化优化全流程，8年实战经验讲师授课，手把手教你做好TikTok跨境电商。</p>
-                            <ul class="service-advantages">
-                                <li><i class="fas fa-check"></i> 实战教学</li>
-                                <li><i class="fas fa-check"></i> 8年行业经验</li>
-                                <li><i class="fas fa-check"></i> 1000+学员验证</li>
-                                <li><i class="fas fa-check"></i> 课后答疑辅导</li>
-                            </ul>
-                            <a href="contact.html" class="service-btn">立即咨询课程详情</a>
-                        </div>
-                    </div>
-                </div>
-    
-                <div class="course-content" id="live">
-                    <div class="service-card">
-                        <div class="service-img">
-                            <img src="images/courses/zhibo.jpg" alt="直播运营课">
-                        </div>
-                        <div class="service-text">
-                            <h3>直播运营课</h3>
-                            <p>聚焦TikTok直播全流程运营，从直播间搭建、选品、脚本设计、流量投放、互动转化，打造高转化的TikTok直播体系。</p>
-                            <ul class="service-advantages">
-                                <li><i class="fas fa-check"></i> 实战教学</li>
-                                <li><i class="fas fa-check"></i> 8年行业经验</li>
-                                <li><i class="fas fa-check"></i> 1000+学员验证</li>
-                                <li><i class="fas fa-check"></i> 课后答疑辅导</li>
-                            </ul>
-                            <a href="contact.html" class="service-btn">立即咨询课程详情</a>
-                        </div>
-                    </div>
-                </div>
-    
-                <div class="course-content" id="amazon">
-                    <div class="service-card">
-                        <div class="service-img">
-                            <img src="images/courses/Amazon.jpg" alt="亚马逊运营课">
-                        </div>
-                        <div class="service-text">
-                            <h3>亚马逊运营课</h3>
-                            <p>涵盖亚马逊店铺注册、选品、Listing优化、FBA发货、广告投放、合规运营，助力你做好亚马逊跨境生意。</p>
-                            <ul class="service-advantages">
-                                <li><i class="fas fa-check"></i> 实战教学</li>
-                                <li><i class="fas fa-check"></i> 8年行业经验</li>
-                                <li><i class="fas fa-check"></i> 1000+学员验证</li>
-                                <li><i class="fas fa-check"></i> 课后答疑辅导</li>
-                            </ul>
-                            <a href="contact.html" class="service-btn">立即咨询课程详情</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- 服务流程 -->
-    <section class="service-process">
-        <div class="container">
-            <h2 class="section-title">服务流程</h2>
-            <div class="process-list">
-                <div class="process-item">
-                    <div class="number">1</div>
-                    <i class="fas fa-comments"></i>
-                    <p>咨询</p>
-                </div>
-                <div class="process-item">
-                    <div class="number">2</div>
-                    <i class="fas fa-user-check"></i>
-                    <p>需求匹配</p>
-                </div>
-                <div class="process-item">
-                    <div class="number">3</div>
-                    <i class="fas fa-key"></i>
-                    <p>工具开通</p>
-                </div>
-                <div class="process-item">
-                    <div class="number">4</div>
-                    <i class="fas fa-book"></i>
-                    <p>操作指导</p>
-                </div>
-                <div class="process-item">
-                    <div class="number">5</div>
-                    <i class="fas fa-headset"></i>
-                    <p>售后维护</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- 常见问题 -->
-    <section class="faq">
-        <div class="container">
-            <h2 class="section-title">常见问题</h2>
-            <div class="faq-list">
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>龙掌柜智能运营系统支持哪些平台？</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        龙掌柜系统支持Shopee、Lazada、TikTok Shop等东南亚主流电商平台，同时覆盖亚马逊欧美市场。支持多店铺、多站点统一管理，一站式解决跨境运营难题。
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>AI合规雷达适配哪些地区的TikTok店铺？</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        跨境AI合规雷达适配全球主流TikTok运营地区，包括东南亚（马来西亚、新加坡、印尼等）、欧美（美国、英国、德国等）、中东等地区的TikTok店铺，全面覆盖你的跨境生意场景。
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>培训课程是线上还是线下？</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        我们的培训课程以线上直播+录播形式为主，支持回放学习，同时提供线下小班课（限深圳地区），满足不同学员的学习需求。
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>课程有效期多久？</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        付费学员可享受课程永久回放权限，同时免费获取课程更新内容，以及1年的课后答疑辅导服务。
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>服务范围是哪些地区？</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        我们的AI工具服务覆盖全球TikTok店铺，培训课程面向全国跨境电商从业者，线下服务目前仅覆盖深圳地区。
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>域途GEO是什么？适合什么企业？</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        域途GEO是AI搜索引擎优化工具，帮助品牌内容在豆包、文心一言、ChatGPT等AI大模型回答中被优先推荐。适合所有希望提升AI搜索可见度的企业，尤其是B2B企业、品牌商、内容型网站。免费版即可体验GEO诊断和AI文案生成。
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>GEO和SEO有什么区别？</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        SEO是针对传统搜索引擎（百度、Google）的优化，GEO是针对AI大模型（豆包、ChatGPT等）的优化。AI搜索时代，用户越来越倾向于直接问AI获取答案，GEO帮助你的品牌内容成为AI回答中的推荐来源，抢占新一代搜索流量入口。
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- 页脚 -->
+        </section>
+    </div>
+
     <footer class="footer">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-col">
-                    <h4>关于我们</h4>
-                    <p>聚焦TikTok跨境电商，提供AI SaaS工具+实战培训全链路服务，助力全球商家高效出海。</p>
-                </div>
-                <div class="footer-col">
-                    <h4>联系方式</h4>
-                    <ul class="contact-info">
-                        <li>
-                            <i class="fas fa-phone"></i>
-                            <span>13715191472（微信同号）</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>深圳市龙岗区坂田街道发达路6号云里智能大厦</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>AI产品</h4>
-                    <ul class="contact-info">
-                        <li>
-                            <i class="fas fa-brain" style="color:#2563EB"></i>
-                            <a href="https://508db561-4a2d-41a8-89f5-4c200a009345.dev.coze.site" target="_blank" style="color:inherit">域途GEO - AI搜索引擎优化</a>
-                        </li>
-                        <li>
-                            <i class="fas fa-robot" style="color:var(--primary)"></i>
-                            <a href="https://lakeli.coze.site/landing" target="_blank" style="color:inherit">龙掌柜 - 智能运营系统</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>社交媒体</h4>
-                    <div class="social-icons">
-                        <a href="#"><i class="fab fa-tiktok"></i></a>
-                        <a href="#"><i class="fab fa-weixin"></i></a>
-                        <a href="#"><i class="fab fa-weibo"></i></a>
-                    </div>
-                </div>
+            <div class="footer-grid">
+                <div class="footer-brand"><a href="index.html" class="logo"><div class="logo-icon">🌐</div>拉克力跨境</a><p>TikTok跨境电商全链路服务商，8年实战经验，AI驱动，助力中国企业成功出海。</p></div>
+                <div class="footer-col"><h4>快速导航</h4><ul class="footer-links"><li><a href="index.html">首页</a></li><li><a href="about.html">关于我们</a></li><li><a href="courses.html">产品服务</a></li><li><a href="cases.html">成功案例</a></li><li><a href="contact.html">联系我们</a></li></ul></div>
+                <div class="footer-col"><h4>AI 产品</h4><ul class="footer-links"><li><a href="https://lakeli.coze.site/landing" target="_blank">🤖 龙掌柜智能运营</a></li><li><a href="https://508db561-4a2d-41a8-89f5-4c200a009345.dev.coze.site" target="_blank">🧠 域途GEO</a></li></ul></div>
+                <div class="footer-col"><h4>联系方式</h4><ul class="footer-links"><li><a>📍 深圳龙岗坂田云里智能大厦</a></li><li><a>📞 13715191472（微信同号）</a></li></ul></div>
             </div>
-            <div class="footer-bottom">
-                <p>©2025 深圳市拉克力国际贸易有限公司 版权所有 | <a href="#">隐私政策</a></p>
-            </div>
+            <div class="footer-bottom"><span>© 2025 深圳市拉克力国际贸易有限公司 版权所有</span><div class="footer-social"><a href="#" aria-label="TikTok">🎵</a><a href="#" aria-label="微信">💬</a><a href="#" aria-label="微博">📱</a></div></div>
         </div>
     </footer>
-    
-    <script>
-        // 龙掌柜详情展开/收起
-        function toggleLongzgDetail() {
-            var detail = document.getElementById('longzgDetail');
-            var btn = document.querySelector('.longzg-btn-outline');
-            var isOpen = detail.classList.contains('open');
-            detail.classList.toggle('open');
-            if (isOpen) {
-                btn.innerHTML = '<i class="fas fa-chevron-down"></i> 查看详情';
-            } else {
-                btn.innerHTML = '<i class="fas fa-chevron-up"></i> 收起详情';
-            }
-        }
 
-        // 业务标签切换
-        var tabItems = document.querySelectorAll('.tab-item');
-        var tabContents = document.querySelectorAll('.tab-content');
-        tabItems.forEach(function(item) {
-            item.addEventListener('click', function() {
-                tabItems.forEach(function(i) { i.classList.remove('active'); });
-                tabContents.forEach(function(c) { c.classList.remove('active'); });
-                item.classList.add('active');
-                var tabId = item.getAttribute('data-tab');
-                document.getElementById(tabId).classList.add('active');
-            });
-        });
-    
-        // 课程子标签切换
-        var courseSubtabs = document.querySelectorAll('.course-subtab');
-        var courseContents = document.querySelectorAll('.course-content');
-        courseSubtabs.forEach(function(item) {
-            item.addEventListener('click', function() {
-                courseSubtabs.forEach(function(i) { i.classList.remove('active'); });
-                courseContents.forEach(function(c) { c.classList.remove('active'); });
-                item.classList.add('active');
-                var courseId = item.getAttribute('data-course');
-                document.getElementById(courseId).classList.add('active');
-            });
-        });
-    
-        // FAQ折叠面板
-        var faqQuestions = document.querySelectorAll('.faq-question');
-        faqQuestions.forEach(function(question) {
-            question.addEventListener('click', function() {
-                var answer = question.nextElementSibling;
-                answer.classList.toggle('show');
-                var icon = question.querySelector('i');
-                icon.classList.toggle('fa-chevron-down');
-                icon.classList.toggle('fa-chevron-up');
-            });
-        });
-    </script>
     <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    var hamburger = document.querySelector('.hamburger');
-    var navMenu = document.querySelector('.nav-menu');
-    var consultBtn = document.querySelector('.consult-btn');
-    
-    if (hamburger && navMenu && consultBtn) {
-      hamburger.addEventListener('click', function() {
-        var isNavVisible = getComputedStyle(navMenu).display === 'flex';
-        navMenu.style.display = isNavVisible ? 'none' : 'flex';
-        consultBtn.style.display = isNavVisible ? 'none' : 'block';
-      });
-    }
-  });
-</script>
+        const canvas=document.getElementById('particleCanvas'),ctx=canvas.getContext('2d');
+        let ps=[],mouse={x:-1000,y:-1000};
+        function rsz(){canvas.width=window.innerWidth;canvas.height=window.innerHeight}rsz();window.addEventListener('resize',rsz);
+        document.addEventListener('mousemove',e=>{mouse.x=e.clientX;mouse.y=e.clientY});
+        class P{constructor(){this.reset()}reset(){this.x=Math.random()*canvas.width;this.y=Math.random()*canvas.height;this.s=Math.random()*2+0.5;this.sx=(Math.random()-0.5)*0.5;this.sy=(Math.random()-0.5)*0.5;this.o=Math.random()*0.5+0.2;this.h=Math.random()<0.5?240+Math.random()*20:180+Math.random()*20}u(){const dx=mouse.x-this.x,dy=mouse.y-this.y,dist=Math.sqrt(dx*dx+dy*dy);if(dist<150){const f=(150-dist)/150;this.x-=dx*f*0.02;this.y-=dy*f*0.02}this.x+=this.sx;this.y+=this.sy;if(this.x<0)this.x=canvas.width;if(this.x>canvas.width)this.x=0;if(this.y<0)this.y=canvas.height;if(this.y>canvas.height)this.y=0}d(){ctx.beginPath();ctx.arc(this.x,this.y,this.s,0,Math.PI*2);ctx.fillStyle=`hsla(${this.h},80%,65%,${this.o})`;ctx.fill();ctx.beginPath();ctx.arc(this.x,this.y,this.s*2,0,Math.PI*2);ctx.fillStyle=`hsla(${this.h},80%,65%,${this.o*0.15})`;ctx.fill()}}
+        for(let i=0;i<Math.min(60,Math.floor(window.innerWidth/20));i++)ps.push(new P());
+        function dc(){for(let i=0;i<ps.length;i++)for(let j=i+1;j<ps.length;j++){const dx=ps[i].x-ps[j].x,dy=ps[i].y-ps[j].y,dist=Math.sqrt(dx*dx+dy*dy);if(dist<120){const o=(120-dist)/120*0.08;ctx.beginPath();ctx.moveTo(ps[i].x,ps[i].y);ctx.lineTo(ps[j].x,ps[j].y);ctx.strokeStyle=`rgba(99,102,241,${o})`;ctx.lineWidth=0.5;ctx.stroke()}}}
+        function anim(){ctx.clearRect(0,0,canvas.width,canvas.height);ps.forEach(p=>{p.u();p.d()});dc();requestAnimationFrame(anim)}anim();
+        function switchTab(tab){document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));event.target.classList.add('active');document.getElementById('tab-'+tab).classList.add('active')}
+        const header=document.getElementById('header');window.addEventListener('scroll',()=>header.classList.toggle('scrolled',window.scrollY>50));
+        document.getElementById('hamburger').addEventListener('click',()=>document.getElementById('navMenu').classList.toggle('mobile-open'));
+        const obs=new IntersectionObserver(e=>{e.forEach(en=>{if(en.isIntersecting){en.target.style.opacity='1';en.target.style.transform='translateY(0)'}})},{threshold:0.1});
+        document.querySelectorAll('.flow-step,.course-card,.product-grid').forEach(el=>{el.style.opacity='0';el.style.transform='translateY(30px)';el.style.transition='opacity 0.6s ease, transform 0.6s ease';obs.observe(el)});
+    </script>
 </body>
 </html>
