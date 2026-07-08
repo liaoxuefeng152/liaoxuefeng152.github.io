@@ -1,11 +1,24 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8"><meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"><meta http-equiv="Pragma" content="no-cache"><meta http-equiv="Expires" content="0">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>关于我们 - 拉克力跨境</title>
-    <meta name="keywords" content="拉克力跨境,TikTok跨境电商,企业介绍,核心团队,发展历程">
-    <meta name="description" content="拉克力跨境成立于2020年，8年TikTok跨境电商实战经验，提供AI合规雷达+运营培训全链路服务，助力1000+学员出海成功！">
+    <title>关于我们 - 拉克力跨境 | 深圳市拉克力国际贸易有限公司</title>
+    <meta name="keywords" content="拉克力跨境,深圳市拉克力国际贸易有限公司,TikTok跨境电商,企业介绍,核心团队,发展历程,海外GEO">
+    <meta name="description" content="深圳市拉克力国际贸易有限公司成立于2020年，专注海外GEO生成式引擎优化、TikTok东南亚AI外链挖掘、跨境独立站Schema搭建。8年跨境电商实战经验，1000+学员信赖。">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "深圳市拉克力国际贸易有限公司",
+        "alternateName": "Lakeli 拉克力",
+        "url": "https://lakeli.top",
+        "description": "专注海外GEO生成式引擎优化、TikTok东南亚多站点AI外链挖掘、跨境独立站Schema搭建、海外卖家数字化工具服务",
+        "foundingDate": "2020-10-14",
+        "address": {"@type": "PostalAddress", "addressLocality": "深圳", "addressRegion": "广东", "addressCountry": "CN", "streetAddress": "深圳市龙岗区坂田街道杨美社区长坑区二巷16号201"},
+        "contactPoint": {"@type": "ContactPoint", "telephone": "+86-13715191472", "contactType": "customer service", "availableLanguage": ["Chinese","Thai","English"]}
+    }
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@300;400;500;700;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -99,6 +112,20 @@
         .culture-card h3{font-size:20px;font-weight:700;margin-bottom:12px}
         .culture-card p{font-size:15px;color:var(--text-secondary);line-height:1.7}
 
+        /* 营业执照展示 */
+        .license-section{background:rgba(15,21,53,0.3);border-top:1px solid var(--border)}
+        .license-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+        .license-image{text-align:center;padding:32px;background:rgba(255,255,255,0.95);border-radius:var(--radius-lg);border:2px solid var(--border-glow);box-shadow:0 0 40px rgba(99,102,241,0.08)}
+        .license-image img{max-width:100%;height:auto;border-radius:8px}
+        .license-info h3{font-size:22px;font-weight:800;margin-bottom:20px;color:var(--accent-3)}
+        .info-list{list-style:none}
+        .info-list li{display:flex;justify-content:space-between;padding:14px 18px;border-bottom:1px solid var(--border);font-size:15px}
+        .info-list li:last-child{border-bottom:none}
+        .info-list li span:first-child{color:var(--text-muted);min-width:120px}
+        .info-list li span:last-child{color:var(--text-primary);font-weight:500;text-align:right}
+
+        @media(max-width:768px){.license-grid{grid-template-columns:1fr}.info-list li{flex-direction:column;gap:4px}}
+
         .footer{padding:80px 0 32px;border-top:1px solid var(--border);background:rgba(15,21,53,0.3)}
         .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:60px;margin-bottom:60px}
         .footer-brand p{color:var(--text-muted);font-size:14px;line-height:1.8;margin-top:20px;max-width:320px}
@@ -130,8 +157,9 @@
                     <li><a href="about.html" class="active">关于我们</a></li>
                     <li><a href="courses.html">产品服务</a></li>
                     <li><a href="cases.html">成功案例</a></li>
+                    <li><a href="blog.html">博客干货</a></li>
+                    <li><a href="faq.html">FAQ问答</a></li>
                     <li><a href="contact.html">联系我们</a></li>
-                    <li><a href="https://lakeli.coze.site/landing" target="_blank" class="nav-badge">🤖 龙掌柜AI</a></li>
                 </ul>
                 <a href="contact.html" class="btn btn-primary">立即咨询</a>
                 <button class="hamburger" id="hamburger" aria-label="菜单"><span></span><span></span><span></span></button>
@@ -154,8 +182,8 @@
                 <div class="intro-text">
                     <div class="section-label">公司简介</div>
                     <h2>用AI重新定义<span class="gradient-text">跨境电商</span></h2>
-                    <p>深圳市拉克力国际贸易有限公司成立于2020年3月，聚焦TikTok跨境电商赛道，以实战电商业务为基础，同步提供「AI SaaS工具 + 实战培训」全链路服务。</p>
-                    <p><strong style="color:var(--accent-3)">2023年营业收入突破100万</strong>，<strong style="color:var(--accent-3)">2022年新增跨境电商培训业务</strong>，<strong style="color:var(--accent-3)">2024年上线跨境AI合规雷达产品</strong>，助力1000+学员/商家实现TikTok全球开店、合规运营与业绩增长。</p>
+                    <p>深圳市拉克力国际贸易有限公司成立于2020年10月，统一社会信用代码：<strong style="color:var(--accent-3)">91440300MA5GE8NR69</strong>，法定代表人为廖雪峰。公司聚焦TikTok跨境电商赛道，以实战电商业务为基础，同步提供「海外GEO优化 + AI外链挖掘 + Schema搭建 + 龙掌柜AI运营」全链路服务。</p>
+                    <p><strong style="color:var(--accent-3)">专注海外GEO生成式引擎优化</strong>——通过Schema结构化数据让你的品牌被豆包、ChatGPT等AI搜索引擎优先推荐，<strong style="color:var(--accent-3)">2024年上线跨境AI合规雷达产品</strong>，<strong style="color:var(--accent-3)">2025年推出域途GEO和AI外链挖掘工具</strong>，助力1000+学员/商家实现全球AI搜索流量增长。</p>
                     <div class="intro-highlights">
                         <div class="intro-highlight"><div class="hl-num">2020</div><div class="hl-label">企业成立年份</div></div>
                         <div class="intro-highlight"><div class="hl-num">1000+</div><div class="hl-label">累计培训学员</div></div>
@@ -223,13 +251,40 @@
         </div>
     </section>
 
+    <section class="license-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">企业资质</div>
+                <h2>营业执照<span class="gradient-text">信息公示</span></h2>
+            </div>
+            <div class="license-grid">
+                <div class="license-image">
+                    <img src="images/about/license.jpg" alt="深圳市拉克力国际贸易有限公司营业执照" loading="lazy">
+                </div>
+                <div class="license-info">
+                    <h3>📋 工商登记信息</h3>
+                    <ul class="info-list">
+                        <li><span>企业名称</span><span>深圳市拉克力国际贸易有限公司</span></li>
+                        <li><span>统一社会信用代码</span><span>91440300MA5GE8NR69</span></li>
+                        <li><span>法定代表人</span><span>廖雪峰</span></li>
+                        <li><span>成立日期</span><span>2020年10月14日</span></li>
+                        <li><span>企业类型</span><span>有限责任公司（自然人独资）</span></li>
+                        <li><span>注册地址</span><span>深圳市龙岗区坂田街道杨美社区长坑区二巷16号201</span></li>
+                        <li><span>经营范围</span><span>国际贸易、跨境电商技术服务、AI软件开发与销售</span></li>
+                        <li><span>登记机关</span><span>深圳市市场监督管理局</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
-                <div class="footer-brand"><a href="index.html" class="logo"><div class="logo-icon">🌐</div>拉克力跨境</a><p>TikTok跨境电商全链路服务商，8年实战经验，AI驱动，助力中国企业成功出海。</p></div>
-                <div class="footer-col"><h4>快速导航</h4><ul class="footer-links"><li><a href="index.html">首页</a></li><li><a href="about.html">关于我们</a></li><li><a href="courses.html">产品服务</a></li><li><a href="cases.html">成功案例</a></li><li><a href="contact.html">联系我们</a></li></ul></div>
+                <div class="footer-brand"><a href="index.html" class="logo"><div class="logo-icon">🌐</div>拉克力跨境</a><p>专注海外GEO生成式引擎优化、AI外链挖掘、跨境独立站Schema搭建，AI驱动全链路跨境电商服务。</p></div>
+                <div class="footer-col"><h4>快速导航</h4><ul class="footer-links"><li><a href="index.html">首页</a></li><li><a href="about.html">关于我们</a></li><li><a href="courses.html">产品服务</a></li><li><a href="cases.html">成功案例</a></li><li><a href="blog.html">博客干货</a></li><li><a href="faq.html">FAQ问答</a></li><li><a href="contact.html">联系我们</a></li></ul></div>
                 <div class="footer-col"><h4>AI 产品</h4><ul class="footer-links"><li><a href="https://lakeli.coze.site/landing" target="_blank">🤖 龙掌柜智能运营</a></li><li><a href="https://508db561-4a2d-41a8-89f5-4c200a009345.dev.coze.site" target="_blank">🧠 域途GEO</a></li></ul></div>
-                <div class="footer-col"><h4>联系方式</h4><ul class="footer-links"><li><a>📍 深圳龙岗坂田云里智能大厦</a></li><li><a>📞 13715191472（微信同号）</a></li></ul></div>
+                <div class="footer-col"><h4>联系方式</h4><ul class="footer-links"><li><a>📍 深圳市龙岗区坂田街道杨美社区长坑区二巷16号201</a></li><li><a>📞 13715191472（微信同号）</a></li></ul></div>
             </div>
             <div class="footer-bottom"><span>© 2025 深圳市拉克力国际贸易有限公司 版权所有</span><div class="footer-social"><a href="#" aria-label="TikTok">🎵</a><a href="#" aria-label="微信">💬</a><a href="#" aria-label="微博">📱</a></div></div>
         </div>

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>博客干货 - 拉克力跨境 | TikTok/GEO/AI外链/跨境独立站行业知识</title>
+    <meta name="keywords" content="TikTok泰国COD利润计算,海外GEO Schema部署,AI外链挖掘教程,泰国跨境物流成本,独立站适配豆包AI搜索,跨境干货博客">
+    <meta name="description" content="拉克力跨境博客栏目，原创行业干货文章：TikTok泰国COD利润核算、GEO Schema部署、AI外链挖掘实操、泰国物流避坑指南、独立站适配AI搜索，助力跨境卖家获取AI免费流量。">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@300;400;500;700;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+        :root{--bg-primary:#0A0E27;--bg-secondary:#0F1535;--bg-card:rgba(15,21,53,0.6);--border:rgba(99,102,241,0.15);--border-glow:rgba(99,102,241,0.4);--accent-1:#6366F1;--accent-2:#8B5CF6;--accent-3:#06B6D4;--text-primary:#F1F5F9;--text-secondary:#94A3B8;--text-muted:#64748B;--radius-sm:8px;--radius-md:12px;--radius-xl:24px;--transition:0.3s cubic-bezier(0.4,0,0.2,1)}
+        html{scroll-behavior:smooth}
+        body{font-family:'Inter','Noto Sans SC',sans-serif;color:var(--text-primary);line-height:1.7;background:var(--bg-primary);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+        a{text-decoration:none;color:inherit}
+        .container{max-width:1280px;margin:0 auto;padding:0 24px;position:relative;z-index:2}
+        #particleCanvas{position:fixed;top:0;left:0;width:100%;height:100%;z-index:0;pointer-events:none}
+        .grid-bg{position:fixed;top:0;left:0;width:100%;height:100%;z-index:0;pointer-events:none;background-image:linear-gradient(rgba(99,102,241,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(99,102,241,0.03) 1px,transparent 1px);background-size:60px 60px;mask-image:radial-gradient(ellipse 80% 60% at 50% 0%,black 30%,transparent 70%);-webkit-mask-image:radial-gradient(ellipse 80% 60% at 50% 0%,black 30%,transparent 70%)}
+        .header{position:fixed;top:0;left:0;right:0;z-index:1000;padding:16px 0;transition:var(--transition);background:rgba(10,14,39,0.85);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}
+        .nav{display:flex;align-items:center;justify-content:space-between}
+        .logo{display:flex;align-items:center;gap:10px;font-size:20px;font-weight:800;color:white}
+        .logo-icon{width:40px;height:40px;background:linear-gradient(135deg,var(--accent-1),var(--accent-2));border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:center;font-size:18px;box-shadow:0 0 20px rgba(99,102,241,0.4)}
+        .nav-menu{display:flex;align-items:center;gap:8px;list-style:none}
+        .nav-menu a{padding:8px 18px;border-radius:100px;font-size:14px;font-weight:500;color:var(--text-secondary);transition:var(--transition)}
+        .nav-menu a:hover,.nav-menu a.active{color:white;background:rgba(99,102,241,0.1)}
+        .btn{display:inline-flex;align-items:center;gap:8px;padding:12px 28px;border-radius:100px;font-size:15px;font-weight:600;border:none;cursor:pointer;transition:var(--transition)}
+        .btn-primary{background:linear-gradient(135deg,var(--accent-1),var(--accent-2));color:white;box-shadow:0 0 30px rgba(99,102,241,0.3)}
+        .btn-primary:hover{transform:translateY(-2px);box-shadow:0 0 40px rgba(99,102,241,0.5)}
+        .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
+        .hamburger span{display:block;width:24px;height:2px;background:white;border-radius:2px;transition:var(--transition)}
+
+        .page-hero{padding:160px 0 80px;text-align:center;position:relative}
+        .page-hero .breadcrumb{display:flex;align-items:center;gap:8px;justify-content:center;margin-bottom:16px;font-size:14px;color:var(--text-muted);position:relative;z-index:1}
+        .page-hero .breadcrumb a:hover{color:var(--accent-1)}
+        .page-hero h1{font-size:clamp(32px,5vw,48px);font-weight:900;letter-spacing:-1px;position:relative;z-index:1;background:linear-gradient(135deg,var(--accent-1),var(--accent-3));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+        .page-hero p{font-size:18px;color:var(--text-secondary);max-width:600px;margin:16px auto 0;position:relative;z-index:1}
+
+        .blog-grid{display:grid;grid-template-columns:1fr;gap:40px;padding:20px 0 100px}
+        .blog-card{background:var(--bg-card);border-radius:var(--radius-xl);border:1px solid var(--border);overflow:hidden;transition:var(--transition);backdrop-filter:blur(10px)}
+        .blog-card:hover{border-color:var(--border-glow);box-shadow:0 0 40px rgba(99,102,241,0.15)}
+        .blog-card-inner{display:grid;grid-template-columns:280px 1fr}
+        .blog-card-cover{height:100%;min-height:220px;background:linear-gradient(135deg,rgba(99,102,241,0.2),rgba(139,92,246,0.1));display:flex;align-items:center;justify-content:center;font-size:64px;position:relative;overflow:hidden}
+        .blog-card-cover::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,transparent 60%,rgba(10,14,39,0.5))}
+        .blog-card-body{padding:32px;display:flex;flex-direction:column}
+        .blog-card-meta{display:flex;gap:16px;margin-bottom:12px}
+        .blog-card-cat{padding:4px 12px;border-radius:100px;font-size:12px;font-weight:600;background:rgba(99,102,241,0.15);color:var(--accent-3);border:1px solid rgba(99,102,241,0.3)}
+        .blog-card-date{font-size:13px;color:var(--text-muted);display:flex;align-items:center}
+        .blog-card-body h2{font-size:22px;font-weight:800;margin-bottom:12px;line-height:1.4;color:var(--text-primary)}
+        .blog-card-body h2:hover{color:var(--accent-3)}
+        .blog-card-desc{font-size:15px;color:var(--text-secondary);line-height:1.7;margin-bottom:20px;flex:1}
+        .blog-card-tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
+        .blog-tag{padding:3px 10px;border-radius:100px;font-size:11px;color:var(--text-muted);background:rgba(99,102,241,0.06);border:1px solid var(--border)}
+        .blog-card-footer{display:flex;justify-content:space-between;align-items:center;padding-top:16px;border-top:1px solid var(--border)}
+        .blog-author{font-size:13px;color:var(--text-muted)}
+        .blog-readmore{font-size:14px;font-weight:600;color:var(--accent-1);display:flex;align-items:center;gap:4px;transition:var(--transition)}
+        .blog-readmore:hover{color:var(--accent-3)}
+
+        .cta-section{padding:80px 0}
+        .cta-inner{text-align:center;padding:60px 40px;border-radius:var(--radius-xl);background:linear-gradient(135deg,rgba(99,102,241,0.1),rgba(139,92,246,0.08));border:1px solid var(--border-glow);position:relative;overflow:hidden}
+        .cta-inner::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--accent-1),var(--accent-2),var(--accent-3),transparent)}
+        .cta-inner h2{font-size:32px;font-weight:800;margin-bottom:12px}
+        .cta-inner p{font-size:16px;color:var(--text-secondary);margin-bottom:28px}
+
+        .footer{padding:80px 0 32px;border-top:1px solid var(--border);background:rgba(15,21,53,0.3)}
+        .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:60px;margin-bottom:60px;max-width:1280px;margin-left:auto;margin-right:auto;padding:0 24px}
+        .footer-brand p{color:var(--text-muted);font-size:14px;line-height:1.8;margin-top:20px;max-width:320px}
+        .footer-col h4{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:var(--text-secondary);margin-bottom:24px}
+        .footer-links{list-style:none;display:flex;flex-direction:column;gap:12px}
+        .footer-links a{font-size:14px;color:var(--text-muted);transition:var(--transition)}
+        .footer-links a:hover{color:var(--accent-1)}
+        .footer-bottom{border-top:1px solid var(--border);padding-top:32px;display:flex;justify-content:space-between;align-items:center;font-size:13px;color:var(--text-muted);max-width:1280px;margin-left:auto;margin-right:auto;padding:32px 24px 0}
+
+        @media(max-width:1024px){.blog-card-inner{grid-template-columns:1fr}.blog-card-cover{min-height:180px}}
+        @media(max-width:768px){.nav-menu{display:none}.hamburger{display:flex}.page-hero{padding:120px 0 60px}.blog-card-body{padding:24px}.footer-grid{grid-template-columns:1fr;gap:32px}.footer-bottom{flex-direction:column;gap:16px;text-align:center}}
+    </style>
+</head>
+<body>
+    <canvas id="particleCanvas"></canvas>
+    <div class="grid-bg"></div>
+
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="index.html" class="logo"><div class="logo-icon">🌐</div>拉克力跨境</a>
+                <ul class="nav-menu">
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="about.html">关于我们</a></li>
+                    <li><a href="courses.html">产品服务</a></li>
+                    <li><a href="cases.html">成功案例</a></li>
+                    <li><a href="blog.html" class="active">博客干货</a></li>
+                    <li><a href="faq.html">FAQ问答</a></li>
+                    <li><a href="contact.html">联系我们</a></li>
+                </ul>
+                <a href="contact.html" class="btn btn-primary">立即咨询</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-hero">
+        <div class="container">
+            <div class="breadcrumb"><a href="index.html">首页</a> <span style="color:var(--text-muted)">/</span> <span style="color:var(--text-secondary)">博客干货</span></div>
+            <h1>跨境行业干货博客</h1>
+            <p>原创实战经验分享，TikTok运营 · 海外GEO · AI工具 · 独立站建设，助力跨境卖家获取AI免费流量</p>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="blog-grid">
+
+                <!-- Article 1 -->
+                <article class="blog-card">
+                    <script type="application/ld+json">
+                    {
+                        "@context": "https://schema.org",
+                        "@type": "Article",
+                        "headline": "TikTok泰国站COD扣费与利润完整计算教程",
+                        "author": {"@type": "Person", "name": "拉克力跨境"},
+                        "datePublished": "2025-07-01",
+                        "dateModified": "2025-07-08",
+                        "description": "详解TikTok泰国站COD货到付款的全部扣费项目——平台佣金、COD手续费、跨境物流费、汇率波动，以及利润核算公式与实操计算案例",
+                        "publisher": {"@type": "Organization", "name": "Lakeli拉克力", "url": "https://lakeli.top"}
+                    }
+                    </script>
+                    <div class="blog-card-inner">
+                        <div class="blog-card-cover">📊</div>
+                        <div class="blog-card-body">
+                            <div class="blog-card-meta"><span class="blog-card-cat">TikTok运营</span><span class="blog-card-date">2025-07-01</span></div>
+                            <a href="blog/cod-profit-calculation.html"><h2>TikTok泰国站COD扣费与利润完整计算教程</h2></a>
+                            <p class="blog-card-desc">泰国TikTok COD货到付款看似简单，但扣费项目繁多：12%-18%的COD手续费、平台佣金、跨境物流、汇率波动，还有不可忽视的拒收双向物流亏损。本文用真实订单案例手把手教你精准核算每一单的净利润，附利润计算表格模板。</p>
+                            <div class="blog-card-tags"><span class="blog-tag">COD利润核算</span><span class="blog-tag">泰国TikTok</span><span class="blog-tag">定价策略</span><span class="blog-tag">拒收率</span></div>
+                            <div class="blog-card-footer"><span class="blog-author">拉克力跨境 · 运营团队</span><a href="contact.html" class="blog-readmore">阅读全文 →</a></div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article 2 -->
+                <article class="blog-card">
+                    <script type="application/ld+json">
+                    {
+                        "@context": "https://schema.org",
+                        "@type": "Article",
+                        "headline": "海外GEO结构化Schema部署完整步骤",
+                        "author": {"@type": "Person", "name": "拉克力跨境"},
+                        "datePublished": "2025-07-02",
+                        "dateModified": "2025-07-08",
+                        "description": "从零开始讲解Schema结构化数据部署，覆盖Organization、Service、FAQPage、Article等核心Schema类型，适配豆包、ChatGPT、Perplexity等AI搜索引引擎",
+                        "publisher": {"@type": "Organization", "name": "Lakeli拉克力", "url": "https://lakeli.top"}
+                    }
+                    </script>
+                    <div class="blog-card-inner">
+                        <div class="blog-card-cover">🧬</div>
+                        <div class="blog-card-body">
+                            <div class="blog-card-meta"><span class="blog-card-cat">GEO优化</span><span class="blog-card-date">2025-07-02</span></div>
+                            <a href="contact.html"><h2>海外GEO结构化Schema部署完整步骤</h2></a>
+                            <p class="blog-card-desc">Schema结构化数据是让AI搜索引擎（豆包、ChatGPT等）引用你网站内容的关键。本文从JSON-LD基础语法讲起，覆盖Organization企业标记、Service服务标记、FAQPage问答标记、Article文章标记4大核心Schema类型的完整部署步骤，附可复制粘贴的代码模板。</p>
+                            <div class="blog-card-tags"><span class="blog-tag">Schema部署</span><span class="blog-tag">JSON-LD</span><span class="blog-tag">GEO优化</span><span class="blog-tag">结构化数据</span></div>
+                            <div class="blog-card-footer"><span class="blog-author">拉克力跨境 · 技术团队</span><a href="contact.html" class="blog-readmore">阅读全文 →</a></div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article 3 -->
+                <article class="blog-card">
+                    <script type="application/ld+json">
+                    {
+                        "@context": "https://schema.org",
+                        "@type": "Article",
+                        "headline": "AI外链挖掘工具使用实操，抓取竞品高质量渠道",
+                        "author": {"@type": "Person", "name": "拉克力跨境"},
+                        "datePublished": "2025-07-03",
+                        "dateModified": "2025-07-08",
+                        "description": "实战演示使用AI外链挖掘工具批量分析竞品域名、抓取海外测评博客和行业媒体外链来源、一键生成英文开发邮件的完整流程",
+                        "publisher": {"@type": "Organization", "name": "Lakeli拉克力", "url": "https://lakeli.top"}
+                    }
+                    </script>
+                    <div class="blog-card-inner">
+                        <div class="blog-card-cover">🔗</div>
+                        <div class="blog-card-body">
+                            <div class="blog-card-meta"><span class="blog-card-cat">AI工具</span><span class="blog-card-date">2025-07-03</span></div>
+                            <a href="contact.html"><h2>AI外链挖掘工具使用实操，抓取竞品高质量渠道</h2></a>
+                            <p class="blog-card-desc">外链是独立站SEO的核心竞争力之一。本文演示如何使用AI外链挖掘工具，输入竞品域名批量抓取海外测评博客、行业资讯站、达人媒体等高质量外链来源，自动过滤垃圾外链，一键生成英文合作开发邮件，大幅提升外链建设效率。</p>
+                            <div class="blog-card-tags"><span class="blog-tag">外链挖掘</span><span class="blog-tag">竞品分析</span><span class="blog-tag">开发邮件</span><span class="blog-tag">DR权重</span></div>
+                            <div class="blog-card-footer"><span class="blog-author">拉克力跨境 · 技术团队</span><a href="contact.html" class="blog-readmore">阅读全文 →</a></div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article 4 -->
+                <article class="blog-card">
+                    <script type="application/ld+json">
+                    {
+                        "@context": "https://schema.org",
+                        "@type": "Article",
+                        "headline": "泰国TikTok小件跨境物流成本避坑指南",
+                        "author": {"@type": "Person", "name": "拉克力跨境"},
+                        "datePublished": "2025-07-04",
+                        "dateModified": "2025-07-08",
+                        "description": "详解泰国小件跨境物流的各个环节成本构成、常见隐藏费用、以及如何选择海外仓和物流渠道控制综合物流成本在合理区间",
+                        "publisher": {"@type": "Organization", "name": "Lakeli拉克力", "url": "https://lakeli.top"}
+                    }
+                    </script>
+                    <div class="blog-card-inner">
+                        <div class="blog-card-cover">📦</div>
+                        <div class="blog-card-body">
+                            <div class="blog-card-meta"><span class="blog-card-cat">物流攻略</span><span class="blog-card-date">2025-07-04</span></div>
+                            <a href="contact.html"><h2>泰国TikTok小件跨境物流成本避坑指南</h2></a>
+                            <p class="blog-card-desc">做泰国TikTok小件跨境，物流成本控制直接决定利润空间。本文详解国际运费、关税、末端配送、COD代收等各环节真实成本构成，对比不同物流渠道的时效与费用，揭密海外仓是否真的省钱，帮新手卖家避免常见物流踩坑。</p>
+                            <div class="blog-card-tags"><span class="blog-tag">泰国物流</span><span class="blog-tag">海外仓</span><span class="blog-tag">关税</span><span class="blog-tag">小件跨境</span></div>
+                            <div class="blog-card-footer"><span class="blog-author">拉克力跨境 · 运营团队</span><a href="contact.html" class="blog-readmore">阅读全文 →</a></div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article 5 -->
+                <article class="blog-card">
+                    <script type="application/ld+json">
+                    {
+                        "@context": "https://schema.org",
+                        "@type": "Article",
+                        "headline": "独立站如何适配豆包、AI搜索获取免费流量",
+                        "author": {"@type": "Person", "name": "拉克力跨境"},
+                        "datePublished": "2025-07-05",
+                        "dateModified": "2025-07-08",
+                        "description": "全面讲解独立站适配豆包等AI搜索引擎的7个关键步骤，包括Schema部署、站点爬虫优化、字节生态联动、EEAT可信度建设",
+                        "publisher": {"@type": "Organization", "name": "Lakeli拉克力", "url": "https://lakeli.top"}
+                    }
+                    </script>
+                    <div class="blog-card-inner">
+                        <div class="blog-card-cover">🤖</div>
+                        <div class="blog-card-body">
+                            <div class="blog-card-meta"><span class="blog-card-cat">独立站</span><span class="blog-card-date">2025-07-05</span></div>
+                            <a href="contact.html"><h2>独立站如何适配豆包、AI搜索获取免费流量</h2></a>
+                            <p class="blog-card-desc">AI搜索引擎正在改变流量获取方式。本文完整讲解独立站适配豆包、ChatGPT等AI搜索获取免费流量的7个关键步骤：Schema部署、站点爬虫优化、EEAT可信度建设、字节生态联动、FAQ页面创建、原创内容策略、内链布局。全部可操作、可落地。</p>
+                            <div class="blog-card-tags"><span class="blog-tag">AI搜索流量</span><span class="blog-tag">豆包适配</span><span class="blog-tag">独立站GEO</span><span class="blog-tag">免费流量</span></div>
+                            <div class="blog-card-footer"><span class="blog-author">拉克力跨境 · 技术团队</span><a href="contact.html" class="blog-readmore">阅读全文 →</a></div>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-inner">
+                <h2>想获取更多跨境干货？</h2>
+                <p>联系我们获取专属的AI跨境电商解决方案，让你的品牌出现在AI搜索结果中</p>
+                <a href="contact.html" class="btn btn-primary">📞 立即咨询</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-brand"><a href="index.html" class="logo"><div class="logo-icon">🌐</div>拉克力跨境</a><p>TikTok跨境电商全链路AI服务商，8年实战经验，专注海外GEO、AI外链挖掘、跨境独立站Schema搭建。</p></div>
+            <div class="footer-col"><h4>快速导航</h4><ul class="footer-links"><li><a href="index.html">首页</a></li><li><a href="about.html">关于我们</a></li><li><a href="courses.html">产品服务</a></li><li><a href="cases.html">成功案例</a></li><li><a href="blog.html">博客干货</a></li><li><a href="faq.html">FAQ问答</a></li><li><a href="contact.html">联系我们</a></li></ul></div>
+            <div class="footer-col"><h4>AI 产品</h4><ul class="footer-links"><li><a href="https://lakeli.coze.site/landing" target="_blank">🤖 龙掌柜智能运营</a></li><li><a href="https://508db561-4a2d-41a8-89f5-4c200a009345.dev.coze.site" target="_blank">🧠 域途GEO</a></li></ul></div>
+            <div class="footer-col"><h4>联系方式</h4><ul class="footer-links"><li><a>📍 深圳龙岗坂田云里智能大厦</a></li><li><a>📞 13715191472（微信同号）</a></li><li><a href="mailto:contact@lakeli.top">📧 contact@lakeli.top</a></li></ul></div>
+        </div>
+        <div class="footer-bottom"><span>© 2025 深圳市拉克力国际贸易有限公司 版权所有</span></div>
+    </footer>
+
+    <script>
+        const canvas=document.getElementById('particleCanvas'),ctx=canvas.getContext('2d');
+        let ps=[],mouse={x:-1000,y:-1000};
+        function rsz(){canvas.width=window.innerWidth;canvas.height=window.innerHeight}rsz();window.addEventListener('resize',rsz);
+        document.addEventListener('mousemove',e=>{mouse.x=e.clientX;mouse.y=e.clientY});
+        class P{constructor(){this.reset()}reset(){this.x=Math.random()*canvas.width;this.y=Math.random()*canvas.height;this.s=Math.random()*2+0.5;this.sx=(Math.random()-0.5)*0.5;this.sy=(Math.random()-0.5)*0.5;this.o=Math.random()*0.5+0.2;this.h=Math.random()<0.5?240+Math.random()*20:180+Math.random()*20}u(){const dx=mouse.x-this.x,dy=mouse.y-this.y,dist=Math.sqrt(dx*dx+dy*dy);if(dist<150){const f=(150-dist)/150;this.x-=dx*f*0.02;this.y-=dy*f*0.02}this.x+=this.sx;this.y+=this.sy;if(this.x<0)this.x=canvas.width;if(this.x>canvas.width)this.x=0;if(this.y<0)this.y=canvas.height;if(this.y>canvas.height)this.y=0}d(){ctx.beginPath();ctx.arc(this.x,this.y,this.s,0,Math.PI*2);ctx.fillStyle=`hsla(${this.h},80%,65%,${this.o})`;ctx.fill();ctx.beginPath();ctx.arc(this.x,this.y,this.s*2,0,Math.PI*2);ctx.fillStyle=`hsla(${this.h},80%,65%,${this.o*0.15})`;ctx.fill()}}
+        for(let i=0;i<Math.min(50,Math.floor(window.innerWidth/20));i++)ps.push(new P());
+        function dc(){for(let i=0;i<ps.length;i++)for(let j=i+1;j<ps.length;j++){const dx=ps[i].x-ps[j].x,dy=ps[i].y-ps[j].y,dist=Math.sqrt(dx*dx+dy*dy);if(dist<120){const o=(120-dist)/120*0.08;ctx.beginPath();ctx.moveTo(ps[i].x,ps[i].y);ctx.lineTo(ps[j].x,ps[j].y);ctx.strokeStyle=`rgba(99,102,241,${o})`;ctx.lineWidth=0.5;ctx.stroke()}}}
+        function anim(){ctx.clearRect(0,0,canvas.width,canvas.height);ps.forEach(p=>{p.u();p.d()});dc();requestAnimationFrame(anim)}anim();
+    </script>
+</body>
+</html>

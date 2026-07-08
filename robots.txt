@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://lakeli.top/sitemap.xml
