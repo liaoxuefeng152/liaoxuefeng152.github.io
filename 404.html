@@ -69,5 +69,6 @@
         function dc(){for(let i=0;i<ps.length;i++)for(let j=i+1;j<ps.length;j++){const dx=ps[i].x-ps[j].x,dy=ps[i].y-ps[j].y,dist=Math.sqrt(dx*dx+dy*dy);if(dist<120){const o=(120-dist)/120*0.08;ctx.beginPath();ctx.moveTo(ps[i].x,ps[i].y);ctx.lineTo(ps[j].x,ps[j].y);ctx.strokeStyle=`rgba(99,102,241,${o})`;ctx.lineWidth=0.5;ctx.stroke()}}}
         function anim(){ctx.clearRect(0,0,canvas.width,canvas.height);ps.forEach(p=>{p.u();p.d()});dc();requestAnimationFrame(anim)}anim();
     </script>
+    <script src="chat-widget.js"></script>
 </body>
 </html>
