@@ -372,7 +372,7 @@
             letter-spacing: 1px;
         }
 
-        /* Hero Visual - Terminal Card */
+        /* Hero Visual - Product Screenshot */
         .hero-visual {
             display: flex;
             justify-content: center;
@@ -397,42 +397,56 @@
             background: linear-gradient(90deg, transparent, var(--accent-1), var(--accent-2), transparent);
             opacity: 0.6;
         }
-        .terminal-header {
-            display: flex;
-            gap: 8px;
-            margin-bottom: 20px;
+        /* Hero Product Screenshot Card */
+        .hero-screenshot {
+            position: relative;
+            border-radius: var(--radius-xl);
+            overflow: hidden;
+            border: 1px solid rgba(99, 102, 241, 0.25);
+            box-shadow: 0 0 60px rgba(99, 102, 241, 0.12), 0 20px 40px rgba(0,0,0,0.4);
+            background: rgba(15, 21, 53, 0.6);
+            backdrop-filter: blur(10px);
         }
-        .terminal-dot {
-            width: 12px; height: 12px;
-            border-radius: 50%;
+        .hero-screenshot img {
+            width: 100%;
+            display: block;
         }
-        .terminal-dot.red { background: #FF5F56; }
-        .terminal-dot.yellow { background: #FFBD2E; }
-        .terminal-dot.green { background: #27C93F; }
-        .terminal-body {
-            font-family: 'JetBrains Mono', monospace;
+        .hero-screenshot .screenshot-badge {
+            position: absolute;
+            top: 16px;
+            left: 16px;
+            background: rgba(99, 102, 241, 0.85);
+            color: #fff;
+            font-size: 12px;
+            font-weight: 600;
+            padding: 6px 14px;
+            border-radius: 20px;
+            letter-spacing: 0.5px;
+            backdrop-filter: blur(8px);
+        }
+        .hero-screenshot .screenshot-label {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 14px 20px;
+            background: linear-gradient(to top, rgba(15,21,53,0.95), transparent);
             font-size: 13px;
-            line-height: 1.8;
-            color: var(--text-secondary);
-        }
-        .terminal-line {
+            color: var(--text-muted);
             display: flex;
+            align-items: center;
             gap: 8px;
         }
-        .terminal-prompt { color: var(--accent-3); }
-        .terminal-cursor {
-            display: inline-block;
-            width: 8px; height: 16px;
-            background: var(--accent-3);
-            animation: cursorBlink 1s step-end infinite;
-            vertical-align: text-bottom;
+        .hero-screenshot .screenshot-label .dot-live {
+            width: 8px; height: 8px;
+            border-radius: 50%;
+            background: #10B981;
+            animation: pulseLive 2s ease-in-out infinite;
         }
-        @keyframes cursorBlink {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0; }
+        @keyframes pulseLive {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(16,185,129,0.4); }
+            50% { box-shadow: 0 0 0 8px rgba(16,185,129,0); }
         }
-        .terminal-highlight { color: var(--accent-1); }
-        .terminal-success { color: #10B981; }
 
         /* Floating orbs around hero visual */
         .floating-card {
@@ -1021,33 +1035,14 @@
                 <div class="hero-visual">
                     <!-- Floating cards -->
                     <div class="floating-card card-1">⚡ AI智能选品</div>
-                    <div class="floating-card card-2">🔮 合规风险预判</div>
+                    <div class="floating-card card-2">🧠 GEO搜索优化</div>
                     <div class="floating-card card-3">📊 实时数据分析</div>
-                    <!-- Terminal Card -->
-                    <div class="hero-card" style="width: 100%; max-width: 440px;">
-                        <div class="terminal-header">
-                            <div class="terminal-dot red"></div>
-                            <div class="terminal-dot yellow"></div>
-                            <div class="terminal-dot green"></div>
-                        </div>
-                        <div class="terminal-body">
-                            <div class="terminal-line">
-                                <span class="terminal-prompt">lakeli ~ $</span>
-                                <span>init --mode=ai-cross-border</span>
-                            </div>
-                            <div style="margin: 8px 0;">
-                                <span class="terminal-success">✓</span> AI选品引擎 <span class="terminal-highlight">v3.2</span> 已启动<br>
-                                <span class="terminal-success">✓</span> 龙掌柜智能运营引擎 已连接<br>
-                                <span class="terminal-success">✓</span> 实时市场数据流 同步中<br>
-                                <span class="terminal-success">✓</span> 多平台店铺API 已接入
-                            </div>
-                            <div class="terminal-line">
-                                <span class="terminal-prompt">lakeli ~ $</span>
-                                <span>deploy --target=global-market</span>
-                            </div>
-                            <div style="margin-top: 8px; color: var(--accent-3);">
-                                <span class="terminal-cursor"></span> Ready for cross-border AI ops...
-                            </div>
+                    <!-- Product Screenshot Card -->
+                    <div class="hero-card hero-screenshot" style="width: 100%; max-width: 440px;">
+                        <span class="screenshot-badge">🧠 域途GEO · AI搜索引擎优化</span>
+                        <img src="images/courses/yutu-geo-home.png" alt="域途GEO - AI搜索引擎优化产品界面" loading="lazy">
+                        <div class="screenshot-label">
+                            <span class="dot-live"></span> 已接入 ChatGPT / 豆包 / DeepSeek 等主流AI搜索
                         </div>
                     </div>
                 </div>
