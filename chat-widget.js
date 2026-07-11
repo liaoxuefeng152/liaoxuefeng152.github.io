@@ -676,6 +676,17 @@
     quickEl = document.getElementById('lakeli-chat-quick');
     bindEvents();
 
+    // 将所有"立即咨询"按钮统一改为打开AI客服（不跳转contact.html）
+    document.querySelectorAll('a').forEach(function (link) {
+      if (link.textContent.trim().indexOf('立即咨询') !== -1) {
+        link.href = 'javascript:void(0)';
+        link.addEventListener('click', function (e) {
+          e.preventDefault();
+          openChat();
+        });
+      }
+    });
+
     var closed = sessionStorage.getItem(sessionKeyClosed);
     if (!closed) {
       setTimeout(function () {
