@@ -17,7 +17,7 @@
     autoOpenDelay: 5000,
 
     // Coze API
-    apiEndpoint: 'https://tshc2scjw6.coze.site/stream_run',
+    apiEndpoint: '/api/chat',
     apiToken: 'eyJhbGciOiJSUzI1NiIsImtpZCI6IjEwMDFjY2EzLTllNjktNGJkYS1hYWNhLThlYTEwMzQ4ODdmMCJ9.eyJpc3MiOiJodHRwczovL2FwaS5jb3plLmNuIiwiYXVkIjpbInJ0T3hOTXNEZ2JReWZUUXZJY3h3U1I5NHViakVzQUplIl0sImV4cCI6ODIxMDI2Njg3Njc5OSwiaWF0IjoxNzgzNzYwNzc0LCJzdWIiOiJzcGlmZmU6Ly9hcGkuY296ZS5jbi93b3JrbG9hZF9pZGVudGl0eS9pZDo3NjYxMTUxMTMwOTI3MjM1MTI2Iiwic3JjIjoiaW5ib3VuZF9hdXRoX2FjY2Vzc190b2tlbl9pZDo3NjYxMTk0MTg4OTcyNjIxODc2In0.JrDuIgyIsQAuj4SWkgtm70O4STOW9CmTlTGhkLiCP50XSGwKi44KOmaN6SwaJNapx3CtBusHG4EHU3Kwj0ekwO__IUfVITmgSjnPY_kqyypk4GBPooVg6cKqA_X5F_ZfFuD2mx5UHOzZh-N_Vrp-NGsrc5YF2LWqdp4Kp0Hm_TSrn8Ziay8p4kcUSJbUUxdSYuldR2iFBFPnBd68mJp2vkZlC1sWprowys3FLF1eO203qigU5lkVpWlia46axSiiXlnCon0sTPfQP84GWzIDASjFldzaBVw2cLsOepWe5aa-nG2As0n5Ag_cV8vYpExzss6p8bPas1EHZuW04zWqCg',
     projectId: '7661131730040078355',
 
@@ -470,9 +470,13 @@
             // 提取文本内容 - 适配多种响应格式
             let text = null;
 
-            // 格式1: { type: "answer", content: "text" }
+            // 格式1: { type: "answer", content: { answer: "xxx" } }  (Coze格式)
             if (data.type === 'answer' && data.content) {
-              text = data.content;
+              if (typeof data.content === 'string') {
+                text = data.content;
+              } else if (data.content && data.content.answer) {
+                text = data.content.answer;
+              }
             }
             // 格式2: { type: "output", content: {...} }
             else if (data.type === 'output' && data.content) {
@@ -568,12 +572,16 @@
     } catch (err) {
       console.error('[LakeliChat] API 错误:', err);
 
+      const errMsg = err && err.name === 'AbortError' ? '请求已取消' :
+                       (err && err.message && err.message.includes('Failed to fetch')) ? '网络连接失败（可能是CORS或网络问题）' :
+                       '抱歉，服务暂时不可用，请稍后再试。';
+
       // 找到或创建 bot 消息展示错误
       const streamingMsg = messages.find(function (m) { return m.streaming; });
       if (streamingMsg) {
         streamingMsg.streaming = false;
         if (!streamingMsg.content) {
-          streamingMsg.content = '抱歉，服务暂时不可用，请稍后再试。';
+          streamingMsg.content = errMsg;
         }
       } else {
         messages.push({
