@@ -43,7 +43,7 @@
       title: '📞 转接人工顾问',
       body: '我是<strong>廖雪峰</strong>，拉克力跨境创始人。很高兴为您提供1对1咨询服务！',
       contactLines: [
-        '📞 <strong>13715191472</strong>（微信同号）',
+        '📞 <strong>13129537910</strong>（微信同号）',
         '📧 contact@lakeli.top',
       ],
     },
@@ -586,7 +586,7 @@
       } else {
         messages.push({
           role: 'bot',
-          content: '抱歉，服务暂时不可用，请稍后再试。<br><br>您可以直接联系我们：<br>📞 13715191472（微信同号）<br>📧 contact@lakeli.top',
+          content: '抱歉，服务暂时不可用，请稍后再试。<br><br>您可以直接联系我们：<br>📞 13129537910（微信同号）<br>📧 contact@lakeli.top',
         });
       }
     }
