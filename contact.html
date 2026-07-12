@@ -82,6 +82,34 @@
         .map-placeholder .addr{font-size:16px;color:var(--text-secondary);font-weight:600}
         .map-placeholder p{font-size:14px;color:var(--text-muted)}
 
+        /* ========== 产品下拉菜单 ========== */
+        .has-dropdown{position:relative}
+        .has-dropdown>a{display:flex;align-items:center;gap:4px;cursor:pointer;user-select:none}
+        .dropdown-arrow{font-size:10px;transition:transform .3s}
+        .has-dropdown:hover .dropdown-arrow{transform:rotate(180deg)}
+        .dropdown-menu{position:absolute;top:calc(100% + 8px);left:50%;transform:translateX(-50%) translateY(8px);opacity:0;visibility:hidden;pointer-events:none;display:grid;grid-template-columns:1fr 1fr;gap:8px;min-width:580px;background:rgba(15,21,53,0.97);backdrop-filter:blur(28px);-webkit-backdrop-filter:blur(28px);border:1px solid var(--border);border-radius:var(--radius-lg);padding:20px;box-shadow:0 24px 64px rgba(0,0,0,0.55),0 0 40px rgba(99,102,241,0.08);transition:all .25s cubic-bezier(.4,0,.2,1);z-index:1001}
+        .has-dropdown:hover .dropdown-menu,.has-dropdown.dropdown-open .dropdown-menu{opacity:1;visibility:visible;pointer-events:auto;transform:translateX(-50%) translateY(0)}
+        .dropdown-column{display:flex;flex-direction:column;gap:2px}
+        .dropdown-column+.dropdown-column{border-left:1px solid var(--border);padding-left:12px;margin-left:4px}
+        .dropdown-label{padding:8px 12px 4px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:var(--text-muted)}
+        .dropdown-item{display:flex;align-items:center;gap:12px;padding:10px 12px;border-radius:var(--radius-sm);transition:background .2s;text-decoration:none;color:inherit}
+        .dropdown-item:hover{background:rgba(99,102,241,0.1)}
+        .dropdown-dot{width:8px;height:8px;border-radius:50%;background:var(--accent-3);flex-shrink:0;opacity:.5;transition:opacity .2s,box-shadow .2s}
+        .dropdown-item:hover .dropdown-dot{opacity:1;box-shadow:0 0 8px var(--accent-3)}
+        .dropdown-text{flex:1;min-width:0}
+        .dropdown-text strong{display:block;font-size:14px;font-weight:600;color:var(--text-primary);margin-bottom:2px}
+        .dropdown-text span{font-size:12px;color:var(--text-muted);display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+        .dropdown-ext{font-size:11px;color:var(--text-muted);opacity:0;transition:opacity .2s,color .2s;flex-shrink:0}
+        .dropdown-item:hover .dropdown-ext{opacity:1;color:var(--accent-3)}
+
+        /* 移动端下拉 */
+        @media(max-width:768px){
+        .has-dropdown>a{justify-content:space-between;width:100%}
+        .has-dropdown .dropdown-menu{position:static;transform:none;min-width:100%;opacity:1;visibility:visible;display:none;grid-template-columns:1fr;background:rgba(99,102,241,0.04);border:1px solid rgba(99,102,241,0.1);border-radius:var(--radius-md);padding:12px;margin-top:8px;box-shadow:none;gap:4px}
+        .has-dropdown.dropdown-open .dropdown-menu{display:grid;pointer-events:auto}
+        .dropdown-column+.dropdown-column{border-left:none;border-top:1px solid var(--border);padding-left:0;padding-top:8px;margin-left:0;margin-top:4px}
+        }
+
         .footer{padding:80px 0 32px;border-top:1px solid var(--border);background:rgba(15,21,53,0.3)}
         .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:60px;margin-bottom:60px}
         .footer-brand p{color:var(--text-muted);font-size:14px;line-height:1.8;margin-top:20px;max-width:320px}
@@ -111,7 +139,70 @@
                 <ul class="nav-menu" id="navMenu">
                     <li><a href="index.html">首页</a></li>
                     <li><a href="about.html">关于我们</a></li>
-                    <li><a href="courses.html">产品服务</a></li>
+                    <li class="has-dropdown">
+                        <a href="courses.html">产品服务 <span class="dropdown-arrow">▾</span></a>
+                        <div class="dropdown-menu">
+                            <div class="dropdown-column">
+                                <div class="dropdown-label">🤖 AI SaaS 工具</div>
+                                <a href="https://lakeli.coze.site/landing" target="_blank" class="dropdown-item">
+                                    <span class="dropdown-dot"></span>
+                                    <div class="dropdown-text">
+                                        <strong>龙掌柜智能运营系统</strong>
+                                        <span>7大AI智能体 + 轻量ERP</span>
+                                    </div>
+                                    <span class="dropdown-ext">↗</span>
+                                </a>
+                                <a href="https://cwsks4kdbm.coze.site" target="_blank" class="dropdown-item">
+                                    <span class="dropdown-dot"></span>
+                                    <div class="dropdown-text">
+                                        <strong>龙掌柜AI助手</strong>
+                                        <span>跨境AI智能助手，随时解答</span>
+                                    </div>
+                                    <span class="dropdown-ext">↗</span>
+                                </a>
+                                <a href="https://yutotu.coze.site" target="_blank" class="dropdown-item">
+                                    <span class="dropdown-dot"></span>
+                                    <div class="dropdown-text">
+                                        <strong>域途GEO</strong>
+                                        <span>AI驱动搜索引擎优化</span>
+                                    </div>
+                                    <span class="dropdown-ext">↗</span>
+                                </a>
+                                <a href="https://scc2vrxswp.coze.site" target="_blank" class="dropdown-item">
+                                    <span class="dropdown-dot"></span>
+                                    <div class="dropdown-text">
+                                        <strong>智能外呼系统</strong>
+                                        <span>AI智能外呼，高效触达客户</span>
+                                    </div>
+                                    <span class="dropdown-ext">↗</span>
+                                </a>
+                            </div>
+                            <div class="dropdown-column">
+                                <div class="dropdown-label">📚 实战培训</div>
+                                <a href="courses.html" class="dropdown-item">
+                                    <span class="dropdown-dot"></span>
+                                    <div class="dropdown-text">
+                                        <strong>TikTok运营实战课</strong>
+                                        <span>短视频运营 + 直播带货</span>
+                                    </div>
+                                </a>
+                                <a href="courses.html" class="dropdown-item">
+                                    <span class="dropdown-dot"></span>
+                                    <div class="dropdown-text">
+                                        <strong>亚马逊运营精讲课</strong>
+                                        <span>Listing优化 + 广告投放 + FBA</span>
+                                    </div>
+                                </a>
+                                <a href="courses.html" class="dropdown-item">
+                                    <span class="dropdown-dot"></span>
+                                    <div class="dropdown-text">
+                                        <strong>TikTok直播运营课</strong>
+                                        <span>直播选品 + 话术 + 场景搭建</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
                     <li><a href="cases.html">成功案例</a></li>
                     <li><a href="blog.html">博客干货</a></li>
                     <li><a href="faq.html">FAQ问答</a></li>
@@ -187,7 +278,70 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand"><a href="index.html" class="logo"><div class="logo-icon">🌐</div>拉克力跨境</a><p>专注海外GEO生成式引擎优化、AI外链挖掘、跨境独立站Schema搭建，AI驱动全链路跨境电商服务。</p></div>
-                <div class="footer-col"><h4>快速导航</h4><ul class="footer-links"><li><a href="index.html">首页</a></li><li><a href="about.html">关于我们</a></li><li><a href="courses.html">产品服务</a></li><li><a href="cases.html">成功案例</a></li><li><a href="blog.html">博客干货</a></li><li><a href="faq.html">FAQ问答</a></li><li><a href="contact.html">联系我们</a></li></ul></div>
+                <div class="footer-col"><h4>快速导航</h4><ul class="footer-links"><li><a href="index.html">首页</a></li><li><a href="about.html">关于我们</a></li><li class="has-dropdown">
+                        <a href="courses.html">产品服务 <span class="dropdown-arrow">▾</span></a>
+                        <div class="dropdown-menu">
+                            <div class="dropdown-column">
+                                <div class="dropdown-label">🤖 AI SaaS 工具</div>
+                                <a href="https://lakeli.coze.site/landing" target="_blank" class="dropdown-item">
+                                    <span class="dropdown-dot"></span>
+                                    <div class="dropdown-text">
+                                        <strong>龙掌柜智能运营系统</strong>
+                                        <span>7大AI智能体 + 轻量ERP</span>
+                                    </div>
+                                    <span class="dropdown-ext">↗</span>
+                                </a>
+                                <a href="https://cwsks4kdbm.coze.site" target="_blank" class="dropdown-item">
+                                    <span class="dropdown-dot"></span>
+                                    <div class="dropdown-text">
+                                        <strong>龙掌柜AI助手</strong>
+                                        <span>跨境AI智能助手，随时解答</span>
+                                    </div>
+                                    <span class="dropdown-ext">↗</span>
+                                </a>
+                                <a href="https://yutotu.coze.site" target="_blank" class="dropdown-item">
+                                    <span class="dropdown-dot"></span>
+                                    <div class="dropdown-text">
+                                        <strong>域途GEO</strong>
+                                        <span>AI驱动搜索引擎优化</span>
+                                    </div>
+                                    <span class="dropdown-ext">↗</span>
+                                </a>
+                                <a href="https://scc2vrxswp.coze.site" target="_blank" class="dropdown-item">
+                                    <span class="dropdown-dot"></span>
+                                    <div class="dropdown-text">
+                                        <strong>智能外呼系统</strong>
+                                        <span>AI智能外呼，高效触达客户</span>
+                                    </div>
+                                    <span class="dropdown-ext">↗</span>
+                                </a>
+                            </div>
+                            <div class="dropdown-column">
+                                <div class="dropdown-label">📚 实战培训</div>
+                                <a href="courses.html" class="dropdown-item">
+                                    <span class="dropdown-dot"></span>
+                                    <div class="dropdown-text">
+                                        <strong>TikTok运营实战课</strong>
+                                        <span>短视频运营 + 直播带货</span>
+                                    </div>
+                                </a>
+                                <a href="courses.html" class="dropdown-item">
+                                    <span class="dropdown-dot"></span>
+                                    <div class="dropdown-text">
+                                        <strong>亚马逊运营精讲课</strong>
+                                        <span>Listing优化 + 广告投放 + FBA</span>
+                                    </div>
+                                </a>
+                                <a href="courses.html" class="dropdown-item">
+                                    <span class="dropdown-dot"></span>
+                                    <div class="dropdown-text">
+                                        <strong>TikTok直播运营课</strong>
+                                        <span>直播选品 + 话术 + 场景搭建</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </li><li><a href="cases.html">成功案例</a></li><li><a href="blog.html">博客干货</a></li><li><a href="faq.html">FAQ问答</a></li><li><a href="contact.html">联系我们</a></li></ul></div>
                 <div class="footer-col"><h4>AI 产品</h4><ul class="footer-links"><li><a href="https://lakeli.coze.site/landing" target="_blank">🤖 龙掌柜智能运营</a></li><li><a href="https://yutotu.coze.site" target="_blank">🧠 域途GEO</a></li></ul></div>
                 <div class="footer-col"><h4>联系方式</h4><ul class="footer-links"><li><a>📍 深圳龙岗坂田云里智能大厦</a></li><li><a>📞 13129537910（微信同号）</a></li><li><a>📧 contact@lakeli.top</a></li></ul></div>
             </div>
@@ -207,6 +361,8 @@
 
         const header=document.getElementById('header');window.addEventListener('scroll',()=>header.classList.toggle('scrolled',window.scrollY>50));
         document.getElementById('hamburger').addEventListener('click',()=>document.getElementById('navMenu').classList.toggle('mobile-open'));
+        /* 移动端下拉菜单点击展开 */
+        document.querySelectorAll('.has-dropdown > a').forEach(function(link){link.addEventListener('click',function(e){if(window.innerWidth<=768){e.preventDefault();this.parentElement.classList.toggle('dropdown-open')}})});
     </script>
     <script src="chat-widget.js"></script>
 </body>
